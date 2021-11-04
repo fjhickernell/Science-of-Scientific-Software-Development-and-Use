@@ -1,0 +1,114 @@
+\documentclass{amsart}
+\usepackage{mathtools,upref,siunitx,upquote,fancyvrb,color}
+\usepackage[hyphens]{url}
+\usepackage[utf8]{inputenc}
+
+\input{FJHDef.tex}
+
+
+\usepackage{algpseudocode}
+\usepackage{algorithm, algorithmicx}
+\algnewcommand\algorithmicparam{\textbf{Parameters:}}
+\algnewcommand\PARAM{\item[\algorithmicparam]}
+\algnewcommand\algorithmicinput{\textbf{Input:}}
+\algnewcommand\INPUT{\item[\algorithmicinput]}
+\algnewcommand\RETURN{\State \textbf{Return }}
+
+\iffalse
+Important Dates and Links
+
+19th November 2021: Deadline for position paper submission
+3rd December 2021: Notification of position acceptance
+13 - 15th December 2021: Workshop
+SUBMISSION URL: https://orausurvey.orau.org/n/SSSDU.aspx
+WORKSHOP URL: https://www.orau.gov/SSSDU2021
+Motivation
+
+Software is an increasingly important component in the pursuit of scientific discovery. Both its development and use are essential activities for many scientific teams. At the same time, very little scientific study has been conducted to understand, characterize, and improve the development and use of software for science.
+
+Computational science teams have diversified over time to include contributions from domain scientists who provide expertise in scientific and engineering disciplines, applied mathematicians and computer scientists who provide optimal algorithms and data structures, and software and data engineers who provide methodologies and tools adapted and adopted from other software domains. These diverse contributions have enabled tremendous advances in the pursuit of scientific discovery, even as models, computer architectures, and software environments have become more complicated.
+
+With this increasing diversity, we believe the next opportunity for qualitative improvement comes from applying the scientific method to understanding, characterizing, and improving how scientific software is developed and used. We believe that this pursuit requires expertise from computational scientists themselves, and from the cognitive and social sciences as well as the software engineering research community.
+
+As we look to increase the productivity and sustainability of the scientific-software- development-and-use cycle, a more systematic application of the scientific method to understand processes for software development and use [1,2] will be a valuable tool to guide future work and result in more usable and sustainable software. This workshop will bring together computer scientists, software engineering researchers, computational scientists, applied mathematicians, social scientists, cognitive scientists, and others, to explore how we can conduct such systematic investigations, what can be learned, and how doing so will benefit the scientific enterprise.
+
+The workshop will be structured around a set of breakout sessions, with every attendee expected to participate actively in the discussions. Afterward, workshop attendees — from DOE, industry, and academia — will produce a report for ASCR that summarizes the findings of the workshop.
+
+[1] https://bssw.io/blog_posts/research-software-science-a-scientific-approach-to-understanding-and-improving-how-we-develop-and-use-software-for-research
+[2] https://www.exascaleproject.org/better-scientific-productivity-through-better-scientific-software-the-ideas-report/
+
+Invitation
+
+We invite community input in the form of two-page position papers that identify and discuss key challenges and opportunities in the science of the scientific-software development process and the study of the use of scientific software. In addition to providing an avenue for identifying workshop participants, these position papers will be used to shape the workshop agenda, identify panelists, and contribute to the workshop report. Position papers should not describe the authors’ current or planned research, contain material that should not be disclosed to the public, recommend specific solutions, or discuss narrowly-focused research topics. Rather, position papers should aim to improve the community’s shared understanding of the problem space, identify challenging research directions, and help to stimulate discussion.
+
+One author of each selected submission will be invited to participate in the workshop.
+
+By submitting a position paper, authors consent to have their position paper published publicly.
+
+Authors are not required to have a history of funding by the ASCR Computer Science program.
+
+Submission Guidelines
+
+Position Paper Structure and Format
+
+Position papers should follow the following format:
+
+Title
+Authors (with affiliations and email addresses)
+Challenge: Identify limitations of state-of-the-art practice with examples
+Opportunity: Describe how the identified challenges may be addressed, whether through new tools and techniques, new technologies, new methodologies, or new groups collaborating in the process
+Timeliness or maturity: Why now? What breakthrough or change makes progress possible now where it wasn’t possible previously? What will be the impact of success?
+References
+Each position paper must be no more than two pages including figures and references. The paper may include any number of authors but contact information for a single author who can represent the position paper at the workshop must be provided with the submission. There is no limit to the number of position papers that an individual or group can submit. Authors are strongly encouraged to follow the structure outlined above. Papers should be submitted in PDF format using the designated page on the workshop website.
+
+Notional Questions
+
+Position papers should present views on why and how scientific-software development and use can be studied as a scientific endeavor, perhaps taking inspiration from some of the following:
+
+What methods can be used to study the development and/or use of scientific software?
+What methods either uniquely apply or uniquely do not apply to the development of scientific software?
+How can we best integrate social and cognitive sciences into scientific software activities?
+How can we study changes in culture affecting scientific software development and use?
+What unique changes in scientific software development would improve productivity, accuracy, trust, and/or reliability?
+How can we motivate changes in the scientific-computing community to improve practices for software development and use?
+How will AI-driven development tools affect best practices for scientific software development and use?
+How will static and dynamic analysis methods affect the practice of scientific software development?
+How are scientific software developers and users atypical from other larger software communities?
+When and how can research and methods from other software communities be adapted and adopted for scientific software?
+How is the field of computational science changing, and how will it change?
+What are the roadblocks faced by computational scientists in computational application use?
+What are the challenges faced by computational scientists in their pursuit of discoveries?
+Selection
+
+Submissions will be reviewed by the workshop’s organizing committee using criteria of overall quality, relevance, likelihood of stimulating constructive discussion, and ability to contribute to an informative workshop report. Unique positions that are well presented and emphasize potentially-transformative research directions will be given preference.
+
+Organizing Committee
+
+Mike Heroux, Sandia National Laboratories
+David Bernholdt, Oak Ridge National Laboratory
+Lois Curfman McInnes, Argonne National Laboratory
+John Cary, University of Colorado
+Sponsor: Department of Energy, Office of Science, Advanced Scientific Computing Research
+
+
+\fi
+
+\begin{document}
+\title{Position Paper on the Science of Scientific-Software Development and Use}
+\author{Yuhan Ding}
+\author{Sou-Cheng Terrya Choi}
+\author{Claude Hall Jr.}
+\author{Fred J. Hickernell}
+\author{Aleksei Sorokin}
+\begin{abstract}This project is where all of the files go that are needed elsewhere
+\end{abstract}
+
+\maketitle
+
+
+References from the same proceedings \cite{HicJim16a,JimHic16a}, but the cross-referenced proceedings volume is not included because of the \texttt{latexmkrc} file.
+
+\bibliographystyle{amsplain}
+\bibliography{FJH23,FJHown23}
+
+\end{document}
