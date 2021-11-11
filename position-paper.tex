@@ -11,10 +11,10 @@
 \voffset -0.5in
 \setlength{\parskip}{0em}
 \usepackage[compact]{titlesec}
-    \titlespacing{\section}{0pt}{2ex}{0ex}
+    \titlespacing{\section}{0pt}{1ex}{0ex}
     \titlespacing{\subsection}{0pt}{1ex}{\wordsep}
     \titleformat{\section}[block]{\scshape \fillast}{\thesection.}{0.5ex}{}
-    \titleformat{\subsection}[runin]{\normalfont \bfseries}{\thesubsection.}{0.5ex}{}[.]
+    \titleformat{\subsection}[runin]{\normalfont \bfseries}{\normalfont\thesubsection.}{0.5ex}{}[.]
 
 \usepackage{algpseudocode}
 \usepackage{algorithm, algorithmicx}
@@ -140,11 +140,11 @@ Complex computations often require the chaining of algorithms, e.g., the output 
 \subsection{Diverse hardware} {\color{blue} not sure what to write here}
 
 \begin{wrapfigure}{r}{0.5\textwidth}
-    \includegraphics[width = 0.47\textwidth]{IDEAS-Watersheds-software-ecosystem-road.jpg}
+    \includegraphics[width = 0.5\textwidth]{cropped-ideas-watersheds-software-ecosystem-road.jpg}
 \end{wrapfigure}
 
 \subsection{Education} 
-First courses in numerical methods \cite{BurFaiBur16a} introduce students to the basic numerical algorithms.  Courses in computational science \cite{HolEic19a,ShifShif14a} combine numerical methods with modeling.  What is missing is teaching students to combine more than one algorithm together to solve a problem.  However, large scale computational science has seen  ``a confluence of trends in hardware and increasing demands for predictive multiscale and multiphysics simulations, analysis, and design,'' as explained in \url{https://ideas-productivity.org/ideas-home-page/about-ideas/}.  The IDEAS Watershed project, whose codebase is depicted on the right \cite{IDEASWatershedPict}, is an example.
+First courses in numerical methods \cite{BurFaiBur16a} introduce students to the basic numerical algorithms.  Courses in computational science \cite{HolEic19a,ShifShif14a} combine numerical methods with modeling.  Students are rarely taught to combine multiple algorithms together to solve a problem.  This leaves them unprepared for  large scale computational science, which is characterized by  ``increasing demands for predictive multiscale and multiphysics simulations, analysis, and design,'' as explained in \cite{IDEASAbout}.  The IDEAS Watershed project, whose codebase is depicted on the right \cite{IDEASWatershedPict}, is an example.
 
    
 
