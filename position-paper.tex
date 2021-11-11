@@ -1,10 +1,14 @@
 \documentclass{amsart}
-\usepackage{mathtools,upref,siunitx,upquote,fancyvrb,color}
+\usepackage{mathtools,upref,siunitx,upquote,fancyvrb,xspace,wrapfig,color}
 \usepackage[hyphens]{url}
 \usepackage[utf8]{inputenc}
 
 \input{FJHDef.tex}
 
+\textwidth 6.5in
+\hoffset -0.7in
+\textheight 9in
+\voffset -0.5in
 
 \usepackage{algpseudocode}
 \usepackage{algorithm, algorithmicx}
@@ -93,22 +97,98 @@ Sponsor: Department of Energy, Office of Science, Advanced Scientific Computing 
 
 \fi
 
+\newcommand{\AGSNote}[1]{{\color{cyan}Aleksei: #1}}
+
+
 \begin{document}
-\title{Position Paper on the Science of Scientific-Software Development and Use}
+\title{Position Paper on the \\ Science of Scientific-Software Development and Use}
 \author{Yuhan Ding}
+\address{Department of Applied Mathematics, RE 220, 10 W. 32nd St., Chicago, IL 60616}
+\email{hickernell@iit.edu}
 \author{Sou-Cheng Terrya Choi}
 \author{Claude Hall Jr.}
 \author{Fred J. Hickernell}
+\address{Department of Applied Mathematics, RE 220, 10 W. 32nd St., Chicago, IL 60616}
+\email{hickernell@iit.edu}
 \author{Aleksei Sorokin}
-\begin{abstract}This project is where all of the files go that are needed elsewhere
-\end{abstract}
+\address{Department of Applied Mathematics, RE 220, 10 W. 32nd St., Chicago, IL 60616}
+\email{hickernell@iit.edu}
+%\begin{abstract}This project is where all of the files go that are needed elsewhere
+%\end{abstract}
 
 \maketitle
 
+The opportunities for discovery, prediction, and optimization provided by advances in computer hardware and software are immense, but the challenges to taking full advantages of these opportunities are substantial.  As noted in \cite{ECP2020a}, ``Members of the CSE [computational science and engineering] community—especially at extreme scales but more broadly at all scales of computing—face an urgent need to improve developer productivity, positively impacting product quality, development time, and staffing resources, and software sustainability, reducing the cost of maintaining, sustaining, and evolving software capabilities.'' This position paper focuses on four challenges: i) connectivity among software packages, ii) data driven error estimates/bounds that propagate across algorithms, iii) taking advantage of diverse hardware architectures, and education of CSE developers and users.
 
-References from the same proceedings \cite{HicJim16a,JimHic16a}, but the cross-referenced proceedings volume is not included because of the \texttt{latexmkrc} file.
+
+\section{Challenge} % Identify limitations of state-of-the-art practice with examples
+\subsection{Connectivity} 
+There is a multitude of software libraries available ranging in size of hundreds of lines of code to millions of lines of code.  An algorithm developer wishing to develop a new library that will work well with other libraries, or a practitioner that wishes to utilize multiple libraries to solve a scientific problem must face the challenge that basic mathematical concepts may be defined differently for different libraries.  Should the definition of a function include its domain and the number of scalar inputs?  For algorithms requiring sampling of function values, are the data data sites specified by the sampler of a fixed number of to be an extensible sequence?  Do significant libraries document the expectations for algorithms that developers must meet to create successful pull requests? In the world of (quasi-)Monte Carlo and probabilistic numerics libraries such as \cite{QMCPy2020a,SciPyQMC,Stan,probnum} with which the authors are most familiar, there is presently a lack of adequate connectivity.
+
+\subsection{Data driven error estimation} 
+Complex computations often require the chaining of algorithms, e.g., an optimizer whose input is the output of a differential equation solver.  Since the next algorithm in the chain is accepting inexact input from the previous one, it would help to have bounds on the error of algorithm output. A priori algorithm error bounds based on unknown norms of input functions are not helpful.  Reliable data driven error bounds or estimates are needed. Moreover, error analysis for algorithms needs to include the possibility of inexact inputs.
+
+\subsection{Diverse hardware} {\color{blue} not sure what to write here}
+
+\subsection{Education} 
+First courses in numerical methods \cite{BurFaiBur16a} introduce students to the basic numerical algorithms.  Courses in computational science \cite{HolEic19a,ShifShif14a} combine numerical methods with modeling.  What is missing is teaching students to combine more than one algorithm together to solve a problem.  However, large scale computational science has seen  ``a confluence of trends in hardware and increasing demands for predictive multiscale and multiphysics simulations, analysis, and design,'' as explained in \url{https://ideas-productivity.org/ideas-home-page/about-ideas/} and the watershed 
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \includegraphics[width = 0.47\textwidth]{IDEAS-Watersheds-software-ecosystem-road.jpg}
+\end{wrapfigure}
+   
+
+
+
+
+
+
+
+\section{Opportunity} % Describe how the identified challenges may be addressed, whether through new tools and techniques, new technologies, new methodologies, or new groups collaborating in the process
+\subsection{Connectivity} 
+Code across multiple languages and platforms adheres to standards for certain data types, such as IEEE 754 for floating point arithmetic, \url{https://en.wikipedia.org/wiki/IEEE_754}.  We propose that groups of interested parties connected with larger scientific libraries develop shared standards for other key objects that appear in algorithms, such as functions, sampling sites, and (partial) differential equations. This would promote connectivity among software libraries and allow smaller libraries to be merged into larger ones.  Developers could more easily contribute to existing libraries and practitioners using multiple libraries.
+
+\subsection{Data driven error estimation} 
+Several of the authors and their collaborators have developed data-driven error bounds for integration and univariate function approximation and optimization using numerical analysis and probabilistic numerics approaches \cite{ChoEtal17a, HicEtal14b, HicEtal14a, HicJim16a, RatHic19a,JimHic16a}.  The key behind these error bounds is to identify reasonable cones of input functions that are not too spiky or peaky.  This facilitates theoretical guarantees on the data-driven error bounds.  The ideas referenced here could be extended to other algorithms such as differential equation solvers.  What is also needed is for the error bounds derived to allow for inexact input, which comes from chaining multiple algorithms together.
+
+
+\section{Timeliness} % Why now? What breakthrough or change makes progress possible now where it wasn’t possible previously? What will be the impact of success?
+
+The Extreme-scale Scientific Software Development Kit (xSDK, \url{https://xsdk.info}) is an effort to ``address challenges in interoperability and sustainability of software developed by diverse groups at different institutions.'' The push to identify standards for objects such as functions and partial differential equations, would fit this program.
 
 \bibliographystyle{amsplain}
 \bibliography{FJH23,FJHown23}
+
+The challenges of educating researchers to develop shared code
+
+Inconsistent APIs across similar packages
+
+The hurdles of getting algorithms into large packages
+
+The difficulties in correcting algorithms with defects
+
+Problems with scaling algorithms to multi-core, GPU, and multi-node architectures
+
+
+
+Error bounds in each step of the pipeline, cones
+
+Ramping up from individual software to larger projects
+
+Connectivity of packages
+
+Definitions that fit the problem of the software 
+
+\AGSNote{
+\subsection{Reproducibility}
+
+Another challenge is reproducibility and ease of access to complex, interconnected frameworks. Reproducible code is consistently documented, thoroughly tested, and widely distributed. 
+
+Documentation enables users to quickly learn essential information pertaining to a particular software element. We advocate for documentation in two forms: both online and inline. Online documentation enables users to quickly learn standards of interaction with a given package element.  Inline documentation lowers the barrier to entry for  developers and documents implementation specific nuances. Documentation is challenging due to its' dynamic nature and required synchronization with the codebase. 
+
+Tests for accuracy, consistency, and performance are a key element of any high quality scientific-software development. Developing a testing framework is time consuming and non-trivial due to the often hierarchical testing suite that must be build. In addition, it can be difficult for an organization to justify devoting hours to test development when they are often underappreciated by the end user. However, a robust testing suite is crucial to helping both users and developers operate with confidence within a frameworks parameters. 
+
+Package distribution is the first line of offense for recruiting new users. Oftentimes, high quality packages are underutilized simply because they are not distributed in a standard fashion. Due to the influx of software development on all scales, a package that is difficult to installed will quickly deter potential users. While a users setup experience should be seamless, distribution can be quite the opposite. Some distribution platforms require additional standards that further hinder developers freedom. 
+}
 
 \end{document}
