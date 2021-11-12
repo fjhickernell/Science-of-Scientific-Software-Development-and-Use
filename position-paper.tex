@@ -104,25 +104,40 @@ Sponsor: Department of Energy, Office of Science, Advanced Scientific Computing 
 \fi
 
 \newcommand{\AGSNote}[1]{{\color{cyan}Aleksei: #1}}
+\newcommand{\FJHNote}[1]{{\color{blue}Fred: #1}}
+\newcommand{\SCTCNote}[1]{{\color{green}Sou-Cheng: #1}}
 
+
+\usepackage{biblatex}
+\addbibresource{FJH23.bib}
+\addbibresource{FJHown23.bib}
+
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue}
 
 \begin{document}
 \title{Position Paper on the \\ Science of Scientific-Software Development and Use}
+\author{\vspace{-2ex}Sou-Cheng Terrya Choi}
+\address[Choi, Ding, Hickernell, Sorokin]{Department of Applied Mathematics, RE 220, 10 W. 32nd St., Chicago, IL 60616}
+\email{schoi32@iit.edu, yding2@iit.edu, hickernell@iit.edu, asorokin@hawk.iit.edu   }
 \author{Yuhan Ding}
-\address{Department of Applied Mathematics, RE 220, 10 W. 32nd St., Chicago, IL 60616}
-\email{hickernell@iit.edu}
-\author{Sou-Cheng Terrya Choi}
-\author{Claude Hall Jr.}
+\author{Claude Hall Jr.,}
+\address[Hall]{Birmingham Southern College, 900 Arkadelpha Rd, Birmingham, AL, 35254}
+\email{cdhall1@bsc.edu}
 \author{Fred J. Hickernell}
-\address{Department of Applied Mathematics, RE 220, 10 W. 32nd St., Chicago, IL 60616}
-\email{hickernell@iit.edu}
 \author{Aleksei Sorokin}
-\address{Department of Applied Mathematics, RE 220, 10 W. 32nd St., Chicago, IL 60616}
-\email{hickernell@iit.edu}
+
 %\begin{abstract}This project is where all of the files go that are needed elsewhere
 %\end{abstract}
 
 \maketitle
+
+\vspace{-5ex}
 
 The opportunities for discovery, prediction, and optimization provided by advances in computer hardware and software are immense, but the challenges to taking full advantages of these opportunities are substantial.  
 %As noted in \cite{ECP2020a}, ``Members of the CSE [computational science and engineering] community \ldots face an urgent need to improve developer productivity, positively impacting product quality, development time, and staffing resources, and software sustainability, reducing the cost of maintaining, sustaining, and evolving software capabilities.'' 
@@ -137,7 +152,9 @@ The developer wishing to develop a new (addition to a) library and the practitio
 \subsection{Data driven error estimation} 
 Complex computations often require the chaining of algorithms, e.g., the output of a differential equation solver becomes the input of an optimizer.  Since the next algorithm in the chain accepts inexact input from the previous algorithm, we need practical error bounds on algorithm output. A priori algorithm error bounds based on unknown norms of input functions are unhelpful.  Reliable data driven error bounds or estimates are needed. Moreover, error analysis for algorithms needs to include the possibility of inexact inputs.
 
-\subsection{Diverse hardware} {\color{blue} not sure what to write here}
+\FJHNote{Get Ilse's slides}
+
+\subsection{Diverse hardware} \SCTCNote{I will take the first stab.}
 
 \begin{wrapfigure}{r}{0.5\textwidth}
     \includegraphics[width = 0.5\textwidth]{cropped-ideas-watersheds-software-ecosystem-road.jpg}
@@ -156,22 +173,25 @@ First courses in numerical methods \cite{BurFaiBur16a} introduce students to the
 
 \section{Opportunity} % Describe how the identified challenges may be addressed, whether through new tools and techniques, new technologies, new methodologies, or new groups collaborating in the process
 \subsection{Connectivity} 
-Code across multiple languages and platforms adheres to standards for certain data types, such as IEEE 754 for floating point arithmetic, \url{https://en.wikipedia.org/wiki/IEEE_754}.  We propose that groups of interested parties connected with larger scientific libraries develop shared standards for other key objects that appear in algorithms, such as functions, sampling sites, and (partial) differential equations. This would promote connectivity among software libraries and allow smaller libraries to be merged into larger ones.  Developers could more easily contribute to existing libraries and practitioners using multiple libraries.
+Code across multiple languages and platforms adheres to standards for certain data types, such as IEEE 754 for floating point arithmetic, \url{https://en.wikipedia.org/wiki/IEEE_754}.  We propose that groups of interested parties connected with larger scientific libraries develop shared standards for other key objects that appear in algorithms, such as functions, sampling sites, and (partial) differential equations. This would promote connectivity among software libraries and allow smaller libraries to be merged into larger ones.  Developers could more easily contribute to existing libraries, and practitioners would find it easier to use multiple libraries.
 
 \subsection{Data driven error estimation} 
 Several of the authors and their collaborators have developed data-driven error bounds for integration and univariate function approximation and optimization using numerical analysis and probabilistic numerics approaches \cite{ChoEtal17a, HicEtal14b, HicEtal14a, HicJim16a, RatHic19a,JimHic16a}.  The key behind these error bounds is to identify reasonable cones of input functions that are not too spiky or peaky.  This facilitates theoretical guarantees on the data-driven error bounds.  The ideas referenced here could be extended to other algorithms such as differential equation solvers.  What is also needed is for the error bounds derived to allow for inexact input, which comes from chaining multiple algorithms together.
 
-\subsection{Diverse Hardware}
+\subsection{Diverse Hardware} \SCTCNote{I will take the first stab.}
 
-\subsection{Education}
+\subsection{Education} \FJHNote{I will take the first stab.} %Claude: I will try to work on this as well
+
+%This will help students learn more about large-scale computing. 
 
 
 \section{Timeliness} % Why now? What breakthrough or change makes progress possible now where it wasn’t possible previously? What will be the impact of success?
 
 The Extreme-scale Scientific Software Development Kit (xSDK, \url{https://xsdk.info}) is an effort to ``address challenges in interoperability and sustainability of software developed by diverse groups at different institutions.'' The push to identify standards for objects such as functions and partial differential equations, would fit this program.
 
-\bibliographystyle{amsplain}
-\bibliography{FJH23,FJHown23}
+\printbibliography
+%\bibliographystyle{amsplain}
+%\bibliography{FJH23,FJHown23}
 
 The challenges of educating researchers to develop shared code
 
