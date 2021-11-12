@@ -111,6 +111,8 @@ Sponsor: Department of Energy, Office of Science, Advanced Scientific Computing 
 \usepackage{biblatex}
 \addbibresource{FJH23.bib}
 \addbibresource{FJHown23.bib}
+\renewcommand*{\bibfont}{\normalfont\footnotesize}
+
 
 \usepackage{url}
 \usepackage{hyperref}
@@ -147,10 +149,12 @@ This position paper focuses on four challenges: i) connectivity among software p
 \section{Challenge} % Identify limitations of state-of-the-art practice with examples
 \subsection{Connectivity} 
 %There is a multitude of scientific software libraries ranging from hundreds of lines of code to millions of lines of code.  
-The developer wishing to develop a new (addition to a) library and the practitioner wishing to utilize multiple libraries together find that basic mathematical concepts may be coded differently in different libraries.  Should a function algorithm include its domain and the number of scalar inputs?  Should an algorithm providing data sites provide a fixed number or an extensible sequence?  What expectations must developers meet so that the pull requests with their new or modified algorithms will be successful? The (quasi-)Monte Carlo and probabilistic numerics libraries with which the authors are most familiar such as \cite{QMCPy2020a,SciPyQMC,Stan,probnum} lack  adequate connectivity.
+The developer wishing to contribute a new (addition to a) library and the practitioner wishing to utilize multiple libraries together find that basic mathematical concepts may be encoded in different structures in different libraries.  Must a function algorithm include its domain and the number of scalar inputs?  Does an algorithm providing data sites provide a fixed number or an extensible sequence?  What expectations must developers meet so that the pull requests with their new or modified algorithms will be successful? The (quasi-)Monte Carlo and probabilistic numerics libraries with which the authors are most familiar such as \cite{QMCPy2020a,SciPyQMC,Stan,probnum} lack  adequate connectivity and consistency.
 
 \subsection{Data driven error estimation} 
-Complex computations often require the chaining of algorithms, e.g., the output of a differential equation solver becomes the input of an optimizer.  Since the next algorithm in the chain accepts inexact input from the previous algorithm, we need practical error bounds on algorithm output. A priori algorithm error bounds based on unknown norms of input functions are unhelpful.  Reliable data driven error bounds or estimates are needed. Moreover, error analysis for algorithms needs to include the possibility of inexact inputs.
+Complex computations often require the chaining of algorithms, e.g., the output of a differential equation solver becomes the input of an optimizer.  Since the next algorithm in the chain accepts inexact input from the previous algorithm, 
+%error may be compounded unbeknownst to individual methods. 
+we need practical error bounds on algorithm output. A priori algorithm error bounds based on unknown norms of input functions are unhelpful.  Reliable data driven error bounds or estimates are needed. Moreover, error analysis for algorithms needs to include the possibility of inexact inputs.
 
 \FJHNote{Get Ilse's slides}
 
@@ -182,7 +186,7 @@ Several of the authors and their collaborators have developed data-driven error 
 
 \subsection{Education} \FJHNote{I will take the first stab.} %Claude: I will try to work on this as well
 
-%This will help students learn more about large-scale computing. 
+%This will help students learn more about algorithms that use numerical procedures in simulating and modeling. Since they are learning about these methods, they would be exposed to large-scale computing and machine learning kills necessary for Quasi Monte-Carlo integration. 
 
 
 \section{Timeliness} % Why now? What breakthrough or change makes progress possible now where it wasn’t possible previously? What will be the impact of success?
@@ -213,6 +217,7 @@ Connectivity of packages
 
 Definitions that fit the problem of the software 
 
+\iffalse
 \AGSNote{
 \subsection{Reproducibility}
 
@@ -220,9 +225,9 @@ Another challenge is reproducibility and ease of access to complex, interconnect
 
 Documentation enables users to quickly learn essential information pertaining to a particular software element. We advocate for documentation in two forms: both online and inline. Online documentation enables users to quickly learn standards of interaction with a given package element.  Inline documentation lowers the barrier to entry for  developers and documents implementation specific nuances. Documentation is challenging due to its' dynamic nature and required synchronization with the codebase. 
 
-Tests for accuracy, consistency, and performance are a key element of any high quality scientific-software development. Developing a testing framework is time consuming and non-trivial due to the often hierarchical testing suite that must be build. In addition, it can be difficult for an organization to justify devoting hours to test development when they are often underappreciated by the end user. However, a robust testing suite is crucial to helping both users and developers operate with confidence within a frameworks parameters. 
+Tests for accuracy, consistency, and performance are a key element of any high quality scientific-software development. Developing a testing framework is time consuming and non-trivial due to the often hierarchical testing suite that must be built. In addition, it can be difficult for an organization to justify devoting hours to test development when they are often underappreciated by the end user. However, a robust testing suite is crucial to helping both users and developers operate with confidence within a frameworks parameters. 
 
 Package distribution is the first line of offense for recruiting new users. Oftentimes, high quality packages are underutilized simply because they are not distributed in a standard fashion. Due to the influx of software development on all scales, a package that is difficult to installed will quickly deter potential users. While a users setup experience should be seamless, distribution can be quite the opposite. Some distribution platforms require additional standards that further hinder developers freedom. 
 }
-
+\fi
 \end{document}
