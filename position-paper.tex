@@ -154,11 +154,12 @@ The developer wishing to contribute a new (addition to a) library and the practi
 \subsection{Data driven error estimation} 
 Complex computations often require the chaining of algorithms, e.g., the output of a differential equation solver becomes the input of an optimizer.  Since the next algorithm in the chain accepts inexact input from the previous algorithm, 
 %error may be compounded unbeknownst to individual methods. 
+%Do you mean priority
 we need practical error bounds on algorithm output. A priori algorithm error bounds based on unknown norms of input functions are unhelpful.  Reliable data driven error bounds or estimates are needed. Moreover, error analysis for algorithms needs to include the possibility of inexact inputs.
 
 \FJHNote{Get Ilse's slides}
 
-\subsection{Diverse hardware} \SCTCNote{I will take the first stab.}
+With the advent of personal machines since the 1990s, most students, researchers, and practitioners of scientific computing are used to using Excel formulas or installing compilers (e.g., C++), interpreters (e.g., Python), or scientific applications (e.g., MATLAB) for performing computations, developing mathematical libraries or scientific applications. However, the demand for computing power is ever increasing due to the proliferation of data sciences in scientific research, business analytics, and citizenship projects. A personal machine is often inadequate for conducting independent or collaborative large-scale analysis or computational experiments that involve intensive, long-running numerical computations and simulations. Fortunately, cloud computing has emerged; commercial providers such as Amazon, Microsoft, and Google provide powerful (clusters of) heterogeneous virtual machines, each with, for instance, more than 100 cores, 1,000 GB memory, and 3,000 GB storage at \$4 per hour or less. One of the challenges today is to transition our students, educators, and scientists to be responsible and effective users and managers of such  formidable computational resources, which race supercomputers in national laboratories, as they are with personal devices.
 
 \begin{wrapfigure}{r}{0.5\textwidth}
     \includegraphics[width = 0.5\textwidth]{cropped-ideas-watersheds-software-ecosystem-road.jpg}
@@ -185,8 +186,10 @@ Several of the authors and their collaborators have developed data-driven error 
 \subsection{Diverse Hardware} \SCTCNote{I will take the first stab.}
 
 \subsection{Education} \FJHNote{I will take the first stab.} %Claude: I will try to work on this as well
-
-%This will help students learn more about algorithms that use numerical procedures in simulating and modeling. Since they are learning about these methods, they would be exposed to large-scale computing and machine learning kills necessary for Quasi Monte-Carlo integration. 
+By exposing students to computational sciences, they will analyze and design projects dealing with simulation and modeling. Because they are learning about these methods, the students would grasp an understanding for complex and large-scale computation. These learning outcomes will be beneficial in our effort of bringing large-scale computation in Quasi-Monte Carlo simulation.
+%Well I shot my shot. SC if you have anything and think it's a good idea to put it in, please do so!!! It is 3 am in the morning I am putting myself to bed. And Dr. Hickernell, we definitely have to get rid of some citations so I made a list on what to keep and choosing from a set of references what to release without changing the overall message.
+%Keep: 3, 9, 14
+%Choose: {5, 12, 15}, {8, 13}, {4, 6, 2, 1, 10, 11}
 
 
 \section{Timeliness} % Why now? What breakthrough or change makes progress possible now where it wasn’t possible previously? What will be the impact of success?
