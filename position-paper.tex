@@ -5,10 +5,10 @@
 
 \input{FJHDef.tex}
 
-\textwidth 6.5in
-\hoffset -0.7in
-\textheight 9in
-\voffset -0.5in
+\textwidth 6.8in
+\hoffset -0.9in
+\textheight 9.8in
+\voffset -0.9in
 \setlength{\parskip}{0em}
 \usepackage[compact]{titlesec}
     \titlespacing{\section}{0pt}{1ex}{0ex}
@@ -159,7 +159,7 @@ we need practical error bounds on algorithm output. A priori algorithm error bou
 \FJHNote{Get Ilse's slides}
 
 \subsection{Large-scale computational environments} 
-With the advent of personal machines since the 1990s, most students, researchers, and practitioners of scientific computing are used to using Excel formulas or installing compilers (e.g., C++), interpreters (e.g., Python), or scientific applications (e.g., MATLAB) for performing computations, developing mathematical libraries or scientific applications. However, the demand for computing power is ever increasing due to the proliferation of data sciences in scientific research, business analytics, and citizenship projects. A personal machine is often inadequate for conducting independent or collaborative large-scale analysis or computational experiments that involve intensive, long-running numerical computations and simulations. Prime examples include projects featured in \href{https://covid19-hpc-consortium.org}{The COVID-19 High Performance Computing Consortium}. Commercial providers such as Amazon, Microsoft, and Nvidia offer powerful on-demand (clusters of) heterogeneous virtual machines, each with, say, more than 100 processors, 1000 GB memory, and 3000 GB storage at  a few dollars hourly. One of the challenges today is to transition our students, educators, and scientists to  responsible and effective masters of such formidable computational resources on the cloud, which race supercomputers in national laboratories.
+With the advent of personal machines since the 1990s, most students, researchers, and practitioners of scientific computing are used to using Excel formulas or installing compilers (e.g., C++), interpreters (e.g., Python), or scientific applications (e.g., MATLAB) for performing computations, developing mathematical libraries or scientific applications. However, the demand for computing power is ever increasing due to the proliferation of data sciences in almost all disciplines. Personal machines are often inadequate for conducting independent or collaborative large-scale analysis or computational experiments that involve intensive, long-running numerical computations and simulations. Prime examples include projects featured in \href{https://covid19-hpc-consortium.org}{The COVID-19 High Performance Computing Consortium}. Commercial providers such as Amazon, Microsoft, and Nvidia offer powerful on-demand (clusters of) heterogeneous virtual machines, each with, say, more than 100 processors, 1000 GB memory, and 3000 GB storage at  a few dollars hourly. One of the challenges today is to transition our students, educators, and scientists to  responsible and effective masters of such formidable computational resources on the cloud, which race supercomputers in national laboratories.
 
 
 \begin{wrapfigure}{r}{0.5\textwidth}
@@ -179,15 +179,15 @@ First courses in numerical methods \cite{BurFaiBur16a} introduce students to  ba
 
 \section{Opportunity} % Describe how the identified challenges may be addressed, whether through new tools and techniques, new technologies, new methodologies, or new groups collaborating in the process
 \subsection{Connectivity} 
-Code across multiple languages and platforms adheres to standards for certain data types, such as IEEE 754 for floating point arithmetic, \url{https://en.wikipedia.org/wiki/IEEE_754}.  We propose that groups of interested parties connected with larger scientific libraries develop shared standards for other key objects that appear in algorithms, such as functions, sampling sites, and (partial) differential equations. This would promote connectivity among software libraries and allow smaller libraries to be merged into larger ones.  Developers could more easily contribute to existing libraries, and practitioners would find it easier to use multiple libraries.
+Code across multiple languages and platforms adheres to standards for certain data types, such as \href{https://en.wikipedia.org/wiki/IEEE_754}{IEEE 754 for floating point arithmetic}.  We propose that groups of interested parties connected with larger scientific libraries develop shared standards for other key objects that appear in algorithms, such as functions, sampling sites, and (partial) differential equations ((P)DEs). This would promote connectivity among software libraries and allow smaller libraries to be merged into larger ones.  Developers could more easily contribute to existing libraries, and practitioners would find it easier to use multiple libraries.
 
 \subsection{Data-driven error estimation} 
 Several of the authors and their collaborators have developed data-driven error bounds for integration and univariate function approximation and optimization using numerical analysis and probabilistic numerics approaches \cite{ChoEtal17a, HicEtal14b, HicEtal14a, HicJim16a, RatHic19a,JimHic16a}.  The key behind these error bounds is to identify reasonable cones of input functions that are not too spiky or peaky.  This facilitates theoretical guarantees on the data-driven error bounds.  The ideas referenced here could be extended to other algorithms such as differential equation solvers.  What is also needed is for the error bounds derived to allow for inexact input, which comes from chaining multiple algorithms together.
 
-\subsection{Large-scale computational environments}  Recognizing the increasing importance of computations in sciences and engineering,  the Illinois Institute of Technology, where the authors are,  established the College of Computing in June 2020, of which both the Departments of Applied Mathematics and Computer Science are integral parts, offering undergraduate and graduate degrees in not only applied/computational mathematics and computer science, but also cybersecurity, data science, artificial intelligence, and industrial technology. A significant portion of our faculty and graduate students have close collaborations with forefront computational scientists at the Argonne National Laboratory. As an ongoing effort, the Illinois Tech academic and research leadership have been holding meetings with industrial leaders including but not limited to Amazon and  Nvidia, in order to explore and create structures for democratizing cloud computing and parallel processing among scientific-computing members of Illinois Tech. Our multipronged approach aims to transform our next-generation scientists and engineers, who are well versed in software engineering principles in desktop environments, to adapt to diverse, emerging computing platforms.
+\subsection{Large-scale computational environments}  Recognizing the pervasiveness of computations in modern world,  the Illinois Institute of Technology (IIT), where the authors are,  established the College of Computing in 2020, of which both the Departments of Applied Mathematics and Computer Science are integral parts, offering under/graduate degrees in not only applied/computational mathematics and computer science, but also cybersecurity, data science, artificial intelligence, and industrial technology. Many of our faculty and graduate students have close ties with forefront computational scientists at the Argonne National Laboratory. In addition, the university's academic and research leadership have ongoing meetings with industrial leaders including but not limited to Amazon and  Nvidia, in order to explore and create structures for democratizing cloud computing and parallel processing among scientific-computing members in IIT. Our multipronged approach aims to transform our next-generation scientists and engineers, who are well versed in software engineering principles in desktop environments, to adapt to diverse, emerging computing platforms.
 
 \subsection{Education} \FJHNote{I will take the first stab.} %Claude: I will try to work on this as well
-By exposing students to computational sciences, they will analyze and design projects dealing with simulation and modeling. Because they are learning about these methods, the students would grasp an understanding for complex and large-scale computation. These learning outcomes will be beneficial in our effort of bringing large-scale computation in Quasi-Monte Carlo simulation.
+By exposing students to computational sciences, they will analyze and design projects dealing with simulation and modeling. Learning about these methods, the students would grasp an understanding for complex and large-scale computation. These learning outcomes will be beneficial in our effort of bringing large-scale computation in Quasi-Monte Carlo simulation.
 %Well I shot my shot. SC if you have anything and think it's a good idea to put it in, please do so!!! It is 3 am in the morning I am putting myself to bed. And Dr. Hickernell, we definitely have to get rid of some citations so I made a list on what to keep and choosing from a set of references what to release without changing the overall message.
 %Keep: 3, 9, 14
 %Choose: {5, 12, 15}, {8, 13}, {4, 6, 2, 1, 10, 11}
@@ -195,12 +195,13 @@ By exposing students to computational sciences, they will analyze and design pro
 
 \section{Timeliness} % Why now? What breakthrough or change makes progress possible now where it wasn’t possible previously? What will be the impact of success?
 
-The Extreme-scale Scientific Software Development Kit (xSDK, \url{https://xsdk.info}) is an effort to ``address challenges in interoperability and sustainability of software developed by diverse groups at different institutions.'' The push to identify standards for objects such as functions and partial differential equations, would fit this program.
+The \href{https://xsdk.info}{Extreme-scale Scientific Software Development Kit} (xSDK) is an effort to ``address challenges in interoperability and sustainability of software developed by diverse groups at different institutions.'' The push to identify standards for objects such as functions and (P)DEs, would fit this program.
 
 \printbibliography
 %\bibliographystyle{amsplain}
 %\bibliography{FJH23,FJHown23}
 
+\iffalse
 The challenges of educating researchers to develop shared code
 
 Inconsistent APIs across similar packages
@@ -220,6 +221,7 @@ Ramping up from individual software to larger projects
 Connectivity of packages
 
 Definitions that fit the problem of the software 
+\fi
 
 \iffalse
 \AGSNote{
