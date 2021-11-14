@@ -6,9 +6,9 @@
 \input{FJHDef.tex}
 
 \textwidth 6.8in
-\hoffset -0.9in
-\textheight 9.8in
-\voffset -0.9in
+\hoffset -0.95in
+\textheight 9.6in
+\voffset -0.7in
 \setlength{\parskip}{0em}
 \usepackage[compact]{titlesec}
     \titlespacing{\section}{0pt}{1ex}{0ex}
@@ -126,7 +126,7 @@ Sponsor: Department of Energy, Office of Science, Advanced Scientific Computing 
 \title{Position Paper on the \\ Science of Scientific-Software Development and Use}
 \author{\vspace{-2ex}Sou-Cheng Terrya Choi}
 \address[Choi, Ding, Hickernell, Sorokin]{Department of Applied Mathematics, RE 220, 10 W. 32nd St., Chicago, IL 60616}
-\email{schoi32@iit.edu, yding2@iit.edu, hickernell@iit.edu, asorokin@hawk.iit.edu   }
+\email{schoi32@iit.edu, yding2@iit.edu, hickernell@iit.edu, asorokin@hawk.iit.edu\vspace{-3.5ex}}
 \author{Yuhan Ding}
 \author{Claude Hall Jr.,}
 \address[Hall]{Birmingham Southern College, 900 Arkadelpha Rd, Birmingham, AL, 35254}
@@ -155,7 +155,7 @@ The developer wishing to contribute a new (addition to a) library and the practi
 Complex computations often require the chaining of algorithms, e.g., the output of a differential equation solver becomes the input of an optimizer.  Since the next algorithm in the chain accepts inexact input from the previous algorithm, 
 %error may be compounded unbeknownst to individual methods. 
 %Do you mean priority
-we need practical error bounds on algorithm output. A priori algorithm error bounds based on unknown norms of input functions are unhelpful.  Reliable data-driven error bounds or estimates are needed. Moreover, error analysis for algorithms needs to include the possibility of inexact inputs.
+we need practical error bounds on algorithm output. A priori algorithm error bounds based on unknown norms of input functions are unhelpful.  Reliable data-driven error bounds or estimates are needed. Moreover, error analysis for algorithms needs to factor in inexact inputs.
 \FJHNote{Get Ilse's slides}
 
 \subsection{Large-scale computational environments} 
