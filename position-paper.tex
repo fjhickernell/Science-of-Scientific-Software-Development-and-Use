@@ -128,7 +128,7 @@ Sponsor: Department of Energy, Office of Science, Advanced Scientific Computing 
 \address[Choi, Ding, Hickernell, Sorokin]{Department of Applied Mathematics, RE 220, 10 W. 32nd St., Chicago, IL 60616}
 \email{schoi32@iit.edu, yding2@iit.edu, hickernell@iit.edu, asorokin@hawk.iit.edu\vspace{-3.5ex}}
 \author{Yuhan Ding}
-\author{Claude Hall Jr.,}
+\author{Claude Hall Jr.}
 \address[Hall]{Birmingham Southern College, 900 Arkadelpha Rd, Birmingham, AL, 35254}
 \email{cdhall1@bsc.edu}
 \author{Fred J. Hickernell}
@@ -149,7 +149,7 @@ This position paper focuses on four challenges: i) connectivity among software p
 \section{Challenge} % Identify limitations of state-of-the-art practice with examples
 \subsection{Connectivity} 
 %There is a multitude of scientific software libraries ranging from hundreds of lines of code to millions of lines of code.  
-The developer wishing to contribute a new (addition to a) library and the practitioner wishing to utilize multiple libraries together find that basic mathematical concepts may be encoded in different structures in different libraries.  Must a function algorithm include its domain and the number of scalar inputs?  Does an algorithm providing data sites provide a fixed number or an extensible sequence?  What expectations must developers meet so that the pull requests with their new or modified algorithms will succeed? The (quasi-)Monte Carlo and probabilistic numerics libraries  the authors are most familiar such as \cite{QMCPy2020a,SciPyQMC,Stan,probnum} lack  adequate connectivity and consistency. \SCTCNote{why is ``Stan'' not a number?}
+The developer wishing to contribute a new (addition to a) library and the practitioner wishing to utilize multiple libraries together find that basic mathematical concepts may be encoded in different structures in different libraries.  Must a function algorithm include its domain and the number of scalar inputs?  Does an algorithm providing data sites provide a fixed number or an extensible sequence?  What expectations must developers meet so that the pull requests with their new or modified algorithms will succeed? The (quasi-)Monte Carlo and probabilistic numerics libraries  the authors are most familiar such as \cite{QMCPy2020a,SciPyQMC,STAN,probnum} lack  adequate connectivity and consistency.  
 
 \subsection{Data-driven error estimation} 
 Complex computations often require the chaining of algorithms, e.g., the output of a differential equation solver becomes the input of an optimizer.  Since the next algorithm in the chain accepts inexact input from the previous algorithm, 
@@ -188,7 +188,7 @@ Several of the authors and their collaborators have developed data-driven error 
 
 \subsection{Education} \FJHNote{I will take the first stab.} %Claude: I will try to work on this as well
 By exposing students to computational sciences, they will analyze and design projects dealing with simulation and modeling. Learning about these methods, the students would grasp an understanding for complex and large-scale computation. These learning outcomes will be beneficial in our effort of bringing large-scale computation in Quasi-Monte Carlo simulation.
-%Well I shot my shot. SC if you have anything and think it's a good idea to put it in, please do so!!! It is 3 am in the morning I am putting myself to bed. And Dr. Hickernell, we definitely have to get rid of some citations so I made a list on what to keep and choosing from a set of references what to release without changing the overall message.
+%Well I shot my shot. SC if you have anything and think it's a good idea to put it in, please do so!!! It is 3 am in the morning I am putting myself to bed. And Dr. Hickernell, we might have to get rid of some citations so I made a list on what to keep and choosing from a set of references what to release without changing the overall message.
 %Keep: 3, 9, 14
 %Choose: {5, 12, 15}, {8, 13}, {4, 6, 2, 1, 10, 11}
 
@@ -211,8 +211,6 @@ The hurdles of getting algorithms into large packages
 The difficulties in correcting algorithms with defects
 
 Problems with scaling algorithms to multi-core, GPU, and multi-node architectures
-
-
 
 Error bounds in each step of the pipeline, cones
 
