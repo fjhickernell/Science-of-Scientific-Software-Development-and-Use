@@ -106,6 +106,7 @@ Sponsor: Department of Energy, Office of Science, Advanced Scientific Computing 
 \newcommand{\AGSNote}[1]{{\color{cyan}Aleksei: #1}}
 \newcommand{\FJHNote}[1]{{\color{blue}Fred: #1}}
 \newcommand{\SCTCNote}[1]{{\color{green}Sou-Cheng: #1}}
+\newcommand{\CDHJNote}[1]{{\color{red}Claude: #1}}
 
 
 \usepackage{biblatex}
@@ -142,8 +143,9 @@ Sponsor: Department of Energy, Office of Science, Advanced Scientific Computing 
 
 \vspace{-5ex}
 
-The opportunities for discovery, prediction, and optimization provided by advances in computer hardware and software are immense, but the challenges to taking full advantage of these opportunities are substantial.  
-This position paper focuses on four challenges: i) connecting software libraries, ii) accurately estimating/bounding computational error across multiple algorithms, iii) preparing developers and users to employ collections of libraries, and iv) educating developers and users to exploit large-scale computational environments.
+The opportunities for discovery, prediction, and optimization provided by advances in computer hardware and software are immense, but the challenges to taking full advantage of these opportunities are substantial. This position paper focuses on four challenges: i) connecting software libraries, ii) accurately 
+\CDHJNote{estimating and limiting computational error...}
+estimating/bounding computational error across multiple algorithms, iii) preparing developers and users to employ collections of libraries, and iv) educating developers and users to exploit large-scale computational environments.
 
 
 \section{Challenge} % Identify limitations of state-of-the-art practice with examples
@@ -154,7 +156,6 @@ Developers wishing to contribute new (additions to) libraries and the practition
 \subsection{Data-driven error estimation} 
 Complex computations may require the chaining of algorithms, e.g., the output of a differential equation solver becomes the input of an optimizer.  Since the next algorithm in the chain accepts inexact input from the previous algorithm, 
 %error may be compounded unbeknownst to individual methods. 
-%Do you mean priority
 we need error bounds on algorithm output, as noted in \cite{Ips21a}. A priori algorithm error bounds based on unknown norms of input functions are unhelpful.  Reliable data-driven error bounds or estimates are needed. Moreover, error analysis for algorithms needs to factor in inexact inputs.
 
 \begin{wrapfigure}{r}{0.5\textwidth}
