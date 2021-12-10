@@ -5,10 +5,10 @@
 
 \input{FJHDef.tex}
 
-\textwidth 6.5in
-\hoffset -0.7in
-\textheight 9in
-\voffset -0.5in
+\textwidth 6.8in
+\hoffset -0.95in
+\textheight 9.6in
+\voffset -0.7in
 \setlength{\parskip}{0em}
 \usepackage[compact]{titlesec}
     \titlespacing{\section}{0pt}{1ex}{0ex}
@@ -106,6 +106,7 @@ Sponsor: Department of Energy, Office of Science, Advanced Scientific Computing 
 \newcommand{\AGSNote}[1]{{\color{cyan}Aleksei: #1}}
 \newcommand{\FJHNote}[1]{{\color{blue}Fred: #1}}
 \newcommand{\SCTCNote}[1]{{\color{green}Sou-Cheng: #1}}
+\newcommand{\CDHJNote}[1]{{\color{red}Claude: #1}}
 
 
 \usepackage{biblatex}
@@ -126,13 +127,14 @@ Sponsor: Department of Energy, Office of Science, Advanced Scientific Computing 
 \title{Position Paper on the \\ Science of Scientific-Software Development and Use}
 \author{\vspace{-2ex}Sou-Cheng Terrya Choi}
 \address[Choi, Ding, Hickernell, Sorokin]{Department of Applied Mathematics, RE 220, 10 W. 32nd St., Chicago, IL 60616}
-\email{schoi32@iit.edu, yding2@iit.edu, hickernell@iit.edu, asorokin@hawk.iit.edu   }
+\email{schoi32@iit.edu, yding2@iit.edu, hickernell@iit.edu, asorokin@hawk.iit.edu\vspace{-3.5ex}}
 \author{Yuhan Ding}
-\author{Claude Hall Jr.,}
+\author{Claude Hall Jr.}
 \address[Hall]{Birmingham Southern College, 900 Arkadelpha Rd, Birmingham, AL, 35254}
 \email{cdhall1@bsc.edu}
 \author{Fred J. Hickernell}
 \author{Aleksei Sorokin}
+
 
 %\begin{abstract}This project is where all of the files go that are needed elsewhere
 %\end{abstract}
@@ -141,62 +143,76 @@ Sponsor: Department of Energy, Office of Science, Advanced Scientific Computing 
 
 \vspace{-5ex}
 
-The opportunities for discovery, prediction, and optimization provided by advances in computer hardware and software are immense, but the challenges to taking full advantages of these opportunities are substantial.  
-%As noted in \cite{ECP2020a}, ``Members of the CSE [computational science and engineering] community \ldots face an urgent need to improve developer productivity, positively impacting product quality, development time, and staffing resources, and software sustainability, reducing the cost of maintaining, sustaining, and evolving software capabilities.'' 
-This position paper focuses on four challenges: i) connectivity among software packages, ii) data driven error estimates/bounds that propagate across algorithms, iii) taking advantage of diverse hardware architectures, and education of CSE developers and users.
+The opportunities for discovery, prediction, and optimization provided by advances in computer hardware and software are immense, but the challenges to taking full advantage of these opportunities are substantial. This position paper focuses on four challenges: i) connecting software libraries, ii) accurately 
+%\CDHJNote{estimating and limiting computational error...}
+estimating discretization errors from the computational data across multiple algorithms, iii) preparing developers and users to employ collections of libraries, and iv) educating developers and users to exploit large-scale computational environments.
 
 
 \section{Challenge} % Identify limitations of state-of-the-art practice with examples
 \subsection{Connectivity} 
 %There is a multitude of scientific software libraries ranging from hundreds of lines of code to millions of lines of code.  
-The developer wishing to contribute a new (addition to a) library and the practitioner wishing to utilize multiple libraries together find that basic mathematical concepts may be encoded in different structures in different libraries.  Must a function algorithm include its domain and the number of scalar inputs?  Does an algorithm providing data sites provide a fixed number or an extensible sequence?  What expectations must developers meet so that the pull requests with their new or modified algorithms will be successful? The (quasi-)Monte Carlo and probabilistic numerics libraries with which the authors are most familiar such as \cite{QMCPy2020a,SciPyQMC,Stan,probnum} lack  adequate connectivity and consistency.
+Developers wishing to contribute new (additions to) libraries and the practitioners wishing to utilize multiple libraries together find that basic mathematical objects may be encoded differently in different libraries.  Must a function routine include its domain and the number of scalar inputs?  Does an algorithm generating data sites provide a fixed number or an extensible sequence?  What standards must developers of library enhancements meet so that their pull requests will succeed? The (quasi-)Monte Carlo and probabilistic numerics libraries that the authors know, such as \cite{QMCPy2020a,SciPyQMC,STAN,probnum}, lack  adequate connectivity and consistency.
 
-\subsection{Data driven error estimation} 
-Complex computations often require the chaining of algorithms, e.g., the output of a differential equation solver becomes the input of an optimizer.  Since the next algorithm in the chain accepts inexact input from the previous algorithm, 
+\subsection{Data-driven error estimation} 
+Complex computations may require the chaining of algorithms, e.g., the output of a (P)DE solver becomes the input of an optimizer.  Since the next algorithm in the chain accepts inexact input from the previous algorithm, 
 %error may be compounded unbeknownst to individual methods. 
-we need practical error bounds on algorithm output. A priori algorithm error bounds based on unknown norms of input functions are unhelpful.  Reliable data driven error bounds or estimates are needed. Moreover, error analysis for algorithms needs to include the possibility of inexact inputs.
-
-\FJHNote{Get Ilse's slides}
-
-\subsection{Diverse hardware} \SCTCNote{I will take the first stab.}
+we need error bounds on algorithm output, as noted in \cite{Ips21a}. A priori algorithm error bounds based on unknown norms of input functions are unhelpful.  Reliable data-driven error bounds or estimates are needed. Moreover, error analysis for algorithms needs to factor in inexact inputs.
 
 \begin{wrapfigure}{r}{0.5\textwidth}
     \includegraphics[width = 0.5\textwidth]{cropped-ideas-watersheds-software-ecosystem-road.jpg}
 \end{wrapfigure}
 
-\subsection{Education} 
-First courses in numerical methods \cite{BurFaiBur16a} introduce students to the basic numerical algorithms.  Courses in computational science \cite{HolEic19a,ShifShif14a} combine numerical methods with modeling.  Students are rarely taught to combine multiple algorithms together to solve a problem.  This leaves them unprepared for  large scale computational science, which is characterized by  ``increasing demands for predictive multiscale and multiphysics simulations, analysis, and design,'' as explained in \cite{IDEASAbout}.  The IDEAS Watershed project, whose codebase is depicted on the right \cite{IDEASWatershedPict}, is an example.
+\subsection{Multiple Algorithms} 
+First scientific computing courses \cite{BurFaiBur16a} introduce students to numerical algorithms.  Computational science courses \cite{HolEic19a,ShifShif14a} combine numerical methods with modeling.  Rarely are students taught to combine multiple algorithms to solve a problem.  This leaves them unprepared for  large-scale computational science, which requires not only multiple algorithms, but multiple libraries. The IDEAS Watershed project, whose codebase is depicted on the right \cite{IDEASWatershedPict}, is an example.
 
-   
-
-
-
+\subsection{Large-scale computational environments} 
+Since the mid-1980s, computational scientists of the last generation have become proficient at carrying out computations on their personal machines.  However, many do not know how to take advantage of the variety of advanced architectures that are now common-place:  GPUs, cloud computing, open science grid, and high-performance computing.  Even with resources being made available through projects such as \href{https://covid19-hpc-consortium.org}{The COVID-19 High Performance Computing Consortium}, many users and software library developers do not know how to take full advantage of them.
 
 
 
 
 \section{Opportunity} % Describe how the identified challenges may be addressed, whether through new tools and techniques, new technologies, new methodologies, or new groups collaborating in the process
 \subsection{Connectivity} 
-Code across multiple languages and platforms adheres to standards for certain data types, such as IEEE 754 for floating point arithmetic, \url{https://en.wikipedia.org/wiki/IEEE_754}.  We propose that groups of interested parties connected with larger scientific libraries develop shared standards for other key objects that appear in algorithms, such as functions, sampling sites, and (partial) differential equations. This would promote connectivity among software libraries and allow smaller libraries to be merged into larger ones.  Developers could more easily contribute to existing libraries, and practitioners would find it easier to use multiple libraries.
+Code across multiple languages and platforms adheres to standards for certain data types, such as \href{https://en.wikipedia.org/wiki/IEEE_754}{IEEE 754 for floating-point arithmetic}.  We propose that interested parties connected with larger scientific libraries develop shared standards for key objects that appear in algorithms, such as functions, sampling sites, and (partial) differential equations ((P)DEs). This would promote connectivity among software libraries and allow smaller libraries to be merged into larger ones.  Developers could more easily contribute to existing libraries, and practitioners would find it easier to use multiple libraries.
 
-\subsection{Data driven error estimation} 
-Several of the authors and their collaborators have developed data-driven error bounds for integration and univariate function approximation and optimization using numerical analysis and probabilistic numerics approaches \cite{ChoEtal17a, HicEtal14b, HicEtal14a, HicJim16a, RatHic19a,JimHic16a}.  The key behind these error bounds is to identify reasonable cones of input functions that are not too spiky or peaky.  This facilitates theoretical guarantees on the data-driven error bounds.  The ideas referenced here could be extended to other algorithms such as differential equation solvers.  What is also needed is for the error bounds derived to allow for inexact input, which comes from chaining multiple algorithms together.
+\subsection{Data-driven error estimation} 
+Several of the authors and their collaborators have developed data-driven error bounds for multi-dimensional integration as well as univariate function approximation and optimization using numerical analysis and probabilistic numerics approaches \cite{ChoEtal17a, HicEtal14b, HicEtal14a, HicJim16a, RatHic19a,JimHic16a}.  The key behind these error bounds is to identify reasonable cones of input functions that are not too spiky or peaky.  This facilitates theoretical guarantees on the data-driven error bounds.  The ideas referenced here could be extended to other algorithms such as differential equation solvers.  What is also needed is for the error bounds derived to allow for inexact input, which comes from chaining multiple algorithms together.
 
-\subsection{Diverse Hardware} \SCTCNote{I will take the first stab.}
+\subsection{Multiple Algorithms}
+Computational science curricula need to be re-written to stress the combination of multiple algorithms, or even multiple libraries to solve problems, during introductory courses.  To make room, we may need to reduce the details of some numerical algorithms that in the past would be explained in the same way that we often avoid the details of the algorithm for computing the sine function.  This curriculum revision may start by way of supplementary materials that will hopefully work their way into standard texts.
 
-\subsection{Education} \FJHNote{I will take the first stab.} %Claude: I will try to work on this as well
+\subsection{Large-scale computational environments}  
+Educating the next generation in viewing cloud or cluster computing the same way that this generation views personal computing can be attained through partnerships involving academic institutions, national labs, and corporations offering test sites for students to learn and for developers to experiment.  Software tools are also needed to help developers migrate their libraries from personal machines to environments taking advantage of multiple cores, GPUs, and other advanced architectures.  
 
-%This will help students learn more about algorithms that use numerical procedures in simulating and modeling. Since they are learning about these methods, they would be exposed to large-scale computing and machine learning kills necessary for Quasi Monte-Carlo integration. 
 
 
 \section{Timeliness} % Why now? What breakthrough or change makes progress possible now where it wasn’t possible previously? What will be the impact of success?
 
-The Extreme-scale Scientific Software Development Kit (xSDK, \url{https://xsdk.info}) is an effort to ``address challenges in interoperability and sustainability of software developed by diverse groups at different institutions.'' The push to identify standards for objects such as functions and partial differential equations, would fit this program.
+The \href{https://xsdk.info}{Extreme-scale Scientific Software Development Kit} (xSDK) is an effort to ``address challenges in interoperability and sustainability of software developed by diverse groups at different institutions.'' The push to identify standards for objects such as functions and (P)DEs, would fit this program. The presence of a good number of large libraries presents the possibility of healthy discussion among these communities to arrive at reasonable standards.
+
+The rise in popularity of probabilistic numerics research provides one promising avenue for data-driven error bounds.  So does the authors' work on adaptive algorithms.
+
+The permeation of computing into multiple disciplines and the availability of multiple packages make it possible to bridge the gap between what is taught in the classroom and what is needed at the frontiers of research.  Training grants may be used to pilot programs to address what is lacking in curricula.
+
+Like large-scale computational environments banded together for COVID-19 research, they can do the same to provide basic competency to computational scientists in advanced architectures.  This might look like \href{https://colab.research.google.com}{Google Colaboratory} but with access to more advanced architectures.  Given the wider availability of these architectures, the time is ripe to provide developer tools to migrate libraries to exploit them.
 
 \printbibliography
 %\bibliographystyle{amsplain}
 %\bibliography{FJH23,FJHown23}
 
+\vspace{-1ex}
+
+\SCTCNote{Need everyone sign off before submission: Sou-Cheng Choi}
+
+\SCTCNote{Typos in bib: `Diagam', `Implmentation'. Change `probnum' to `ProbNum'}
+
+\end{document}
+
+
+Recent generations have become comfortable with With the advent of personal machines since the 1990s, most students, researchers, and practitioners of scientific computing are used to installing applications, compilers, or interpreters for performing computations, developing mathematical libraries, or scientific software. However, the demand for computing power is ever increasing due to the proliferation of data sciences in many disciplines. Personal computers are often inadequate for conducting independent or collaborative large-scale analysis or computational experiments that involve intensive, long-running numerical computations and simulations. Prime examples include projects featured in \href{https://covid19-hpc-consortium.org}{The COVID-19 High Performance Computing Consortium}. Commercial providers such as Amazon, Microsoft, and Nvidia offer powerful on-demand (clusters of) heterogeneous virtual machines, each with, say, more than 100 processors, 1000 GB memory, and 3000 GB storage at a few dollars hourly. One of the challenges today is to transition students, educators, and scientists to responsible and effective masters of such formidable computational resources, which race supercomputers in national laboratories.
+
+
+\iffalse
 The challenges of educating researchers to develop shared code
 
 Inconsistent APIs across similar packages
@@ -207,8 +223,6 @@ The difficulties in correcting algorithms with defects
 
 Problems with scaling algorithms to multi-core, GPU, and multi-node architectures
 
-
-
 Error bounds in each step of the pipeline, cones
 
 Ramping up from individual software to larger projects
@@ -216,6 +230,7 @@ Ramping up from individual software to larger projects
 Connectivity of packages
 
 Definitions that fit the problem of the software 
+\fi
 
 \iffalse
 \AGSNote{
@@ -230,4 +245,7 @@ Tests for accuracy, consistency, and performance are a key element of any high q
 Package distribution is the first line of offense for recruiting new users. Oftentimes, high quality packages are underutilized simply because they are not distributed in a standard fashion. Due to the influx of software development on all scales, a package that is difficult to installed will quickly deter potential users. While a users setup experience should be seamless, distribution can be quite the opposite. Some distribution platforms require additional standards that further hinder developers freedom. 
 }
 \fi
-\end{document}
+
+
+
+Recognizing the pervasiveness of computations in modern world,  the Illinois Institute of Technology (IIT), where the authors are,  established the College of Computing in 2020, of which both the Departments of Applied Mathematics and Computer Science are integral parts, with highly-motivating and complex problems from our non-traditional degree programs in cybersecurity, data science, artificial intelligence, and industrial technology. Many of our faculty and graduate students have close ties with forefront computational scientists at the Argonne National Lab, co-located with IIT in Cook county, Illinois. In addition, the university's leadership have ongoing meetings with Amazon and Nvidia to tailor-make deep-dive sessions for various research projects. Our expanding internal and external partnerships aim to democratize cloud computing, massive parallelism, and advanced computational models among scientific-computing members in IIT, many of whom are already well versed in software engineering principles in desktop environments.
