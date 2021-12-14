@@ -1,0 +1,1562 @@
+11:00:52 From Simon Hettrick to Everyone:
+	Hello!
+11:01:21 From Mark (he/him) Miller (LLNL) to Everyone:
+	Hi @Simon
+11:02:41 From Mike Heroux to Everyone:
+	Hi Simon, welcome!
+11:03:56 From David Rogers to Everyone:
+	orau.gov/SSSDU2021
+11:16:44 From Fred Hickernell (Illinois Tech) to Observer: Claude D. Hall Jr.(Direct Message):
+	Good morning, Claude
+11:17:03 From Observer: Claude D. Hall Jr. to Fred Hickernell (Illinois Tech)(Direct Message):
+	Hello, Dr. Hickernell
+11:17:16 From Neil Chue Hong / SSI (he/his) to Everyone:
+	Thanks for the kind words, Mike! Simon Hettrick, Caroline Jay and myself are all attending from the SSI at this workshop.
+11:17:56 From David Bernholdt (he/him) to Everyone:
+	Thanks for joining us!
+11:18:42 From Sandra Gesing to Everyone:
+	Thanks also from URSSI - Dan Katz, Jeff Carver, Nic Weber and I are also here
+11:19:15 From David Bernholdt (he/him) to Everyone:
+	Thanks to you folks as well!
+11:19:55 From Sandra Gesing to Everyone:
+	always a pleasure to collaborate!
+11:23:24 From Timothy Menzies to Everyone:
+	Remind me: where are these slides?
+11:24:33 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	This is labeled as RSS components, but I like it as an RSE description as well
+11:25:24 From Simon Hettrick to Everyone:
+	Agreed! RSE is about a lot more than just software engineering.
+11:34:31 From Reed Milewicz (SNL) to Everyone:
+	I’m blushing that you mentioned us, haha
+11:34:47 From Fan Du (she/her) \\ U Texas to Everyone:
+	Officially cited :)
+11:34:51 From Hartwig Anzt to Everyone:
+	Maybe I missed this in the beginning: will the slides later be available for the workshop participants?
+11:35:13 From Observer: Rene van Oostrum to Everyone:
+	… and for observers?
+11:35:20 From Observer: Claude D. Hall Jr. to Everyone:
+	You know I find this interesting, especially as a double major between Mathematics and Computer Science
+11:35:37 From Fernanda, NextSilicon (she/her) to Everyone:
+	How so Claude?
+11:36:51 From Observer: Claude D. Hall Jr. to Everyone:
+	Because of the overlap between Applied Mathematics and Software Engineering.
+11:39:30 From Daniel S Katz to Everyone:
+	Some may be less interested in LSSw than BSSw because of the L - lots of us are doing work that can be applied to leadership computing but also is applied (more often) to other, smaller, computing
+11:41:19 From Fernanda, NextSilicon (she/her) to Everyone:
+	+1
+11:41:41 From ganesh to Everyone:
+	Are there fellowships in RSS targeting PhD students (US citizens and international)?
+11:41:47 From Todd Gamblin to Everyone:
+	Just to play devil’s advocate (I’m actually very excited about this topic area): there’s a lot of very influential but not-really-scientific literature on software engineering from industry, and industry has been successful at adopting good software engineering practices — even originating many of them.  Is it just harder to convince scientists to adopt good practices?  Do we have to make it a science to get scientists to pay attention?
+11:42:05 From Hannah Cohoon to Everyone:
+	Simon, I’ll be talking about that some on Wednesday and I can’t wait to hear your thoughts!
+11:42:14 From Simon Hettrick to Everyone:
+	We’ve not cracked it with RSEs yet either...
+11:42:22 From Mark (he/him) Miller (LLNL) to Everyone:
+	+1 question from @Todd Gamblin
+11:43:00 From Simon Hettrick to Everyone:
+	Looking forward to it @Hannah Cohoon!
+11:43:16 From Mark (he/him) Miller (LLNL) to Everyone:
+	My title @LLNL has been computer "scientist" for 30+ years. But, I've always thought of myself as a software engineer (I am educated as an EE).
+11:43:36 From Miranda Mundt (SNL) to Everyone:
+	A small response to @Todd Gamblin - Reed and I have done a lot of reading and talking about this; partly it’s cultural, but we also believe that industry standards just don’t generally work for the vast majority of scientific programming. There needs to be better adaptation, which, in turn, kind of turns it into a science experiment and makes it more appealing
+11:43:38 From Boyana Norris to Everyone:
+	@Todd: I certainly believe that having a way to scientifically evaluate SE practices can motivate adoption in very limited-resource teams (most scientific ones), but only time will tell if that’s actually true.
+11:43:41 From Reed Milewicz (SNL) to Everyone:
+	Todd, I’d say there’s also a lot of influential scientific literature on software engineering, and there’s a dynamic process of synthesis between industry practitioners and the research side of the house. Two sides of the same coin. This is in part because the field is relatively young (relative to other engineering disciplines), and also because it’s evolving so rapidly.
+11:43:51 From Wes Bethel (he/him) to Everyone:
+	(In response to Todd’s question, thanks for asking) “Scientists” may feel they need to be convinced of the value of using science in SWE before they pay much attention; if not convinced or aware, they may be more likely to simply take the path of least resistance that they are aware of.
+11:44:17 From Jeff Shrager to Everyone:
+	@TG: Science changes faster than products, and the world can't be manipulated like a product. At SUFs (e.g., LCLS) they do a different experiment every week!
+11:44:32 From Anshu Dubey to Everyone:
+	@Todd — when you ask those very same companies about what happens in their research departments they tell you that those practices are not applied there. And that is because most of literature addresses itself to software with a known goal.
+11:45:06 From Todd Gamblin to Everyone:
+	“Science changes faster than products” <— a bit skeptical of this claim, or at least I don’t think it’s by any means absolute.
+11:45:18 From Observer: Claude D. Hall Jr. to Everyone:
+	I am with Jason Wiese
+11:45:34 From Jeff Shrager to Everyone:
+	@TG: Apple isn't building a new phone every week.
+11:45:36 From Miranda Mundt (SNL) to Everyone:
+	Todd, I’m with you on that. I think a better claim is that science is more fluid than products.
+11:45:52 From Mark (he/him) Miller (LLNL) to Everyone:
+	@Jeff Shrager...LLNL is running simulation codes with lineage going back to the 70s. Some of the submodules might even still be Fortran code written in the 60's.  Capabilities have improved bu existing good bits have been retained . So, I am apt not to believe that "science" software changes faster than commercial/industry. I think it doesn't.
+11:46:09 From Anshu Dubey to Everyone:
+	It is not just science, it is also when you are in the exploratory mode.
+11:46:31 From Anshu Dubey to Everyone:
+	Even for industry software.
+11:46:50 From Fernanda, NextSilicon (she/her) to Everyone:
+	There’s def tension between industry SE and HPC. Each side loves to reinvent the wheel and since industry is so much larger they create many more things that scientists can digest in addition to the changes in their own domain science
+11:46:58 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	+1 to @miranda’s earlier comment.  Adding on to that:  When scientists try once to applying industry practice without tailoring them appropriately, they can get bad results and get burned from ever considering them again
+11:47:40 From Daniel S Katz to Everyone:
+	whenever anyone tells me "here the right way to do something" my first thought is how do they know what I'm dealing with and that their solution is right for me
+11:48:12 From Vadim Dyadechko to Everyone:
+	@Dan +1
+11:48:21 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	+1 to @danielskatz
+11:48:26 From Carlo Graziani (ANL) to Everyone:
+	@Todd Gamblin: I would say that the perspective of V&V/UQ gives a good way of seeing important distinctions between vanilla industrial software development and the scientific software development enterprise. In particular, design of a word processor or a web browser (for example) begins with a design document, against which a complete validation process can be trivially defined. In scientific engineering, "validation" has a rather different meaning, having to do with the comparison of software simulation output and experiental data. And in discovery science "validation" has yet another meaning, since there are gaps in knowledge in what the system under study are even in principle.
+11:48:28 From Vanessa to Everyone:
+	It's better to say "good ways" instead of right or best, or just acknowledge that "this worked for us given this context."
+11:48:37 From Sandra Gesing to Everyone:
+	yeah - I also think that best practices is not the best word. I like much better good practices
+11:48:59 From Sandra Gesing to Everyone:
+	@Vanessa: same idea;-)
+11:49:13 From Miranda Mundt (SNL) to Everyone:
+	+1 Carlo
+11:49:20 From Hannah Cohoon to Everyone:
+	harsh
+11:49:21 From Jordan Perr-Sauer to Everyone:
+	“Is it just harder to convince scientists to adopt good practices?  Do we have to make it a science to get scientists to pay attention?” - Depends what kind of scientist you’re talking about. A domain scientist may not want to invest the huge amount of time and funding required to become a software engineering expert or to acquire one for their team.
+11:49:24 From Daniel S Katz to Everyone:
+	Is that quote the same for "engineering"?
+11:49:44 From Daniel S Katz to Everyone:
+	eg "software engineering"
+11:49:49 From Mike Heroux to Everyone:
+	We call BSSw.io (the website) and BSSw Fellowships *Better* Scientific Software, focused on improvement relative to the current state.
+11:50:13 From Observer: Claude D. Hall Jr. to Everyone:
+	I think this also relates to Human Computer Interaction and how we can better the software for scientific computing
+11:50:14 From Todd Gamblin to Everyone:
+	On best practices: I like establishing best practices but I don’t like it when people tell me to do something *because* it’s a best practice. I think people should tell me why.
+11:50:18 From Vanessa to Everyone:
+	A domain scientist should not have to be a research software engineer isn't that the point of moving towards having a layer of RSEng at an institution? It's too much.
+11:50:33 From Sandra Gesing to Everyone:
+	@Mike: yes - I really like the “better” in the name
+11:50:39 From Todd Gamblin to Everyone:
+	Also thanks for all the awesome responses to my earlier question 🙂
+11:51:30 From Miranda Mundt (SNL) to Everyone:
+	@Vanessa, absolutely. The whole purpose of bringing in RSEs is to allow better scoping of expertise
+11:51:30 From Vanessa to Everyone:
+	Medium and small computers are pretty useful too. :)
+11:51:57 From Vanessa to Everyone:
+	There is always this focus on "the biggest computers!" and it distracts from other areas. Yes, big computers are good but not the most important thing.
+11:52:13 From David Rogers to Everyone:
+	I was actually wondering whether we would bring up the specter of Feynman's thoughts on psychologists.
+11:52:27 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	If we went back to the medieval terminology of saying “natural science” to mean what we now mean by “science”, a lot of the confusion would go away… :-)
+11:52:35 From Jordan Perr-Sauer to Everyone:
+	@Vanessa - Agree! RSEng is still such an new specialization. Each institution represented here will be at different stages of implementing the concept.
+11:53:28 From Reed Milewicz (SNL) to Everyone:
+	@Charles: Perfect! Conflict resolved. No science is science because everything has science in its name. :-)
+11:53:36 From Vanessa to Everyone:
+	At least at national labs I'm not sure we can have RSEng because it's (historically) impossible to change your title. E.g., I'm a "Computer Scientist" which is a title I absolutely don't relate to.
+11:53:59 From Jeff Shrager to Everyone:
+	Anshu Dubey made the relevant distinction (to my mind) between exploratory SE and non-exploratory (which, of course, started off exploratory at some point). Once you're out of exploratory, we should be using the techniques of Apple and Google. In exploratory mode, things are very very  different.
+11:54:22 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	Do we ever completely get out of exploratory mode?
+11:54:24 From Fernanda, NextSilicon (she/her) to Everyone:
+	10 years ago I was up-to-date on the latest and greatest in server-side web dev, I blinked and now I’m entirely lost. I just wanted to build a dashboard and got lost in all of the frameworks
+11:54:25 From Jeff Shrager to Everyone:
+	Yes
+11:54:40 From Fernanda, NextSilicon (she/her) to Everyone:
+	Industry moves super fast
+11:55:10 From Vadim Dyadechko to Everyone:
+	@Vanessa: I see the purpose of RSE not in taking the SE burden off the shoulders of domain scientists but patiently exposing the subject matter experts to good practices and helping them adopt them
+11:55:14 From Jeff Shrager to Everyone:
+	On a per $ basis industry doesn't move that fast.
+11:56:28 From Mike Heroux to Everyone:
+	I look forward to Ian Cosden’s talk tomorrow.  I think he will agree with @Vadim’s comment on how RSEs can help domain scientists learn
+11:56:41 From Reed Milewicz (SNL) to Everyone:
+	As an aside, I would argue that there is a "science" to the science of *systems*, no whether that's environmental science, computer science, or political science. Just because they're very dynamic systems that don't easily boil down to singular physical laws or formal proofs doesn't mean we can't study them rigorously. Of course, I’m injecting my own biases into the discussion…
+11:57:01 From Fernanda, NextSilicon (she/her) to Everyone:
+	I’m not sure if that makes a difference Jeff. We are tiny and there are big and creating a lot of things to keep up with
+11:57:10 From Ignacio Laguna (LLNL) to Everyone:
+	Industry has developed several best practices that work, but industry don’t necessarily deal with the same environment that HPC programmers use. They don’t always use the same parallel programming models, they don’t have the same “big” systems and/or workflows. However, there are definitely opportunities to learn from industry in many areas, e.g., when it comes to developing robust and correct software.
+11:57:13 From Todd Gamblin to Everyone:
+	Agree with @Fernanda
+11:57:46 From Todd Gamblin to Everyone:
+	@Ignacio: I think that is converging rapidly as a bigger chunk of industry starts caring about doing computational work.
+11:57:59 From Todd Gamblin to Everyone:
+	Also as people want more cloud stuff on their supercomputers.
+11:58:07 From Vanessa to Everyone:
+	What industry seems to do well is making choices about a controlled development / build environment and then providing that reliably to build/develop on. I don't think we can make that decision - we have to support every compiler / architecture etc.
+11:58:27 From Fernanda, NextSilicon (she/her) to Everyone:
+	11 Vanessa
+11:58:44 From Miranda Mundt (SNL) to Everyone:
+	Adding to that, @V, we also have next generation systems
+11:59:02 From Miranda Mundt (SNL) to Everyone:
+	It’s hard to follow good practices on an architecture that has never been used before
+11:59:21 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	+1 @miranda
+11:59:26 From Reed Milewicz (SNL) to Everyone:
+	+1
+11:59:30 From Vanessa to Everyone:
+	Maybe we have "this generation systems" with developer environments that are more solid?
+11:59:34 From James Willenbring to Everyone:
+	I think this workshop is recognizing some of the challenges of working on a scientific software ecosystem as a whole, and prior to ECP we didn’t appreciate the challenges of doing that as specifically as we do now.
+11:59:51 From Vadim Dyadechko to Everyone:
+	@Miranda: it shouldn't be the excuse though
+12:00:00 From Ignacio Laguna (LLNL) to Everyone:
+	@Todd True. Things are converging rapidly. Perhaps after both groups converge more we will see HPC programmers adopting well-known practices from industry.
+12:00:22 From Mike Heroux to Everyone:
+	@Miranda, it is hard to follow a specific best practice, but I think there are better or worse “meta” practices with dealing with new architectures
+12:00:35 From Fernanda, NextSilicon (she/her) to Everyone:
+	Tbh the only way HPC adopts any industry practice is when industry people come over: K8s via Admins, Github via FOSS, platforms via vendors building for industry
+12:00:58 From Anshu Dubey to Everyone:
+	A few years ago I asked the question in ICSE of people from google, Cisco and BMW about how many of your software practices are used in your research departments. The answer was very few if at all.
+12:01:09 From Miranda Mundt (SNL) to Everyone:
+	Absolutely - I would 100% agree. There are architecture-agnostic better practices that should be applied everywhere
+12:01:13 From Todd Gamblin to Everyone:
+	I think we should define the software stack at the right layer so that we can separate the concerns.  Industry downscopes most problems, and doesn’t have to explore new architectures as fast.  We have to, but we often do the quick and dirty thing and expose really low-level details to users.
+12:01:18 From David Rogers to Everyone:
+	Note: these performance numbers are a bit speculative
+12:01:25 From Miranda Mundt (SNL) to Everyone:
+	And the lessons learned from existing architectures should help lead us all in a good direction
+12:01:28 From Aditya Kashi to Everyone:
+	I guess challenge 3 is a subset of challenge 2.
+12:01:31 From Mark (he/him) Miller (LLNL) to Everyone:
+	We don't know that Kokkos team can't fix that performance issue for EXAALT (as well as everyone else using Kokkos)
+12:01:41 From Anshu Dubey to Everyone:
+	This is to say that even in the industry, they haven’t solved the problem of how to software engineering right when you don’t have a defined goals for your software.
+12:01:41 From Vanessa to Everyone:
+	I don't want to be in a bubble!
+12:01:53 From Fernanda, NextSilicon (she/her) to Everyone:
+	But bubbles feel safe 😛
+12:01:56 From Vanessa to Everyone:
+	yes!
+12:02:06 From Vanessa to Everyone:
+	*takes large sharp object to break out of bubble*
+12:02:25 From Miranda Mundt (SNL) to Everyone:
+	Global ecosystem!
+12:02:26 From Simon Hettrick to Everyone:
+	Absolutely agree about this “most computational science” point. The vast majority of software is being used by researchers on their laptops and desktops.
+12:02:47 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	@v ouch, careful where you point that thing!  Lots of us are in the bubble with you :-)
+12:02:49 From Pete Peterson (ORNL) to Everyone:
+	Remember that yesterday's HPC is today's laptop
+12:02:57 From Daniel S Katz to Everyone:
+	silos are like bubbles, with pros and cons - some call silos "cylinders of excellence"
+12:02:59 From Vanessa to Everyone:
+	oops sorry, will be more careful with my sharp objects
+12:03:01 From Jordan Perr-Sauer to Everyone:
+	This workshop can help recognize the role of smaller research software projects - the “small jupyter notebooks” mentioned in the previous talk - their impact on modern science, and the ways our research institutions can support the development of these codes and transition them from running on a laptop, to running in the cloud, to running on HPC systems.
+12:03:06 From Rick Arthur (GE) to Everyone:
+	There are inconveniently tedious tasks and confounding realities outside the bubble.
+12:03:19 From Deb Agarwal (Berkeley Lab) to Everyone:
+	@Simon agree and the software developed on the laptop/desktop is what they bring to the larger computers as their starting point.
+12:03:32 From Mark (he/him) Miller (LLNL) to Everyone:
+	Complexity is the enemy!
+12:04:02 From Vanessa to Everyone:
+	I like the world outside of the bubble - it's open source software communities, GitHub, and standard academic scientists that run on "much less cool HPC systems" without all the bells and whistles and also use cloud services when appropriate. It's the "make it work!" as Tim Gunn would say world.
+12:04:06 From Jeff Shrager to Everyone:
+	You can make it as simple as possible, but not simpler.
+12:04:09 From Rick Arthur (GE) to Everyone:
+	A fantastic result of AI/ML research would be to tame the complexities we find tedious / uninteresting.
+12:04:11 From Observer: Claude D. Hall Jr. to Everyone:
+	But I love complexity so much, because it a challenge I want to solve
+12:04:32 From Vanessa to Everyone:
+	I think we create a lot of complexity for ourselves.
+12:04:34 From Observer: Claude D. Hall Jr. to Everyone:
+	its**
+12:04:35 From Fernanda, NextSilicon (she/her) to Everyone:
+	Tim Gunn quote is the litmus for how HPC is becoming modern
+12:04:47 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	There is intrinsic complexity and accidental complexity - we want to avoid the accidental complexity, but inherent complexity is part of the deal for doing science
+12:04:50 From Jeff Shrager to Everyone:
+	What if the ML creates inscrutable code?
+12:05:02 From Jeff Shrager to Everyone:
+	We can't yet prove code correct.
+12:05:22 From Anshu Dubey to Everyone:
+	C++ templates already do that. You don’t have to wait for ML created code.
+12:05:24 From Rick Arthur (GE) to Everyone:
+	We create ML to track all the intellectual debt and then throw it over the wall to NSF to fund programs to sort?
+12:05:39 From Ignacio Laguna (LLNL) to Everyone:
+	I believe that ML could reduce a significant amount of the complexity that we have today.
+12:06:23 From Mark (he/him) Miller (LLNL) to Everyone:
+	Key word there is "theorist". Maybe we need more software theorists.
+12:06:35 From smiths to Everyone:
+	https://physicstoday.scitation.org/do/10.1063/PT.6.1.20180822a/full/
+12:06:36 From Anshu Dubey to Everyone:
+	Nope. The world is complex, it does not lend itself to neat bins therefore software that tries to model is ends up becoming complex too.
+12:06:39 From David Bernholdt (he/him) to Everyone:
+	These weren't *software* theorists
+12:06:49 From David Bernholdt (he/him) to Everyone:
+	There are such people, though.
+12:07:07 From Prasanna Balaprakash to Everyone:
+	ML will (unfortunately) opens up a new set of complexity from SE perspective
+12:07:09 From Vadim Dyadechko to Everyone:
+	@Ignacio: On ML hopes: "every complex problem has a simple but incorrect solution" ;)
+12:07:48 From Ignacio Laguna (LLNL) to Everyone:
+	@Vadim LOL
+12:08:08 From Jordan Perr-Sauer to Everyone:
+	Question: What are the typical causes of unnecessary complexity in research software?
+12:08:12 From Rick Arthur (GE) to Everyone:
+	(Snark about ML aside...) The world is VUCA - volatile, uncertain, complex and ambiguous. Human limitations on tracking the cross-product of these on already complex implementations is a fair call to have some form of machine assistance.
+12:08:21 From Jeff Shrager to Everyone:
+	Correctness is a matter of degree in science. All models are incorrect.
+12:08:44 From Reed Milewicz (SNL) to Everyone:
+	@David B. Software theorist? Grad school prepared me for this! Rice’s theorem tells us that all non-trivial properties of programs are undecidable. That’s not very comforting though.
+12:09:19 From Ignacio Laguna (LLNL) to Everyone:
+	All models may be incorrect. But there are ways to prove that a software implementation is correct.
+12:09:20 From Jeff Shrager to Everyone:
+	@RM: Isn't that Turning's?
+12:09:27 From Kirk Landin (Sandia) to Everyone:
+	Undecidable in the general case, but certainly tractable in particular cases of interest
+12:09:28 From Jeff Shrager to Everyone:
+	Oops. Turings!
+12:09:29 From Rick Arthur (GE) to Everyone:
+	Automation for productivity/consistency, machine-assisted mindfulness for longitudinal soundness and completeness.
+12:09:35 From Jeff Shrager to Everyone:
+	Ugh. Turing's
+12:09:49 From Fernanda, NextSilicon (she/her) to Everyone:
+	What sharp object could burst our bubble? Create an equivalent facility that funds community code modernization. Make ECP it’s own center… ORNL, ANL, LBL… ECP -“L” ?
+12:10:41 From Rick Arthur (GE) to Everyone:
+	Formal support by contract / indemnity guarantees are pretty sharp.
+12:10:46 From Fernanda, NextSilicon (she/her) to Everyone:
+	I realize I’m pandering a bit to the organizers 😛
+12:10:47 From Reed Milewicz (SNL) to Everyone:
+	@Jeff It’s ultimately based on the halting problem, yeah! There’s a lot of interesting consequences downstream of Turing that developed between the 1950s and 1970s.
+12:10:49 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	@fernanda:  … a Software Sustainability Institute?
+12:10:54 From Reed Milewicz (SNL) to Everyone:
+	In terms of theoretical developments.
+12:11:34 From Jeff Shrager to Everyone:
+	Turing was the first software scientist!
+12:11:39 From Fernanda, NextSilicon (she/her) to Everyone:
+	@Charles… yup
+12:11:51 From Jeffrey Terry to Everyone:
+	What training do you offer domain scientists on GPU programming?
+12:11:55 From Carlo Graziani (ANL) to Everyone:
+	Godel?
+12:12:02 From Reed Milewicz (SNL) to Everyone:
+	@Kirk L, Oh, absolutely. I’m just poking fun.
+12:12:07 From Jeff Shrager to Everyone:
+	I think G was after T.... No?
+12:12:09 From Daniel S Katz to Everyone:
+	As a reminder, we would like NSF to offer an opportunity for funding some like https://urssi.us (with some potential plans in https://plan.urssi.us)
+12:12:10 From Vanessa to Everyone:
+	I do think we aren't great at working together but I don't know how to fix that. I think all the things that have been established historically tend to have outputs like papers / best practices, but you can't really consume that. Like okay, best practices paper, but it's still really hard to set up anything on my local HPC. How does that help me?
+12:13:10 From Vanessa to Everyone:
+	I want someone to rethink how we do everything. Start fresh with something that is more similar to what is being done outside our bubble. Build on that - I want APIs, ability to develop modules myself, and controlled developer environments.
+12:13:11 From Jeff Shrager to Everyone:
+	I'm wrong. T died way earlier, but was born way after G.
+12:13:24 From Fernanda, NextSilicon (she/her) to Everyone:
+	Who here remembers laughing at industry “reinventing MPI” in the 2000s?
+12:13:26 From Mark (he/him) Miller (LLNL) to Everyone:
+	Thats ironic because there are many algorithmic parallels between writing map-reduce kernels and writing GPU kernels
+12:13:38 From James Howison (he/his) to Everyone:
+	Rather than making it easier to code, can we create and sustain a community of practice for the (layers) of domain scientists.  Address not with new code but a police and practices that bring people solving the problems together?
+12:13:44 From Vanessa to Everyone:
+	yes!
+12:13:55 From Vanessa to Everyone:
+	There is a framework for empowering developers
+12:13:59 From Fernanda, NextSilicon (she/her) to Everyone:
+	@Vanessa wants to nuke it all from space
+12:14:11 From Daniel S Katz to Everyone:
+	both these examples of success have relied on having much larger communities of developers than in HPC (exascale)
+12:14:13 From Vanessa to Everyone:
+	that's right lol
+12:14:15 From Reed Milewicz (SNL) to Everyone:
+	@Fernanda It’s the only way to be sure.
+12:14:20 From Fernanda, NextSilicon (she/her) to Everyone:
+	LOL
+12:14:28 From Vanessa to Everyone:
+	*takes out the Dr. Evil rocketship*
+12:14:37 From Jeff Shrager to Everyone:
+	@Hal: Someone should make sure the chat is preserved. It'll be lost if you close the meeting!
+12:14:42 From Bin Dong to Everyone:
+	Some efforts at Lab to build MapReudce thing for scien
+12:14:43 From Vanessa to Everyone:
+	"It's fricken freezing in here Mr. Bigglesworth."
+12:14:56 From Daniel S Katz to Everyone:
+	there's potentially a critical mass of developers needed to create new sustainable abstractions and models, and we (exascale) may not have it
+12:15:05 From Fernanda, NextSilicon (she/her) to Everyone:
+	<volunteers to join the Dr. Evil ship>
+12:15:09 From Hal Finkel to Everyone:
+	Yes, the chat is being saved.
+12:15:15 From Fernanda, NextSilicon (she/her) to Everyone:
+	FFTW needs to die a horrible death
+12:15:16 From Vanessa to Everyone:
+	"are the the sharks with laserbeams on the moon ready?"
+12:15:19 From Jordan Perr-Sauer to Everyone:
+	This idea of the “average” programmer. Are we saying that scientists should be thought of as “average” programmers? Is the level of quality of the “average” iphone app really what we’re striving for?
+12:15:23 From Derek Gaston to Everyone:
+	@Daniel - I agree… and a LOT more money (especially for iOS) both for development and up for grabs if you develop a successful application.
+12:15:33 From Miranda Mundt (SNL) to Everyone:
+	I’d need some sharks with lasers attached to their heads in order to be swayed to join, @Vanessa
+12:15:36 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	@Jordan good point
+12:15:51 From Fernanda, NextSilicon (she/her) to Everyone:
+	Has anyone looked at FFTW source? And the OCaml generator. OMG
+12:16:02 From Bin Dong to Everyone:
+	Some efforts at Lab to build MapReudce-thing for science . eg. FasTensor https://sdm.lbl.gov/fastensor/
+12:16:36 From Vanessa to Everyone:
+	To continue the app metaphor, if we take a look at our own phones, we still are likely to install a small set of apps. If you have an iphone, I bet you it looks somewhat like mine. If the iphone is an HPC system, think of how different they are. This is part of the complexity that we've chosen (and we can choose differently).
+12:16:38 From Daniel S Katz to Everyone:
+	note that two of these three tool success stories also are much more widely used than just in exascale (and the smaller one is the one that is less clear to have become a widely-used success)
+12:16:38 From Jeff Shrager to Everyone:
+	How large are those teams? Apple's and Google's teams for their main products are multiple hundreds of engineers!
+12:16:44 From Boyana Norris to Everyone:
+	The “average” scientific software developer is a scientist with a Ph.D. (and likely twice the age, and hence, experience, of the average industry developer who may or may not have a BS in CS).
+12:17:19 From Jason Wiese to Everyone:
+	@Jeff, +1
+12:17:23 From Rick Arthur (GE) to Everyone:
+	(Would have to hunt down the reference...) General Dynamics implemented a MapReduce version that instead of massive redundancy assumed a reliable (HPC) architecture and dramatically increased the performance.
+12:17:39 From Fernanda, NextSilicon (she/her) to Everyone:
+	Industry doesn’t have the responsibility to have their sw survive decades
+12:17:51 From William Godoy (ORNL) to Everyone:
+	When I worked in industry we used several of the DOE quality products (e.g. many in e4s) as they have been “vetted” for several corner cases over the years. Now at DOE, I recognize this is a very complex and, many times, painful task (e.g. fix that bug that only shows at scale with an esoteric dependency combo…and submit to the journal of irreproducible results).
+12:17:59 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	+1 @fernanda
+12:18:04 From David Rogers to Everyone:
+	I made one of those HPC map-reduces too (mpi_list)
+12:18:07 From Jordan Perr-Sauer to Everyone:
+	+1 @Jeff
+12:18:26 From Rick Arthur (GE) to Everyone:
+	Our industries have products with 30+ year lifespans.
+12:19:00 From Jeff Shrager to Everyone:
+	Maybe our software is too old.
+12:19:00 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	“Industry” covers a lot of ground.  GE, Boeing, … != Apple, Google, …
+12:19:15 From Reed Milewicz (SNL) to Everyone:
+	Nurturing, to mean, means commitment to a unremitting discipline of cleanliness (in Fred Brooks’ words) and to evidence-based practice
+12:19:17 From Daniel S Katz to Everyone:
+	another idea on this is that these successes have generally been quite small and simple in some sense - like Unix tools - each has a function and only does that functions
+12:19:20 From Fernanda, NextSilicon (she/her) to Everyone:
+	@Rick I mean Google… #killedbygoogle
+12:19:23 From Reed Milewicz (SNL) to Everyone:
+	To me*
+12:19:39 From Rick Arthur (GE) to Everyone:
+	Yes, I'm all for segregating "Advertising Industry" from "real Industry" :-)
+12:19:48 From Fernanda, NextSilicon (she/her) to Everyone:
+	@Rick +1
+12:19:49 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	@rick :-)
+12:20:07 From Jeff Shrager to Everyone:
+	(This is like one of those youtube feeds during a political debate! :-) )
+12:20:35 From Vanessa to Everyone:
+	Re: discussion on what industry does - for monorepo projects, I think the developers of the code are responsible for updating their own code. E.g., the main build teams send out alerts/notifications about something change and then say I develop software X, it's up to me to make sure it's updated. I would guess the actual core team is no more than 100. We could have that number too we just don't choose to.
+12:21:32 From Mike Heroux to Everyone:
+	@MarkMiller: When the software was that simple, it’s easy to believe the NASA story, but modern software is much more sophisticated
+12:21:38 From Rick Arthur (GE) to Everyone:
+	There may be opportunities in evolving/formalizing Dev*Ops (DevResOps / DevSecOps / etc.)
+12:21:44 From Boyana Norris to Everyone:
+	@Rick — I’ve been on a number of program committees over the last several years where an impressive number papers about HPC implementations of MR and variations have been consistently rejected.
+12:21:46 From Vanessa to Everyone:
+	RseOps!
+12:21:59 From Vanessa to Everyone:
+	https://rse-ops.github.io/
+12:22:02 From Jordan Perr-Sauer to Everyone:
+	@Rick @Vanessa +1 Yes!
+12:22:22 From Fernanda, NextSilicon (she/her) to Everyone:
+	nice!
+12:22:27 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	@boyana curious:  why are they rejected?
+12:22:42 From Alex Friedman to Everyone:
+	It seems to me that many of today’s challenges for users involve making multiple software packages interoperate.
+12:22:53 From Rick Arthur (GE) to Everyone:
+	Ooh +1 on RSE-Ops
+12:22:59 From Vanessa to Everyone:
+	I think the point of the app metaphor is that there is a structured framework for doing the development.
+12:23:01 From Boyana Norris to Everyone:
+	Re HCP MR rejections — usually lack of novelty
+12:23:21 From Fernanda, NextSilicon (she/her) to Everyone:
+	The difference between HPC and Cell Phone apps is one you can become rich, the other you you just have to publish
+12:24:27 From Jeff Shrager to Everyone:
+	Nb. Industry rarely uses Open Source.  In most cases they code it all down to the metal, and totally control everything down to the metal. They don't have the problem of others "contributing to" or even looking at their code.
+12:24:32 From Boyana Norris to Everyone:
+	Not to start another religious argument — but also functional programming models in general are much easier to parallelize and optimize automatically (and MR takes advantage of that in a very limited way).
+12:24:39 From Rick Arthur (GE) to Everyone:
+	Which "MR" are we talking about?
+12:24:45 From Boyana Norris to Everyone:
+	Map-reduce
+12:25:05 From Reed Milewicz (SNL) to Everyone:
+	@Boyana ooh, functional programming evangelism, I’m here for it!
+12:25:27 From Vanessa to Everyone:
+	I don't think we can be all things for everyone - if we had some development framework that helped 80% of cases (but not 20%) that would still be progress if it meant people better working together, standards, etc.
+12:25:38 From Derek Gaston to Everyone:
+	Re: monorepos…. Within the MOOSE framework ( https://mooseframework.org ) ecosystem we started with a monorepo… but moved to a system that works like a monorepo (all downstream modules are tested against all upstream changes)… but using separate repos tied together with CI.  This system extends all the way out to our users in industry (testing their input files against any changes made in the ecosystem of 30 applications or in the framework).  In this system it is the person _who is making the change_ that is responsible for working with all downstream users to patch their work _before_ the change can go in.  We’ve been working this way for 14 years and have hundreds of scientists/engineers working in this ecosystem daily.  It is possible to do - but requires an extensive CI setup and specialized Git workflows.
+12:25:39 From Rick Arthur (GE) to Everyone:
+	(Thanks - hard to shift brain from base lexicon (GE Healthcare / Magnetic Resonance))
+12:25:43 From Fernanda, NextSilicon (she/her) to Everyone:
+	Oh no, we’ve awaken the Haskell Fans
+12:25:51 From Reed Milewicz (SNL) to Everyone:
+	Monads for everyone!
+12:26:05 From Cyrus Harrison (LLNL) to Everyone:
+	arduino (and processing) are other interesting examples. Over the course of a few years — they removed barriers to do embedded development and art, opening things up to a much broader set of folks to leverage. And from them many many other eco systems have emerged.
+12:26:07 From Vanessa to Everyone:
+	ooh Derek tell me more about moose!
+12:26:20 From Kirk Landin (Sandia) to Everyone:
+	I've been on the Functional Programming wagon for a long time, it's fantastic! Functional abstractions have tremendous potential for simplifying many (but not all) software structure
+12:26:45 From Vanessa to Everyone:
+	it looks domain specific? I was looking at VFS for git
+12:26:49 From Fernanda, NextSilicon (she/her) to Everyone:
+	Moose looks like what the future of HPC should look like
+12:27:07 From Elaine to Everyone:
+	Great talk @Steve. Could you comment on the role of technology transfer from the national labs (for example) to industry in the vision for more usable software by domain scientists as well as others?
+12:27:21 From Ignacio Laguna (LLNL) to Everyone:
+	Adding to @Boyana. Also functional programming is easier to test, reuse, and reason about.
+12:27:46 From Jeffrey Terry to Everyone:
+	Vadim is correct. The interplay between Software
+12:27:59 From Fernanda, NextSilicon (she/her) to Everyone:
+	<c++ entered the chat> we are building functional programming into c++35
+12:28:00 From Daniel S Katz to Everyone:
+	many of the MR papers I've reviewed are basically: here's a change I've made to MR that under some particular conditions improves performance by a few percent on a particular type of workload on a particular system.  The work is fine, but it's not especially general
+12:28:06 From Ganesh Gopalakrishnan to Everyone:
+	@Boyana and @Ignacio, is Julia a good compromise? (Func style with opt allowed when necessary)?
+12:28:07 From Reed Milewicz (SNL) to Everyone:
+	I would say we're not trying to merge the concepts of software engineering and computational science. We’re trying to figure out how to get cross-disciplinary teams to function well. It’s not possible to make everyone into universal experts with universal skillsets.
+12:28:15 From Kirk Landin (Sandia) to Everyone:
+	Functional programming allows for much easier composition of components as well
+12:28:28 From Vanessa to Everyone:
+	The greatest gift (imho) to software developers in academia at least has been GitHub. We are empowered to automate building containers, make documentation, test - there are workflows we can share, APIs we can do cool stuff - that's the kind of thing we need for HPC.
+12:28:51 From Ignacio Laguna (LLNL) to Everyone:
+	@Ganseh. I think Julia is a good compromise.
+12:28:53 From Jeffrey Terry to Everyone:
+	Vadim is correct. The interplay between Software Engineer and Scientific Subject matter expert is incredibly important. It strongly recommend having courses to train these groups to work together. There can be a different mindset.
+12:28:58 From Jeff Shrager to Everyone:
+	Julia is a terrific compromise. It's not as good as Lisp, but it can call Python packages.
+12:29:18 From Fernanda, NextSilicon (she/her) to Everyone:
+	There’s a generation of scientific developers who learned procedural programming. (Me) and it’s hard to move to anything but that
+12:29:35 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	@fernanda +1
+12:29:38 From Mark (he/him) Miller (LLNL) to Everyone:
+	@Fernanda...me too. I still can't code OO python ;)
+12:29:40 From Fernanda, NextSilicon (she/her) to Everyone:
+	Thus why Python and Julia gain fans in HPC
+12:29:51 From Vanessa to Everyone:
+	Or it could be a container technology, or a programming language. It's software that powers research.
+12:30:00 From Jeff Shrager to Everyone:
+	I wish we could skip the Python part.
+12:30:12 From Derek Gaston to Everyone:
+	@Vanessa - agreed about GitHub.  To learn more about what we do with CI you can see my position paper here, but also one of the software engineering papers we’ve published.  The most recent one: Slaughter, Andrew E., et al. "Continuous integration for concurrent MOOSE framework and application development on GitHub." Journal of Open Research Software 3.INL/JOU-15-34179 (2015).
+12:30:12 From Mark (he/him) Miller (LLNL) to Everyone:
+	But, I can copy and modify OO python ;)
+12:30:16 From Boyana Norris to Everyone:
+	@Ganesh re Julia; not sure, have not looked deeply into its compiler. Have done so in Haskell (without liking Haskell necessarily) and have some evidence that it can outperform C at a low level (single CPU or GPU performance). I don’t know how much work has been done about the performance implications of composing non-functional and functional code.
+12:30:16 From Todd Gamblin to Everyone:
+	We have GitHub for HPC — it’s GitHub, and for internal stuff it’s maybe GitLab (it’s too bad it can’t be the same in and outside the firewall).  The issue is that the HPC machines are in restricted environments and there’s no sandboxing — so you can’t run untrusted CI jobs on them.  There need to be widely available HPC resources for CI for us to keep software working on HPC platforms.
+12:30:30 From Todd Gamblin to Everyone:
+	And I mean public CI here ^^
+12:30:34 From Daniel S Katz to Everyone:
+	+100 @todd
+12:31:06 From Jeff Shrager to Everyone:
+	Julia is very well compiled!
+12:31:08 From Daniel S Katz to Everyone:
+	the lack of platforms for CI for HPC (which is system-specific) makes testing really hard and time consuming
+12:31:09 From Fan Du (she/her) \\ U Texas to Everyone:
+	It is possible that someday Excel will become your specialized scientific software dependency...
+12:31:25 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	@todd’s CI issue is one of the examples of labs vs. industry having different requirements
+12:31:41 From Daniel S Katz to Everyone:
+	industry has far fewer unique platforms than we do 🙁
+12:31:55 From Todd Gamblin to Everyone:
+	Is it?  The labs have the requirement to keep software working, and they rely on 100’s of open source products that *need to work with proprietary codes*.
+12:32:01 From Jeff Shrager to Everyone:
+	The only problem is that they made the mistake everyone makes when they try to make a non-Lisp-Lisp, which is that they broke the macro system.
+12:32:05 From Vanessa to Everyone:
+	another example is being able to spin up a developer environment on a whim - you select what you need, the part of code you are working on, and you have a browser editor (e.g., Cider) ready to go.
+12:32:10 From Todd Gamblin to Everyone:
+	So they have the same problem, they just prioritize the proprietary part.
+12:32:15 From Mark (he/him) Miller (LLNL) to Everyone:
+	@Fan Du...when developing some simple 1D heat equation examples...I found and used on from Excel ;)
+12:32:20 From Derek Gaston to Everyone:
+	Agreed about CI for HPC.  For MOOSE we have our own set of 2,500 processors dedicated to running the tests for the ecosystem.  It runs over 20M tests every week in order to do CI over the framework + 30 applications.  In that system we are able to merge ~80 PRs every week in the ecosystem.
+12:32:33 From Pete Peterson (ORNL) to Everyone:
+	@daniel be careful of heterogeneity bias
+12:32:57 From Boyana Norris to Everyone:
+	One can have a career in industry without knowing what “compile” means… With better pay than most academics, too.
+12:33:00 From Fernanda, NextSilicon (she/her) to Everyone:
+	@Derek who is using Moose?
+12:33:13 From Daniel S Katz to Everyone:
+	@pete - please define "heterogeneity bias"
+12:33:20 From Fan Du (she/her) \\ U Texas to Everyone:
+	@Mark Miller Thanks for your insights. There are also already Python components out there for handling Excel routines so I won't be surprised that it will bring Excel somewhere...
+12:33:33 From Kirk Landin (Sandia) to Everyone:
+	@Boyana, an interesting language to look at is OCaml. It feels very much like Hasekll, but it has a compiler that is very transparent, like the C compiler. Might spark some thoughts about interop with non-functional languages
+12:33:38 From Kirk Landin (Sandia) to Everyone:
+	*Haskell
+12:33:42 From Neil Chue Hong / SSI (he/his) to Everyone:
+	Industry does have a lot of unique platforms, too. I’d be interested to see if they have the same issues with CI.
+12:33:55 From Reed Milewicz (SNL) to Everyone:
+	Great talk!
+12:33:55 From Boyana Norris to Everyone:
+	@Kirk, yes I teach in OCaml (in PL theory grad course).
+12:34:03 From Derek Gaston to Everyone:
+	@Fernanda - lots of people (well over 500 publications)… but the primary user is the DOE Nuclear Energy Advanced Modeling and Simulation (NEAMS) program that develops a set of ~15 MOOSE-based tools for multi scale, multphysics simulation of all parts of nuclear reactors.
+12:34:04 From Miranda Mundt (SNL) to Everyone:
+	Well done, Mike and Steve. Great talks!
+12:34:05 From Hannah Cohoon to Everyone:
+	Thanks, Steve!
+12:34:18 From Kirk Landin (Sandia) to Everyone:
+	great, so you already know all about that
+12:34:21 From Fan Du (she/her) \\ U Texas to Everyone:
+	Thanks for the talk and great conversations!
+12:34:24 From Boyana Norris to Everyone:
+	Thank you, Steve!
+12:34:43 From Daniel S Katz to Everyone:
+	As a complete outsider, it seems like there can't be as many platforms that iPhone apps run as there are HPC systems (almost each one of which is unique)
+12:35:30 From Todd Gamblin to Everyone:
+	@Dan: it’s mostly the center software environment that is unique.  Though yes there are lots of hardware platforms too.  People have difficulty porting from Sierra to Summit — and they’re the same HW platform.
+12:35:46 From Pete Peterson (ORNL) to Everyone:
+	short version: seeing differences within your own familiarity group but not within those outside your familiarity group. A charged example is "all cats are the same." This is demonstrably false to people more familiar with cats.
+12:35:49 From Neil Chue Hong / SSI (he/his) to Everyone:
+	@Daniel - iPhones/Macs are a bit different because of Apple’s strategy, but have you seen the heterogeneity of the Android and Windows platforms?
+12:35:52 From Shreyas Cholia (LBL) to Everyone:
+	There are very different approaches when we talk about  between core scientific codes and  infrastructure tools, and I feel like the conversation could go in very different directions depending on what we are talking about.
+12:36:05 From Daniel S Katz to Everyone:
+	yes, I agree it's mostly the software environment (AAA, compiler locations, module names, ...)
+12:36:34 From Daniel S Katz to Everyone:
+	@pete - thanks
+12:37:21 From Daniel S Katz to Everyone:
+	@neil - good point
+12:38:13 From Mike Heroux to Everyone:
+	@Leslie: DOE’s Office of Advanced Scientific Computing Research (ASCR, the sponsor of this workshop) is a a bit like an aircraft carrier in that it is hard to redirect.  Historically, ASCR has focused on HPC.  We are considering a broader scope in the LSSw conversations (https://lssw.io), but the key is that we are focused on scientific computing on the “frontier” of the computing environments themselves. We have the opportunity to revise the focus, but I think the frontier element will likely always be a part of picture.  One opportunity we have with the research software science theme is to broaden what we mean by frontier
+12:38:39 From Jana Thayer to Everyone:
+	@shreyas - that is really good point
+12:44:14 From Ganesh Gopalakrishnan to Everyone:
+	+1 Jeff!
+12:44:30 From Alex Friedman to Everyone:
+	+1 Jeff
+12:44:32 From Ganesh Gopalakrishnan to Everyone:
+	Code-fragility of GPUs is not widely discussed.
+12:44:49 From Ganesh Gopalakrishnan to Everyone:
+	Why isn’t there one data race-checker for GPUs (that covers global memory transfers)?
+12:44:54 From Rick Arthur (GE) to Everyone:
+	How about instead of a batch tool workflow for compiling/linking (and not being "interpreted" and the lack of a DSL) there is a workflow based on an interactive conversation between the "compiler agent" and the implementer. E.g., presenting options in context while tracking over-arching architecture interaction implications on performance/robustness/etc.
+12:45:07 From Ignacio Laguna (LLNL) to Everyone:
+	+1 @Ganesh
+12:45:55 From Ganesh Gopalakrishnan to Everyone:
+	Academic race-checkers have come and gone.
+12:46:05 From Ganesh Gopalakrishnan to Everyone:
+	Unable to sustain.
+12:46:12 From Jeff Shrager to Everyone:
+	To what extent does TF and cloud TPUs solve a lot of this?
+12:46:39 From David Rogers to Everyone:
+	@Jeff more processors, more problems
+12:46:51 From Fernanda, NextSilicon (she/her) to Everyone:
+	@Ganesh +1
+12:46:55 From Vanessa to Everyone:
+	Idk I think TPUs are pretty cool :)
+12:47:08 From Jacob Lee McLemore to Everyone:
+	@Rick +1. Interesting idea.
+12:47:27 From Sam Pollard (Sandia) to Everyone:
+	If anything, TPUs make this problem worse since not only may you have different parallelism problems you also may have different floating-point behavior
+12:48:09 From Jeff Shrager to Everyone:
+	Okay, so TF on GPUS.
+12:49:31 From Reed Milewicz (SNL) to Everyone:
+	@Jeff I never have the right version of TF installed, ever. Every single time I download a codebase that uses TF, I always have the wrong version. It’s like an immutable law.
+12:49:34 From Vanessa to Everyone:
+	Go Miranda!
+12:49:38 From Fernanda, NextSilicon (she/her) to Everyone:
+	Currently on the market there are CPU-like things and Tensor machines and then the baby no one talks about FPGA
+12:50:50 From William Godoy (ORNL) to Everyone:
+	+1 Go Miranda!
+12:51:07 From Rick Arthur (GE) to Everyone:
+	And back to longitudinal mindfulness, as the architecture may change, or algorithms are published - the agent can remember the conversation and revisit a decision made in the Q&A with the human (or find another appropriate decision-maker) - e.g., "hey now we can do particle tracking with ray tracer processors - shall I do that on this here kernel instead of brute math?" - understanding > #pragma
+12:51:15 From Miranda Mundt (SNL) to Everyone:
+	Shameless written plug for the USRSE, as always ;)
+12:51:31 From Sam Pollard (Sandia) to Everyone:
+	@Jeff in theory, TF solves a lot of the issues because the library routines can both be better optimized and more rigorously checked for mistakes such as data races, numerical instability, and others. I can’t speak to the practice of using TF.
+12:52:01 From Jordan Perr-Sauer to Everyone:
+	Does anybody know offhand the % of time that leadership class computing facilities spend running optimized scientific software applications vs. running custom research software? In which types of code are these machines spending most of their time?
+12:53:05 From Mark (he/him) Miller (LLNL) to Everyone:
+	@Jordan...I don't think that is easily measureable and in any case I am not aware of data being gathered at that level of granularity.
+12:53:26 From Leslie Carr to Everyone:
+	Oops. Apologies
+12:53:38 From David Bernholdt (he/him) to Everyone:
+	@jordan, how would you define these two classes?
+12:54:19 From Katherine Riley (ANL) (she/her) to Everyone:
+	‘Optimized’ on an LCF resource is a loaded question.  It means many things, and we also spent years (a little before the LCFs) fighting the idea of reporting optimization levels.
+12:54:26 From Fernanda, NextSilicon (she/her) to Everyone:
+	@Jordan that’s near impossible to know because much of the time is compiling, running analysis, etc
+12:55:06 From Jacob Lee McLemore to Everyone:
+	@Rick, it's like your reading my mind. How do you think the agent could gather "new" knowledge like that? Is it just when a user suggests it for the first time or do you think there's a way it could be more proactive?
+12:55:30 From Mark (he/him) Miller (LLNL) to Everyone:
+	FWIW...I am really turned off by the prevalence of the word "research" here. I don't think we need as many HPC/CSE software "researchers" as we do HPC/CSE software "practitioners" with real daily, weekly experience solving nuts-n-bolts problems with developing and using scientific software.
+12:56:51 From Anshu Dubey to Everyone:
+	@Fan here is a paper where we did try to quantify the human cost saving of spending upfront effort in architecture design.
+12:56:53 From Anshu Dubey to Everyone:
+	https://journals.sagepub.com/doi/pdf/10.1177/1094342017747692
+12:57:23 From Vanessa to Everyone:
+	Mark +1
+12:58:18 From Fan Du (she/her) \\ U Texas to Everyone:
+	Great pointer, Thanks for sharing @Anshu.
+12:58:57 From Vanessa to Everyone:
+	+1
+12:59:21 From Mike Heroux to Everyone:
+	@Mark: The reason for using the word research in this context is to bring some portion of scientific software scope under the umbrella of DOE ASCR (Advanced Scientific Computing *Research*).  If we focus only on practice, it is hard to directly justify ASCR sponsorship.  Besides, we have *lots* of venues that focus on practices.  Reserving a few days for research themes is worth it, IMO.
+12:59:28 From Rick Arthur (GE) to Everyone:
+	@Jacob / other side convos - before retiring, I'd like to help shepherd something like O
+12:59:49 From Fernanda, NextSilicon (she/her) to Everyone:
+	**Cohesive value system** YESSSSSS
+12:59:49 From Rick Arthur (GE) to Everyone:
+	I've tried to capture here: https://richardarthur.medium.com/provenance-for-decision-making-bf2c89d76ec2 / https://richardarthur.medium.com/machine-augmented-mindfulness-e844f9c54985
+13:00:15 From Rick Arthur (GE) to Everyone:
+	Conceptually, it goes well beyond the decisions made in software design/implementation
+13:00:34 From Vanessa to Everyone:
+	@Mike but if we scope to "research" this is another example of culture - I feel like an imposter in the room because I don't want to do research, I want to develop software. I'm a software engineer and I want to feel like I am an important part of the culture.
+13:00:44 From Miranda Mundt (SNL) to Everyone:
+	@Fernanda, YES. Communication is really resolved by making sure that everyone sees why a particular practice is being done
+13:00:52 From Miranda Mundt (SNL) to Everyone:
+	Ergo, value!
+13:00:56 From Fernanda, NextSilicon (she/her) to Everyone:
+	!!
+13:01:36 From Vanessa to Everyone:
+	I think you can write code fast and still be careful. So maybe don't write code without care?
+13:01:55 From Fernanda, NextSilicon (she/her) to Everyone:
+	Some of us can’t write code fast at all @V
+13:02:02 From Fernanda, NextSilicon (she/her) to Everyone:
+	Aka me
+13:02:02 From Abhinav Bhatele (U. Maryland) to Everyone:
+	@Vanessa @Mike to provide the counter argument, @Mark comments suggests that researchers are not practitioners. I think many researchers work in the nuts and bolts of production code
+13:03:04 From Vanessa to Everyone:
+	I agree that researchers are often forced to take on developing code - that's the reality of most academic institutions. That doesn't mean that wherever there is software development we label the culture as "research" because that is leaving another community out.
+13:03:16 From Mark (he/him) Miller (LLNL) to Everyone:
+	@Abinhav...pardon me but I don't see a counter argument there...just that some people do both research and practice.
+13:03:21 From Mike Heroux to Everyone:
+	@Vanessa: A primary focus on research does not eliminate the practice component. It’s not a choice of either/or but both/and.  So far, there has been almost no focus on research.
+13:03:23 From Jeffrey Terry to Everyone:
+	Ha, I can write a lot of bad code really fast. The good code not so much.
+13:03:24 From Jordan Perr-Sauer to Everyone:
+	I am pushing back on the idea that “small jupyter notebooks” and other code written by the SMEs are less impactful to leadership class computing facilities than established  scientific software applications.
+13:04:13 From Jacob Lee McLemore to Everyone:
+	@Rick, I'll check that out. Thanks for the links.
+13:04:14 From Mark (he/him) Miller (LLNL) to Everyone:
+	I have written code fast on a number of occasions...and regretted it. Fast is fatal. Slow is safe.
+13:04:22 From Vanessa to Everyone:
+	I don't consider notebooks research software but that's just me. But that doesn't say they can't have impact - I was running a GAN in a colab notebook this weekend and it was lovely.
+13:04:30 From Karthik Ram to Everyone:
+	I agree with Vanessa
+13:04:47 From Vanessa to Everyone:
+	Go Sandra!
+13:04:52 From Simon Hettrick to Everyone:
+	Seconded!
+13:05:18 From Miranda Mundt (SNL) to Everyone:
+	YAY SANDRA!
+13:05:30 From Hannah Cohoon, UT Austin to Everyone:
+	@vanessa, why not consider it research software? is it worth studying separately?
+13:05:39 From William Godoy (ORNL) to Everyone:
+	+1 Go Sandra!
+13:05:44 From Vanessa to Everyone:
+	Miranda you totally beat my level of enthusiasm, haha.
+13:06:15 From Vanessa to Everyone:
+	Software is a full product - it has a structure, design, and
+13:06:23 From Vanessa to Everyone:
+	oops wasn't finished one second.
+13:06:36 From Jordan Perr-Sauer to Everyone:
+	I use notebooks as an example. There is a spectrum of code from notebooks, to scripts, to established libraries. And I am wondering if anyone has measured the % of time that HPC facilities spend in each type of codebase.
+13:07:14 From Jordan Perr-Sauer to Everyone:
+	And, yes - Go @Sandra!
+13:07:20 From Vanessa to Everyone:
+	And people have put thought into the design. A notebook is akin to a script - you run it top to bottom. It *uses* research software and accomplishes research tasks, but it (in and of itself) is not research software.
+13:07:38 From Vanessa to Everyone:
+	The journal of open source software would not accept a notebook as research software, if I remember correctly.
+13:07:46 From Karthik Ram to Everyone:
+	That’s correct
+13:08:10 From Harinarayan Krishnan to Everyone:
+	This has probably been brought up earlier. Domain scientists are prioritizing their science and their software work is a means to an end to enable their science. It is not necessarily that scientists in other fields are not aware of producing good sustainable software. It is sometimes that the priority is vastly different and the incentive of publishing in their space (which they are funded to do) outweighs making code sustainable (which is not an immediate priority or even strategic priority but hurts them in the long run)
+13:08:13 From Pete Peterson (ORNL) to Everyone:
+	I've seen jupyter notebooks that people openly declare *are* sustainable research software that they publish to users
+13:08:52 From Prasanna Balaprakash to Everyone:
+	+1 Pete. Quite common in ML research
+13:09:55 From Vanessa to Everyone:
+	If it's run within a controlled environment there is no reason it's not an okay vehicle to share work. But that doesn't make it research software. It's a really great example of a tool that has empowered people to share, visualize, etc. We know it has a use case and can be considered successful because people do choose to use it.
+13:10:06 From Pete Peterson (ORNL) to Everyone:
+	I've come across it in processing data for netron imaging and small angle scattering
+13:11:03 From Vanessa to Everyone:
+	Also, researchers are scrappy. They look at what is available, and they "make it work" (second time I've said that today!) Even if a notebook isn't the perfect reproducibility tool, people choose it because they don't have a lot of other choices. And it gets the job done - you can write code it in, sare it, and then someone else can run it.
+13:12:48 From Fernanda, NextSilicon (she/her) to Everyone:
+	“and then someone else can run it.” Another diff: Sharing the code and the info contained is not something industry has to do per se. They leverage each other’s work and that’s fundamentally different
+13:12:50 From Hannah Cohoon, UT Austin to Everyone:
+	There’s a difference in development practices that are definitely worth exploring, but I’m not sure those differences categorically exclude notebooks from scientific software
+13:13:00 From Matthew Wolf to Everyone:
+	I think this makes the point of needing a ‘science’ investigation.  Systems, libraries, platforms, applications, and workflows are all part of using software for (domain) science. But we’re obviously drawing lines among them as to what counts as ‘software’.
+13:13:23 From Jordan Perr-Sauer to Everyone:
+	My opinion is that it doesnt matter if a function is defined in a rmarkdown cell, in a jupyter notebook, or in a C++ library.
+13:13:49 From Hannah Cohoon, UT Austin to Everyone:
+	+1 jordan and matthew!
+13:14:52 From Vanessa to Everyone:
+	I think people have had this conversation of what constitutes research software a lot - and my guess would be that consensus is that notebooks are not research software. Could there be some notebook integration that is considered research software? Maybe. Here are the JoSS requirements if you are interested. https://joss.readthedocs.io/en/latest/submitting.html#submission-requirements
+13:15:13 From Pete Peterson (ORNL) to Everyone:
+	I had totally forgotten about ipynb for tutorials, both of a software "environment" and of a set of scientific ideas. Often they are written by self-taught individuals but are very impactful and almost never cited
+13:16:05 From Reed Milewicz (SNL) to Everyone:
+	@Spencer I <3 <3 <3 evidence-based best practices, thank you so much for bringing this up
+13:16:13 From Vanessa to Everyone:
+	The notebook itself I think is research software, but not what it's running. If the thing being run only works in that GUI / interactive notebook it's code running in an environment. It's not a tool that I can easily install somewhere else, or customize for my own needs. It's literally just a script
+13:16:39 From Dan Gunter (he/him) to Everyone:
+	Notebooks don't need a gui to run?
+13:17:12 From Ganesh Gopalakrishnan to Everyone:
+	Notebooks with full animations can easily be run on Colab
+13:17:36 From Vanessa to Everyone:
+	There are ways to run without GUI but it's really painful. It's like "a solution to a problem that just because you can does not mean you should."
+13:18:14 From Jordan Perr-Sauer to Everyone:
+	@Dan jupyter can convert notebook to python script automatically.
+13:18:25 From Vanessa to Everyone:
+	A python script is also note research software.
+13:18:30 From Vanessa to Everyone:
+	not*
+13:18:35 From Jordan Perr-Sauer to Everyone:
+	@Vanessa - I do agree that notebooks would be equivalent in scope to a script
+13:18:36 From Ganesh Gopalakrishnan to Everyone:
+	I routinely teach an UG class (Models of Computation) where all machines are animated directly on Colab off of my Github: https://github.com/ganeshutah/Jove.git
+13:18:44 From Vanessa to Everyone:
+	Notebooks are not research software, they are small scripts. Small scripts are not research software. This is the hill I will die on. Submit a notebook to JoSS and have it accepted as reserach software and I will consider changing my mind.
+13:19:49 From David Bernholdt (he/him) to Everyone:
+	It may not be considered publishable, but for the developer/user it is still software that's important for their research, isn't it?
+13:19:59 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	How complex can a notebook be?  Genuinely curious, I haven’t used notebooks.  I do know of scripts that are complex enough that they could be considered research software.
+13:20:10 From Vanessa to Everyone:
+	It's a *script* that is important for their research that *uses* research software, libraries like numpy, etc.
+13:20:49 From Jacob Lee McLemore to Everyone:
+	At what point does something become scientific software then?
+13:20:52 From Mark (he/him) Miller (LLNL) to Everyone:
+	@Charles...I don't really know per se but I would think as complex as you wanna make it ;) Keeping in mind that complexity is the enemy of sustainability
+13:21:02 From Vanessa to Everyone:
+	I would argue software needs to be installable. And customizable. And expose an API interface of functions. Most notebooks are just not that - it's a hard coded "run from top to bottom" script.
+13:21:18 From Pete Peterson (ORNL) to Everyone:
+	@vanessa I'd be curious what is too large as well as too small to be considered research software. I may not agree on your specific choice of "too small," but you are correct that there is a lower-bound
+13:21:27 From Todd Gamblin to Everyone:
+	Check out the Colab linked from this tweet and “Show Code” on every frame for how complicated this stuff can get: https://twitter.com/hillelogram/status/1422603763009851398
+13:21:49 From Ben Dudson to Everyone:
+	I argue that Research Software is any software which is used to perform research. A lot of useful and published research is done with notebooks, python scripts and Excel spreadsheets. Good RSE practices can and should be applied to this software, including version control, testing and documentation
+13:22:05 From Alex Friedman to Everyone:
+	+1 Ben Dudson
+13:22:16 From Hannah Cohoon, UT Austin to Everyone:
+	+1 Ben
+13:22:31 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	It’s not small vs. large per se - it’s how much the script does math/science on its own vs. just executing a list of external codes
+13:22:38 From Kelley Ruehl (Sandia) to Everyone:
+	+1 Ben
+13:22:40 From Sam Pollard (Sandia) to Everyone:
+	+1 Ben
+13:22:40 From Vanessa to Everyone:
+	@Pete this is from JoSS: "Total lines of code (LOC). Submissions under 1000 LOC will usually be flagged, those under 300 LOC will be desk rejected."
+13:22:44 From Todd Gamblin to Everyone:
+	I think the distinction of research software vs. not research software isn’t that useful for notebooks — the issue I have with notebooks that I think @v is getting at is that notebooks are not *reusable* in other software. You can’t install them, import them, adapt them really easily — they’re IMO for teaching/explaining, not for use as general components.
+13:22:59 From Vanessa to Everyone:
+	@Todd yes! Thank you!
+13:23:21 From Alex Friedman to Everyone:
+	Today’s notebooks are often more complex, and perhaps more heavily reused, than important compiled software of not-so-long-ago
+13:23:36 From Todd Gamblin to Everyone:
+	You can of course pull up someone else’s notebook and easily tweak it.  They are amazing for that, and they can be super useful for highlighting key concepts in code.  But the path from notebook to library IMO is fraught.
+13:24:00 From Todd Gamblin to Everyone:
+	@Alex: I find that sad since not eve the control flow in notebooks is well defined.
+13:24:10 From Mark (he/him) Miller (LLNL) to Everyone:
+	@Todd, @Vanessa doesn't a notebook represent reproducible/reusable science?
+13:24:13 From Todd Gamblin to Everyone:
+	You can execute the cells in whatever order, though people say they’re reproducible.
+13:24:19 From Jordan Perr-Sauer to Everyone:
+	Notebook -> Library is a very common path in my experience.
+13:24:20 From Hannah Cohoon, UT Austin to Everyone:
+	Since Jana just mentioned it…what happens when no/low code work is used more by domain scientists to create research tools? Will that be software? How will excluding it help our study of scientific software?
+13:25:12 From Todd Gamblin to Everyone:
+	@Jordan: I think there are plenty of notebooks that have turned into libraries and just as many that are handed around as notebooks — I think the latter case is unfortunate b/c it’s hard to pull that into a non-notebook project.
+13:25:25 From David Bernholdt (he/him) to Everyone:
+	if not speaking, please mute!
+13:25:30 From Vanessa to Everyone:
+	@Mark it could be reproducible given a controlled context - in practive I've run old notebooks that just "pip install <library>" and it doesn't work anymore. E.g., good example during my experience is with scikit-image that changed quite a bit. being a reproducible artifact does not imply its resesarh software.
+13:25:56 From Pete Peterson (ORNL) to Everyone:
+	@vanessa Thank you for the guiding quote. I'm pushing because I'm interested in the underlying criteria as I think you are in the neighborhood of identifying what shouldn't be considered research software. It isn't based on the language/format, it is based on something else that I'm having a hard time putting words to.
+13:26:01 From Vanessa to Everyone:
+	+1 - if there is a notebook that is invaluable, you'd want to turn it into a proper library. And a research software engineer could help with that!
+13:26:01 From Todd Gamblin to Everyone:
+	Also, worse: old notebooks that use tons of magic %
+13:26:10 From Mark (he/him) Miller (LLNL) to Everyone:
+	@Vanessa...right...was speaking to @Todd's notion of  "reusable".
+13:26:14 From Kelley Ruehl (Sandia) to Everyone:
+	+1 Jana
+13:26:25 From Alex Friedman to Everyone:
+	Much of this meeting centers on the HPC world.  But much day-to-day science relies on modest programs and scripts, and there may well be more human effort centered on the latter than the former.
+13:26:32 From Vanessa to Everyone:
+	Imagine how hard it would be to provide testing for a notebook, a release cycle for different platforms, a container build, it's the wrong level of abstraction.
+13:26:40 From Kelley Ruehl (Sandia) to Everyone:
+	+1 Alex
+13:27:01 From Jeff Shrager to Everyone:
+	It occurs to me that this might be interesting here, re low code and how to get scientist and SEs working together: https://drive.google.com/file/d/1cf0k0FvHlPW_HKppskSDMNbQRAA1McNV/view
+13:27:01 From Vanessa to Everyone:
+	Alex huge +1 - I do 99% of my development not on HPC.
+13:27:23 From Fan Du (she/her) \\ U Texas to Everyone:
+	Perhaps RSEs could help with code reviews for scientists who write codes. Maybe this is already done by some, or maybe this is adding workload to RSEs
+13:27:31 From Mark (he/him) Miller (LLNL) to Everyone:
+	Does that model work in experimental sciencies...that domain scientists stay only in their domain and don
+13:27:38 From Mark (he/him) Miller (LLNL) to Everyone:
+	wind up doing a lot of engineering of experiments?
+13:27:39 From Vanessa to Everyone:
+	+1 in neuroscience
+13:27:43 From Reed Milewicz (SNL) to Everyone:
+	+1 @Fan Du
+13:28:24 From Hannah Cohoon, UT Austin to Everyone:
+	thanks for that paper, @jeff
+13:28:32 From Ganesh Gopalakrishnan to Everyone:
+	Good comment @smiths about code generation. There is some success in the Python world. Do you know other examples of “programming by example”?
+13:28:43 From Todd Gamblin to Everyone:
+	FWIW, some of our most successful code projects started in MATLAB and grew to be hardened — over many years and with significant funding.  I have a lot of empathy both for the prototyping (notebook/MATLAB) use case and for the library use case — I think the thing people need to understand is where the tipping points are and when that notebook that’s held together by several shoestrings and %pips needs to get funding and hardening.
+13:28:49 From Jeff Shrager to Everyone:
+	I think we need to create structures that enable domain experts to work closely with HP software experts.
+13:29:01 From Haowen Xu - ORNL to Everyone:
+	Totally agree, for "reusable" and "interoperable", there should be a well-established  scientific software engineering conventions for domain scientist to follow when writing their code and software
+13:29:15 From Rick Arthur (GE) to Everyone:
+	To what extent is the "domain-specificity" the problem with domain specific coding? We have necessarily reduced complexity and computational intensity by decomposing "full physics" into single-physics or multi-physics (co-simulated or coupled) - so once we allow for a researcher to focus on their problem, the specific may end up confining the solutions (and imposing limitations) based on those legacy embodiments of solution software.
+13:29:33 From smiths to Everyone:
+	Thank you Ganesh.  What do you mean by programming by example?
+13:29:35 From Reed Milewicz (SNL) to Everyone:
+	We need more scholarly works exploring design patterns for scientific software, like the classic Gang of Four work on design patterns.
+13:29:52 From Jeff Shrager to Everyone:
+	Scientific computing is a scientific domain in-and-of-itself.
+13:29:57 From Vanessa to Everyone:
+	That's a cool idea. And also design patterns for not just the software, but development of it.
+13:30:04 From Ganesh Gopalakrishnan to Everyone:
+	@smiths - Programming by Example is what PL people do — Sarah Chasins of Berkeley and her advisor Was Bodik of UW
+13:30:12 From Ganesh Gopalakrishnan to Everyone:
+	Ras Bodik
+13:30:12 From Neil Chue Hong / SSI (he/his) to Everyone:
+	+1 Reed
+13:30:15 From Prasanna Balaprakash to Everyone:
+	@Ganesh: related, https://dl.acm.org/doi/pdf/10.1145/2076450.2076469
+13:30:17 From Observer Joshua Brown to Everyone:
+	+1 Reed
+13:30:24 From Pete Peterson (ORNL) to Everyone:
+	It can be very difficult to add engineering to an existing software. It is also very difficult to convince somebody to add engineering when they are just playing with ideas in a "simple script"
+13:30:35 From Reed Milewicz (SNL) to Everyone:
+	Right, exactly. I’ve got books on this subject for conventional software development on my shelf. They’re great, they’re useful. But what if I’m writing a physics simulation rather than a piece of word processing software?
+13:30:39 From Simon Hettrick to Everyone:
+	No
+13:30:53 From Vanessa to Everyone:
+	The script / notebook is perfect for playing with ideas. And visualizing things. That's one of the main goals of a tool like that I think.
+13:30:53 From Jeff Shrager to Everyone:
+	@Anshu: No one can be an expert in everything.
+13:31:01 From Simon Hettrick to Everyone:
+	Sorry, Reed, that was in response to Anshu and not you!
+13:31:12 From Todd Gamblin to Everyone:
+	@Reed: agree except I’ll just say the design patterns started just happening and not being “work” when I started writing in Python instead of C++.  Language matters for this stuff and half the reason the design patterns book exists was so that people coding in crufty languages could have nice things with a bit of boilerplate.
+13:31:12 From Fernanda, NextSilicon (she/her) to Everyone:
+	I dislike this analogy so much. A biologist isn’t an expert in optics
+13:31:23 From Reed Milewicz (SNL) to Everyone:
+	@Simon Oh, I see how it is, Simon! /jk
+13:31:31 From Jordan Perr-Sauer to Everyone:
+	I expect them to use the instruments but not necessarily be able to build an instrument from the ground up.
+13:31:32 From smiths to Everyone:
+	@Genesh, rather than programming by example, I’ve seen examples mainly of Domain Specific Examples embedded in Haskell.  I’ll look into the people you suggested.  :-)
+13:31:41 From Jeff Shrager to Everyone:
+	@fernanda: Which analogy don't you like?
+13:31:45 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	@anshu and @Jeff:  maybe they’re not experts on everything, but they need to understand at least at a high level what the issues might be
+13:31:49 From Vanessa to Everyone:
+	We also can't require everyone to read books to perform their basic jobs. Everyone is already over-burdened with their niche areas of expertise. I think we've also already tried that - there are plenty of papers out there about best practices that maybe just a tiny number of people have actually read.
+13:31:54 From Neil Chue Hong / SSI (he/his) to Everyone:
+	@reed - I remember that when I started my career there were books looking at something like design patterns for scientific computing (though focussed on algorithm design). Somehow, they never got updated and expanded as scientific computing developed new tools.
+13:32:06 From Anshu Dubey to Everyone:
+	@ Charles, that is precisely the point I was trying to make.
+13:32:12 From Reed Milewicz (SNL) to Everyone:
+	@Todd Oh, absolutely. Many design patterns are symptoms of missing programming language features.
+13:32:16 From Jeff Shrager to Everyone:
+	@OC: If there is an interaction then these can be worked out.
+13:32:32 From Reed Milewicz (SNL) to Everyone:
+	@Neil Right, we just need to invest more time and energy into to developing and validating these things.
+13:32:56 From Fan Du (she/her) \\ U Texas to Everyone:
+	I like Anshu's question. Although I guess a realistic answer is you need someone on the research team who knows the instrument well. Then the question seems become, how do we know that the scientific collaboration is effective enough to handle that expertise gap.
+13:33:09 From Fernanda, NextSilicon (she/her) to Everyone:
+	“You wouldn’t trust the results from a bench scientists if they didn’t understand their isntruments, so developers should understand how to write code from scratch”. @Jeff
+13:33:10 From Anshu Dubey to Everyone:
+	We had a scientist come along and try to use a completely wrong solver for the regime they were in. It would have led to wrong results if there hadn’t been others around who spoke both languages.
+13:33:17 From Todd Gamblin to Everyone:
+	What about DevSecRSEMLOps?
+13:33:33 From Fan Du (she/her) \\ U Texas to Everyone:
+	Sounds great, do it ;)
+13:33:41 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	Re Keith’s quote:  “I made this one [letter] longer only because I have not had the leisure to make it shorter.” - Blaise Pascal
+13:33:42 From Reed Milewicz (SNL) to Everyone:
+	There’s always room to add more elements to DevOps! :D
+13:33:47 From Rick Arthur (GE) to Everyone:
+	+1 Todd, you're in charge, go forth!
+13:33:47 From Jordan Perr-Sauer to Everyone:
+	Question for the last panel: Is it better to try and automate the software engineering (e.g., provide low-code / no-code tools for domain scientists) - or is it better to invest in humans that can perform this function?
+13:33:50 From Todd Gamblin to Everyone:
+	DevSecRSEMLNotebookOps
+13:33:52 From Vanessa to Everyone:
+	DevSecNoodlePancakeChickenOps
+13:33:53 From Fernanda, NextSilicon (she/her) to Everyone:
+	@anshu I can use the same model and use the wrong time step and still get wrong results.
+13:33:57 From Anshu Dubey to Everyone:
+	That is a real possible pitfall. And that is what I mean when I say they should have working knowledge of the tools they are using.
+13:34:21 From Reed Milewicz (SNL) to Everyone:
+	@Vanessa “Here at MegaCorp, we really emphasize the pancake in DevSecNoodlePancakeChickenOps. That’s what differentiates us from our competitors."
+13:34:25 From Fan Du (she/her) \\ U Texas to Everyone:
+	increasing complexity of the dev tool ecosystem, how can I now spend more on software
+13:34:27 From Sandra Gesing to Everyone:
+	@Jordan: I think we need to do both because the community in software has both groups
+13:34:39 From Vanessa to Everyone:
+	@Jordan why not a little of both? You want the "no code" environments to make life easy, but maybe you want real humans to be innovating on that.
+13:34:57 From Vanessa to Everyone:
+	@Reed hahah :D
+13:35:00 From Kjiersten Fagnan (she/her) to Everyone:
+	@Anshu @Fernanda - this speaks to the need for folks to not try to be polymaths or do things in isolation. We need interdisciplinary teams to work in science… but that requires strong management and leadership… which is a bigger gap in science than strong tech skills.
+13:35:11 From Reed Milewicz (SNL) to Everyone:
+	2+2=4 for extremely high values of 2
+13:35:29 From Vanessa to Everyone:
+	noodle + noodle = meta noodle for high values of noodle
+13:35:30 From Kjiersten Fagnan (she/her) to Everyone:
+	Also, I wish we had a slack space for this meeting because this chat is challenging to follow!
+13:35:34 From Fernanda, NextSilicon (she/her) to Everyone:
+	2+2= 4.00000000000000000000000001
+13:35:39 From Jordan Perr-Sauer to Everyone:
+	I agree with the need for both!
+13:35:41 From Vanessa to Everyone:
+	haha
+13:35:50 From Todd Gamblin to Everyone:
+	I kid about all the ops but this notion that ML models need to be versioned, deployed and managed like software artifacts is very real and it’ll be a mess if we don’t do it.
+13:35:52 From smiths to Everyone:
+	Jordan - I think automation is better when you take a long-term productivity viewpoint - capture the knowledge once really well and reuse it in the future.
+13:36:15 From Reed Milewicz (SNL) to Everyone:
+	@Todd There was a great exploratory paper on asset management for ML applications this year at ICSE.
+13:36:24 From Vanessa to Everyone:
+	huge +1 Todd, I see this over and over again (and the last group I remember thinking/working on it was at Facebook so it's an industry problem too)
+13:36:38 From Rick Arthur (GE) to Everyone:
+	@Anshu - this now treads on the perimeter of what we've called "model competency" - so whether an expert or a model or even a dataset - there should be some way of concretely bounding the limits of expertise and appropriateness to assert. But I do not believe we have formalisms / a language to do so.
+13:36:45 From Fernanda, NextSilicon (she/her) to Everyone:
+	I gave up carrying that torch @Todd
+13:37:06 From Todd Gamblin to Everyone:
+	I talked to one of the directors of devtools at Facebook and they’re v. Interested in this.
+13:37:22 From Todd Gamblin to Everyone:
+	There are many messes to be cleaned up
+13:37:24 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	@todd - Scientific software has followed a long, difficult path to figure out why versioning/management are important - will the ML folks listen to us or will they rediscover this on their own (the hard way)?
+13:37:31 From Jacob Lee McLemore to Everyone:
+	@Kjiersten huge +1.
+13:37:34 From Fernanda, NextSilicon (she/her) to Everyone:
+	Interested for their ads but everyone else is flying high and fast
+13:37:39 From Jana Thayer to Everyone:
+	+1 Todd - If we don’t get ahead of it and set up standards or best practices for managing ML model versioning and deployment, then my users will grow their own (or not) and it will make comparing and trusting scientific results MUCH more difficult in the future.
+13:37:43 From Todd Gamblin to Everyone:
+	@Charles: probably both 🙂
+13:38:05 From Vanessa to Everyone:
+	"Does your team have a dinosaur?"
+13:38:14 From Todd Gamblin to Everyone:
+	@Charles: but maybe there will be a new class of national-lab-ML-person who has both scientific and ML handicaps and adopts at an even slower rate than we’ve seen up til now.
+13:38:47 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	@todd : 🙄
+13:38:56 From Fernanda, NextSilicon (she/her) to Everyone:
+	Thunderdome of funding models
+13:39:01 From Vanessa to Everyone:
+	Something I was interested in is - what percentage of grants written are written to try to appeal to a call vs. actually being something the person is passionate about doing / thinks is important to do.
+13:39:52 From Kjiersten Fagnan (she/her) to Everyone:
+	@Vanessa, good question… I’d be interested in a poll where people could put in their guesses, too 🙂
+13:40:05 From Vanessa to Everyone:
+	It seems like these calls come out and everyone just "writes a thing" for the purposes of writing a thing (and not wanting to be one that doesn't write a thing) and throwing something at the ceiling that hopefully will stick and get some monies.
+13:40:07 From Carlo Graziani (ANL) to Everyone:
+	@Vanessa: Not a real either/or. Often a call for proposals will occasion a team forming/discussion that will bring about the creation of an interesting new project.
+13:40:18 From Anshu Dubey to Everyone:
+	@Rick I agree. And I do think we need some way of formalizing that.
+13:40:32 From Mark (he/him) Miller (LLNL) to Everyone:
+	@Breck...interesting idea. Does the experience with GameStop stock last year change your perspective any?
+13:40:38 From Vanessa to Everyone:
+	Also what percentage of these grants are written with someone already in mind and the whole call is just a formality?
+13:40:41 From Vadim Dyadechko to Everyone:
+	Am I the only one having problem keeping up with all the conversations in the chat?
+13:40:47 From Rick Arthur (GE) to Everyone:
+	My brain dump on a form of starting the formalization: https://richardarthur.medium.com/co-design-web-6f37664ac1e1
+13:40:50 From Todd Gamblin to Everyone:
+	@Vadim: no
+13:40:54 From Fernanda, NextSilicon (she/her) to Everyone:
+	@V can I ask the q on twitter?
+13:40:55 From Mark (he/him) Miller (LLNL) to Everyone:
+	+1 Vadime
+13:40:58 From Vanessa to Everyone:
+	yes!
+13:41:00 From Guillaume Louis Giudicelli to Everyone:
+	+1 Vadim
+13:41:02 From Vanessa to Everyone:
+	ping me so I see it!
+13:41:11 From Vadim Dyadechko to Everyone:
+	How about moving to Slack?
+13:41:21 From Vanessa to Everyone:
+	which one (looks at 95 slacks)
+13:41:47 From Kyle Harrington, ORNL to Everyone:
+	@Breck, IIRC random selection is used in Switzerland now
+13:41:52 From Jordan Perr-Sauer to Everyone:
+	I am finding the chat very distracting from the presentations - but seems to be a very important part of this workshop!
+13:41:57 From Mark (he/him) Miller (LLNL) to Everyone:
+	+1 moving to slack
+13:42:09 From Todd Gamblin to Everyone:
+	I think Hal or someone would have to weigh in on moving to some other chat medium — I believe there is a requirement to retain the discussions.
+13:42:19 From Vadim Dyadechko to Everyone:
+	@MikeHeroux: Mike can we launch a new Slack space for conversations?
+13:42:36 From Todd Gamblin to Everyone:
+	Might have to be a slack just for this workshop given that we are supposed to keep this to only registered participants
+13:43:05 From Vanessa to Everyone:
+	"And then there were 96 slacks"
+13:43:19 From Todd Gamblin to Everyone:
+	At least this one would be short-lived
+13:43:24 From Carlo Graziani (ANL) to Everyone:
+	Probably bust through the free slack message retention limit on the first dat.
+13:43:28 From Carlo Graziani (ANL) to Everyone:
+	"day".
+13:43:39 From Hal Finkel to Everyone:
+	We can consider using an alternate platform for the chat, but as Todd says, we do need to retain it. Also, we'll soon move into breakout sessions, and things will be different at that point.
+13:44:07 From Todd Gamblin to Everyone:
+	I do find it hard to track both the awesome talks and the awesome discussion.
+13:44:11 From Todd Gamblin to Everyone:
+	Slack would help.
+13:44:54 From Fernanda, NextSilicon (she/her) to Everyone:
+	https://twitter.com/hpcprogrammer/status/1470479765442289669
+13:47:36 From Mark (he/him) Miller (LLNL) to Everyone:
+	@Todd...if we were all together in one room, we likely wouldn't be doing this chat would we? Thats interesting though since in theory, all along we've been able to do that (everyone tend's to be in an actual room with their devices)...we just haven't.
+13:47:56 From Hannah Cohoon, UT Austin to Everyone:
+	@Caroline, are there followup events to the theory translation workshop?
+13:48:07 From Vanessa to Everyone:
+	A hard factor here is that there is a big difference in how software is developed depending on the scientific community. They have different data formats (and storage needs), different languages of choice, and different levels of skill at writing code.
+13:49:04 From Mark (he/him) Miller (LLNL) to Everyone:
+	@Vanessa...IMHO, data issues represent a major productivity issue for software-enabled scientific discovery. And, they don't really get the attention they deserve.
+13:49:14 From Todd Gamblin to Everyone:
+	+1 mark
+13:49:27 From Elaine Raybourn to Everyone:
+	@Todd, so do I. I’ve asked @Mike to save the chat for review later in the day.
+13:49:43 From Vanessa to Everyone:
+	+1 Mark.
+13:50:25 From Vanessa to Everyone:
+	An upcoming RSE Story talks about the planetary data science community, where all the data is public and released. I heard that and was like "Wow, that's amazing!" And it's not done for most domains of science.
+13:50:38 From Carlo Graziani (ANL) to Everyone:
+	Heh. On data (not a major topic at this workshop) see my position paper, https://custom.cvent.com/DCBD4ADAAD004096B1E4AD96F3C8049E/files/event/1b7d7c3ae9b4409dae2b284779cfe72f/abd426cfcf2747bfb7db0500b1273c11.pdf.
+13:50:39 From Ben Dudson to Everyone:
+	+1 @vanessa agree software development is very context dependent. How reproducible can research software science hope to be?
+13:51:29 From Kjiersten Fagnan (she/her) to Everyone:
+	I’d like to see another poll on the number of folks here that have reproduced someone else’s analysis
+13:51:41 From Kjiersten Fagnan (she/her) to Everyone:
+	Or “know someone that has"
+13:52:07 From Ben Dudson to Everyone:
+	Or tried reproducing their own...
+13:52:08 From Vanessa to Everyone:
+	I used to be like, religiously "reproducibility! reproducibility!" but now I have more of a mindset that it's not something that can be perfectly achieved, it's something that we can strive for. Also, software is a bit like survival of the fittest. If a piece of code / data is important, it will be preserved. Stuff that isn't as important, it's okay for it to die. We can't sae everything.
+13:52:13 From Todd Gamblin to Everyone:
+	Yes we love HEP!
+13:52:15 From Dan Gunter (he/him) to Everyone:
+	Intentionally, you mean
+13:52:34 From Todd Gamblin to Everyone:
+	Also, FYI for ECP folks: the reason Spack has the build caches that have become so prevalent in ECP is because of the HEP community.
+13:52:59 From Todd Gamblin to Everyone:
+	They contributed the first implementation of that — still lots to do there but it’s helped us tremendously
+13:53:12 From Todd Gamblin to Everyone:
+	(Among other HEP contribs)
+13:53:13 From Kjiersten Fagnan (she/her) to Everyone:
+	@Vanessa - exactly
+13:54:28 From Vanessa to Everyone:
+	spack is a really good example of different national labs / HPC folks working together on something. And it's in Python so it's a language of scientific programming. We need more projects that we work on together at that scale.
+13:54:47 From Reed Milewicz (SNL) to Everyone:
+	I dream of a future without sectarian conflict between frequentists and bayesians.
+13:55:22 From Mark (he/him) Miller (LLNL) to Everyone:
+	@Read...isn't that ML/AI?
+13:55:45 From Mark (he/him) Miller (LLNL) to Everyone:
+	@Read->@Reed
+13:55:56 From Reed Milewicz (SNL) to Everyone:
+	haha
+13:55:58 From Fan Du (she/her) \\ U Texas to Everyone:
+	Good one :)
+13:57:09 From Kjiersten Fagnan (she/her) to Everyone:
+	Do you think that the best software always propagates out into the community? What drives whether or not we hear about a software effort? We learned about Spack because ASCR facilities were supporting it… otherwise we might not have ever used it.
+13:57:14 From Carlo Graziani (ANL) to Everyone:
+	Actually, it's more like standard neural net methods versus variational probabilistic ANNs.
+13:57:49 From Vanessa to Everyone:
+	It's okay that software dies.
+13:58:00 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	Sometimes yes, sometimes no.
+13:58:00 From Reed Milewicz (SNL) to Everyone:
+	It’s only natural
+13:58:18 From Mark (he/him) Miller (LLNL) to Everyone:
+	@Kijersten...no, absolutely not. There are many factors that lead to uptake of a package only some of which have to do with it being "best" (quality). Just like industry. Maybe an analogy lost on younger folks but VHS beat out Beta for no good reason..other than availability of content ;)
+13:58:27 From Reed Milewicz (SNL) to Everyone:
+	The problem is that we have really poor data on software mortality, which makes it hard to do root cause analysis at any meaningful scale.
+13:58:36 From Carlo Graziani (ANL) to Everyone:
+	I wish I could still compile NCSA Mosaic.
+13:58:40 From Anshu Dubey to Everyone:
+	@kjersten that is a good question. My favorite library for fault tolerance died because it lost funding.
+13:58:41 From Jordan Perr-Sauer to Everyone:
+	@Kjiersten - great question! I am wondering these days the role of a centralized management structure in facilitating best SWE practices.
+13:58:42 From Reed Milewicz (SNL) to Everyone:
+	Like when is software “dead”? How do you know this as an external obserer?
+13:58:43 From Sandra Gesing to Everyone:
+	software sustainability should be a decision - some can die, some need effort to be sustained
+13:58:50 From Fernanda, NextSilicon (she/her) to Everyone:
+	Let software die. If someone cares they’ll do something about it
+13:58:51 From Vanessa to Everyone:
+	I guess as a historical record that's a bit different - you could put it in some software archive.
+13:59:11 From Todd Gamblin to Everyone:
+	I think part of the burden of longevity is on the project. Outreach is a thing that projects need to do — there’s nothing you can do to keep a project alive if its team won’t use CI, write docs, host tutorials and events, and include new contributors.
+13:59:19 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	@fernanda - what if someone cares but doesn’t have resources to do anything about it?
+13:59:30 From Anshu Dubey to Everyone:
+	@Fernanda, that is not always possible.
+13:59:32 From Vanessa to Everyone:
+	A software that is valuable, put on Github (or more generally public and open for collaborative effort), and people want to use it isn't going to just die.
+13:59:33 From Mark (he/him) Miller (LLNL) to Everyone:
+	@Todd...you mean the if you build it they will come model doesn't work?
+13:59:54 From Todd Gamblin to Everyone:
+	@Mark if you build it, tell people about it, and convince people it’s useful they might come 🙂
+13:59:59 From Vanessa to Everyone:
+	@Mark darn (looks over to corn field) I had plans for that.
+14:00:10 From Fernanda, NextSilicon (she/her) to Everyone:
+	Without a community that cares ….
+14:00:17 From smiths to Everyone:
+	Software can be kept alive if there is documentation - the documentation should include rationale information - not just what was done, but why
+14:00:27 From Mark (he/him) Miller (LLNL) to Everyone:
+	Gotta drop. Back in a bit ;)
+14:00:32 From Carlo Graziani (ANL) to Everyone:
+	More seriously, the BABAR collaboration, knowing that there would be no more b-bbar events generated in accelerators for a while, put their analysis software in containers to keep it usable for users, future-proofing it and keeping it "alive".
+14:00:56 From Sandra Gesing to Everyone:
+	@Mark: if you build it, reach out, they trust, they will come;-) there is a paper from a social scientist about it. let me look whether i find it
+14:01:07 From Vanessa to Everyone:
+	+1 to what Fernanda said, and Todd. If you put software out there, demonstrate that it's useful, build community around it, heck make it *fun*, make it so easy for someone to look at and say "Oh I see my use case here!" it's going to survive.
+14:01:15 From Kjiersten Fagnan (she/her) to Everyone:
+	how is the community building funded?
+14:01:18 From William Godoy (ORNL) to Everyone:
+	Software needs patrons
+14:01:21 From Rick Arthur (GE) to Everyone:
+	These topics are entwined - software often dies because its life support is exhausted within its current microenvironment. (E.g., I've had to watch truly awesome software wither on the vine within my company because it could not be sufficiently funded - yet was considered too proprietary to release into the outside world).  Similarly - there may be people who would cherish and nurture codes that otherwise die prematurely because of ignorance.
+14:01:25 From Reed Milewicz (SNL) to Everyone:
+	Regular brushfires help keep the ecosystem healthy
+14:01:42 From Todd Gamblin to Everyone:
+	Scaling a software project is entrepreneurial. You have to do all the outreach and marketing AND figure out where your next dollar is coming from.
+14:01:47 From Vanessa to Everyone:
+	Community building a lot of the time isn't funded. You just do it. I've done it a few times, and it's really just writing little blog posts, posting on Twitter, sharing your exitement.
+14:02:02 From Fernanda, NextSilicon (she/her) to Everyone:
+	@kjiersten cookies and GitHub should be enough 😛
+14:02:04 From Reed Milewicz (SNL) to Everyone:
+	+1 @Vanessa
+14:02:05 From Kjiersten Fagnan (she/her) to Everyone:
+	I disagree that it’s just writing blog posts or using social media
+14:02:24 From Vanessa to Everyone:
+	Those things are what I'd consider "the N=1 marketing strategy" you basically go on social networks and scream about things you think are important.
+14:02:35 From Kjiersten Fagnan (she/her) to Everyone:
+	Depending on who you are trying to reach and who you need to reach, it can require a focused effort. Particularly if you aim to be inclusive.
+14:02:36 From Oceane Bel (PNNL) to Everyone:
+	Where do we get the list of breakout rooms?
+14:02:43 From Vanessa to Everyone:
+	But it can be just that. if you don't have a marketing department, that's what you have for a choice.
+14:02:44 From Simon Hettrick to Everyone:
+	Success in community building is 1% inspiration and 99% administration
+14:02:50 From Todd Gamblin to Everyone:
+	And +1 to what @v said — I often hear people say “we can’t scale our project because we don’t have that kind of money”, but I’ve never seen anyone who put in the work and did the outreach get dinged by a funding agency for it.  You *have* to start scrappy and push to get the funding.  Rinse, repeat.
+14:02:51 From Fernanda, NextSilicon (she/her) to Everyone:
+	@Kjiersten indeed.
+14:02:59 From Caroline Jay to Everyone:
+	@Hannah yes - have been thinking about f2f event but we may go online. Will keep you posted.
+14:03:00 From Kjiersten Fagnan (she/her) to Everyone:
+	It takes community engagement to even know what to build at the outset.
+14:03:04 From Kjiersten Fagnan (she/her) to Everyone:
+	That should not be undervalued.
+14:03:08 From Hannah Cohoon, UT Austin to Everyone:
+	thanks!
+14:03:09 From Todd Gamblin to Everyone:
+	Growth is part of the job when you are running a software project that you want to live.
+14:03:10 From Vanessa to Everyone:
+	+1
+14:03:14 From Fan Du (she/her) \\ U Texas to Everyone:
+	Thanks everyone, great panel discussion
+14:03:19 From Anshu Dubey to Everyone:
+	If you have a software that is useful for a small community, and is complex, however motivated the community it cannot keep it going with infusion of funding.
+14:03:55 From Vanessa to Everyone:
+	If software is useful for a small commuity then they need to figure out how to remove the complexity and make it maintainable by that community.
+14:04:00 From Sandra Gesing to Everyone:
+	@Anshu you mean without infusion of funding;-) yeah - I second that
+14:04:08 From Anshu Dubey to Everyone:
+	without.
+14:04:13 From Vanessa to Everyone:
+	A huge mistake I see time again is writing some piece of software in some niche language or framework that a user could never contribute to.
+14:04:24 From Pete Peterson (ORNL) to Everyone:
+	This would be an easier discussion if one could more direcly measure the impact of an individual software product
+14:04:32 From Jeffrey Terry to Everyone:
+	I agree with Anshu. I really fear what will happen in Feff loses its university of Washington support in the synchrotron community.
+14:04:45 From Vanessa to Everyone:
+	As much as I love Go, it's not super heavily used in our community. If I wrote a Go library how could anyone be able to easily contribute to it and thus help it survive?
+14:04:48 From Reed Milewicz (SNL) to Everyone:
+	@Vanessa You make it sound like high-performance Cobol is a bad thing…
+14:05:01 From Fernanda, NextSilicon (she/her) to Everyone:
+	A community that needs it will find a way to make it happen if without out it means their field will suffer. What I’m basically saying is the user community largely assumes “someone will fix it”
+14:05:10 From Anshu Dubey to Everyone:
+	I am talking about multi physics code that is trying to model complex physical phenomena, the complexity comes from degrees of freedom and number of diverse solvers.
+14:05:26 From Vanessa to Everyone:
+	Cobol you mean... Kabal from mortal kombat? (kidding kidding)
+14:05:47 From Reed Milewicz (SNL) to Everyone:
+	Lololololol
+14:05:50 From Vanessa to Everyone:
+	Yeah Anshu I think that's a different animal, and I don't have insights because I've never worked on that software.
+14:06:07 From Todd Gamblin to Everyone:
+	Agree with all this stuff. I think we should distinguish between unnecessary complexity and complexity in general, though — some complexity is self-inflicted (like using a language you’ll never get contributors in — this is why we chose Python for Spack even though it was partly inspired by Homebrew which is written in Ruby)  Some complexity is necessary — e.g. if your goal is to enable inter-language inter-op or to build tools for real systems, you have to handle corner cases but you should be real careful about it.
+14:06:35 From Todd Gamblin to Everyone:
+	Part of the challenge of sustainable software is coming up with a design that lets you simplify the complex thing.
+14:06:37 From Fernanda, NextSilicon (she/her) to Everyone:
+	Multiphysics code may be beautiful and complex and without a community that cares to fight for it, it will die
+14:06:38 From Carlo Graziani (ANL) to Everyone:
+	Even the Linux kernel receives massive informal industry support, despite its reputation as a "community" project.
+14:06:39 From Rick Arthur (GE) to Everyone:
+	If there were a way to formally score the competency of SciSW - you could assign to it what the DOD calls "authoritative source of truth" - and perhaps then obligate the community to at least an equivalent level of competence to subsume that authoritativeness before allowing the legacy authority to be de-funded.
+14:08:00 From Fernanda, NextSilicon (she/her) to Everyone:
+	Linux kernel survived LONG before industry $$$
+14:08:06 From Anshu Dubey to Everyone:
+	@Fernanda, what ends up happening is that cottage industries develop where groups start keeping their own repos and slowly the quality deteriorates.
+14:08:28 From Fernanda, NextSilicon (she/her) to Everyone:
+	And then that domain realizes that unsustainable and comes together
+14:08:39 From Anshu Dubey to Everyone:
+	Unfortunately they do not.
+14:08:49 From Fernanda, NextSilicon (she/her) to Everyone:
+	Well then their domain suffers
+14:08:52 From Anshu Dubey to Everyone:
+	They start reinventing the wheel.
+14:09:08 From David Rogers to Everyone:
+	However, de-funding is the default and funding is the abnormality.  So a real enemy is bit-rot.
+14:09:23 From Fernanda, NextSilicon (she/her) to Everyone:
+	That’s 30% of DOE software: reinventing the wheel
+14:09:43 From Fernanda, NextSilicon (she/her) to Everyone:
+	Ask me how many CFD codes NASA develops… per site
+14:09:43 From Anshu Dubey to Everyone:
+	And some misguided funding agency funds the whole development all over again, and it is huge waste of human capital.
+14:10:02 From Anshu Dubey to Everyone:
+	Because it is “new” development.
+14:10:09 From Fernanda, NextSilicon (she/her) to Everyone:
+	Then the sofware is reborn , more modern
+14:10:26 From Vanessa to Everyone:
+	yes! Like rust coming to the Linux kernel?
+14:10:28 From Fernanda, NextSilicon (she/her) to Everyone:
+	Without legacy x87 in that obscure header file
+14:10:34 From Rick Arthur (GE) to Everyone:
+	The financial industry also has benchmark authoritative codes, and these are the "gold standard" for scoring / analyzing - and you are obligated to show your alternative is better or more relevant than those standards. The funding continues because that established benchmark is compulsory for citing results.
+14:10:34 From Pete Peterson (ORNL) to Everyone:
+	Crazy do-overs are very important
+14:10:49 From Anshu Dubey to Everyone:
+	Not necessarily. A software that has been exercised by a bunch of people has had more defects removed.
+14:11:17 From Fernanda, NextSilicon (she/her) to Everyone:
+	Has it?
+14:11:28 From Anshu Dubey to Everyone:
+	From the developers perspective a new software project is great, from science perspective not so much.
+14:11:30 From Reed Milewicz (SNL) to Everyone:
+	Well, save for the hardest of bugs.
+14:11:32 From Anshu Dubey to Everyone:
+	Oh yes.
+14:11:33 From Reed Milewicz (SNL) to Everyone:
+	Most latent
+14:11:50 From Rick Arthur (GE) to Everyone:
+	So suppose the FDA dictates "thou shalt not be certified unless your analysis is done in LAMMPS" or w/e
+14:11:53 From smiths to Everyone:
+	I agree with Todd Gamblin about the challenge of sustainable software being designs that simplify complex things.  Abstraction, modularity, and separation of concerns are powerful principles for handling complexity.  A generative approach is a powerful tool for dealing with complexity, analogous to how a compiler handles the complexity of writing machine code.
+14:12:14 From Reed Milewicz (SNL) to Everyone:
+	^^^^
+14:12:45 From Carlo Graziani (ANL) to Everyone:
+	There are cases where competing codes in the same domain have value. Often they are optimized for different purposes or tasks, and can improve each other.
+14:13:26 From Rick Arthur (GE) to Everyone:
+	But those codes could be forced to demonstrate their competency boundaries - both to differentiate from each other and to justify overlaps.
+14:13:36 From Anshu Dubey to Everyone:
+	Multiple codes in the same domain is great. But letting a well exercised code die is not so great.
+14:13:41 From Vanessa to Everyone:
+	I think it's more risky when there aren't competing codes - when there is "one library to do the thing" and then there is no competitive energy to make it better, and you have one choice and it's not very good. I can think of examples but I won't name them :)
+14:14:32 From Rick Arthur (GE) to Everyone:
+	E.g., Everyone should use FLASH!!! (No! I use my code because it is better at X than FLASH and FLASH cannot do Y)
+14:14:32 From Vadim Dyadechko to Everyone:
+	@vanessa: Examples: CVS
+14:14:57 From Carlo Graziani (ANL) to Everyone:
+	We had a case with FLASH and PLUTO (which Anshu remembers) where people would complain that "FLASH is slow" without being able to tell us "slow compared to what".  We were able to find a number of inefficiencies by comparing specific kernels to those of a lower-coverage but more highly-optimized code (PLUTO), which actually helped speed up FLASH simulations quite a bit.
+14:15:02 From Jeff Shrager to Everyone:
+	How do we get into the breakout rooms?
+14:15:06 From Kjiersten Fagnan (she/her) to Everyone:
+	Thought experiment… we buy a lot of engineering equipment from external vendors, should we do the same with software? Would that be any better?
+14:15:31 From Reed Milewicz (SNL) to Everyone:
+	In the long run, if we can get all this reproducibility and replicability business settled, we can think about whether two teams with two codes can get (roughly) the same results for the same data when operating under the same assumptions.
+14:22:24 From Damian Rouson (he/him/his) to Everyone:
+	https://docs.google.com/document/d/1YjhmQJM7WLK_C1xQuJdFl1B_1lULOt4RQJ-213bvMTI/edit
+14:25:33 From Jeff Carver to Everyone:
+	https://docs.google.com/document/d/1UYbJ4YCERh-OyrKj8tLohfZVouDPQv-HLd_m9XPvYgE/edit
+14:58:25 From James Howison (he/his) to Everyone:
+	Leslie, I think it would be wonderful if you were to write up and publish about how to help software contributing researchers make their case for contribution.
+15:04:26 From Ben Dudson to Everyone:
+	Agreed! Test driven development, even in a watered-down form, really helps make software testable
+15:06:13 From Dan Gunter (he/him) to Everyone:
+	I think of it as test-friendly development
+15:08:14 From Jeff Carver to Everyone:
+	Or even just thinking about testing from the beginning and designing the software so it can be tested. Much easier to do at the beginning than at the end.
+15:18:37 From Vanessa to Everyone:
+	I love those colors
+15:19:11 From Jordan Perr-Sauer to Everyone:
+	There should be a short break between end of breakout and the reporting session!
+15:19:34 From Todd Gamblin to Everyone:
+	Hal both acknowledged that and said that we would not be doing it 🙂
+15:20:22 From Vanessa to Everyone:
+	#rseng!
+15:20:51 From Vanessa to Everyone:
+	Not even on the job training, more like "being thrown into a pit with a monster and 'learning' to fight it." Learn or becoming dinner.
+15:21:19 From Observer: Claude D. Hall Jr. to Everyone:
+	That sounds like survival of the fittest
+15:21:27 From Todd Gamblin to Everyone:
+	Or the least tasty.
+15:21:34 From Vanessa to Everyone:
+	yes but a monster pit is much more fun, visually
+15:21:44 From Miranda Mundt (SNL) to Everyone:
+	Todd, I’m hungry. How dare you make that worse
+15:22:16 From Vanessa to Everyone:
+	+1 I don't think SCRUM / Agile always makes sense (I've never done it, sounds scary).
+15:22:28 From Vanessa to Everyone:
+	There was no time before Makefile
+15:22:43 From Jeff Shrager to Everyone:
+	There was a time when you got code that actually compiled?!
+15:22:52 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	By-the-book Scrum doesn’t work well for research software, but tailored Scrum can work
+15:23:24 From Todd Gamblin to Everyone:
+	There is still at least one application that compiles everywhere and is bug free: https://github.com/kelseyhightower/nocode
+15:23:54 From Ben Dudson to Everyone:
+	Often the developers aren't in the same instutute or country, or funded by the same project or funding agency. Coordinating with a methodology like scrum is difficult
+15:24:07 From Reed Milewicz (SNL) to Everyone:
+	There was a nice study of industry I saw at one of the big software engineering conferences, and it turns out that out of 700+ software firms, all of them used customized methodologies to some extent, depending on their business needs. So very few people go “by the book” in reality, but pick and choose practices that fit their contexts.
+15:24:20 From Vanessa to Everyone:
+	Kelsey Hightower is amazing. I love hearing him speak - he was on a Twitter space over the weekend that was 2+ hours about leveling up in tech, the entire thing was so great.
+15:24:45 From David Rogers to Everyone:
+	before people tried doing advanced things with dlfcn and ioctl
+15:24:51 From Mark (he/him) Miller (LLNL) to Everyone:
+	@Todd...I just tried to run "No code" on my "NoMachine" instance...I didn't get any output ;)
+15:24:52 From Vanessa to Everyone:
+	Reed could we look at academic / national labs as a single company then?
+15:25:04 From Will Sutherland to Everyone:
+	Do you remember what that paper was Reed?
+15:25:16 From Todd Gamblin to Everyone:
+	@v: I think there are huge differences in the labs’ code practices and even languages of choice
+15:25:17 From Reed Milewicz (SNL) to Everyone:
+	Yes.. hold on, I’ll get that for you after I finish cleaning up these slides
+15:25:24 From Jordan Perr-Sauer to Everyone:
+	I want to look at the “Lab” as a company. But in reality, each research team seems to be a company - at least in my  lab.
+15:25:25 From Will Sutherland to Everyone:
+	lol no worries
+15:25:29 From Jeff Shrager to Everyone:
+	I just did NOT try to run no code, and guess what? It worked perfectly!
+15:26:04 From Mark (he/him) Miller (LLNL) to Everyone:
+	@Jeff...Oh, of course...that was my mistake...trying to run it ;)
+15:26:05 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	+1 to Todd
+15:27:58 From Miranda Mundt (SNL) to Everyone:
+	This may be a strange connection to make, but software practices are very similar to IT service management (ITSM). There are 34 practices (grouped into 3 categories), and no one uses all of the practices. It is meant to be a piecemeal framework in which you pick those practices which actually fit your business need
+15:28:05 From Reed Milewicz (SNL) to Everyone:
+	Sounds like a Zen koan. Running code without running. Effortless action, all that jazz. Practicing not doing.
+15:28:07 From Miranda Mundt (SNL) to Everyone:
+	Perhaps we need to approach software practices like that
+15:28:16 From Mark (he/him) Miller (LLNL) to Everyone:
+	@Todd...regarding diffs in lab's preferreed language...have you seen any LRLTran code? That is what we used to run on the Crays...before your time I think ;)
+15:28:34 From Todd Gamblin to Everyone:
+	I have not.  Seen plenty of yorick though
+15:28:40 From Observer: Claude D. Hall Jr. to Everyone:
+	I thought people used SmileBasic
+15:28:59 From Marc Paterno (FNAL) to Everyone:
+	@Todd even within a single lab, different experiments/collaborations have different cultures, command structures, and priorities. The lab has some influence but does not dictate many policies.
+15:29:21 From Alex Friedman to Everyone:
+	Yorick was the best interactive seat-of-thje-pants language ever.  Absolutely minimal typing, clever syntax.
+15:29:41 From Todd Gamblin to Everyone:
+	alas
+15:29:53 From Todd Gamblin to Everyone:
+	💀
+15:30:04 From Alex Friedman to Everyone:
+	Alas poor York …
+15:30:10 From Alex Friedman to Everyone:
+	*Yorick
+15:30:17 From Reed Milewicz (SNL) to Everyone:
+	Sans semantics, sans syntax, sans everything
+15:30:51 From Mark (he/him) Miller (LLNL) to Everyone:
+	Sans everything...I think someone wrote that already...No code (see link above).
+15:31:16 From Reed Milewicz (SNL) to Everyone:
+	D&I has been studied in non-scientific software engineering contexts!
+15:32:28 From Jordan Perr-Sauer to Everyone:
+	@Miranda - The comparison with IT is very interesting. I wonder where should RSEng be housed in a research org? Is it the IT department? In the HPC support group? In a computer science group? What is the best way to form and fund RSEs?
+15:33:36 From Miranda Mundt (SNL) to Everyone:
+	@Jordan, it’s a great question, and I think the answer is “yes” to all of them, dependent on the organization. For example, my RSE group is its own department that falls into our computing research larger umbrella. But we have a system administrator in our department, too, who helps support the tools that we provide generally for the researchers
+15:33:41 From Vanessa to Everyone:
+	I used to sit in research computing and it wasn't a healthy RSEng environment, and that's funded / based on an IT setup. Research Software Engineers aren't just hired to sit in a role with no career advancement or existing beyond providing a service.
+15:34:18 From Vanessa to Everyone:
+	A Research Software Engineer can't be shoved into IT because it's convenient. They need to be their own part of the academic fabric.
+15:34:26 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	Asking “how are they going to be supported” is more important than asking “where do they sit”
+15:34:44 From Todd Gamblin to Everyone:
+	Yeah from what I know of at least our IT org it’s very ticket-driven.  I think RSEs need more freedom — esp. with the increasing need to contribute/adapt OSS to accomplish RSE goals.
+15:34:51 From Vanessa to Everyone:
+	I think the discussion of "where do they sit" assumes that first question is answered (which you are right it is not!)
+15:36:12 From Will Sutherland to Everyone:
+	Wouldn’t the question of where do you site include things like “are you in a group with other RSEs who you can talk to and learn from?”
+15:36:14 From Jordan Perr-Sauer to Everyone:
+	@charles I agree with that. To the extent that where we sit in an organization at least partially determines how we are supported.
+15:36:32 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	@Jordan or not supported :-(
+15:36:42 From Vanessa to Everyone:
+	@Will that's important - where I used to sit I was the only RSEng, I was alone.
+15:38:10 From Miranda Mundt (SNL) to Everyone:
+	@Vanessa, I have never been in a scenario where I was the only RSE, but I would imagine that’s extremely difficult. I benefit from my RSE team in numerous ways (not only because I am one of the “greenest” people!)
+15:38:40 From Kirk Landin (Sandia) to Everyone:
+	along the lines of Anshu talking about the software constantly changing, a new book that I have found really inspiring is "Software Design for Flexibility" by Hanson & Sussman https://mitpress.mit.edu/books/software-design-flexibility
+15:39:05 From Kirk Landin (Sandia) to Everyone:
+	It has encouraged me to think outside the box of traditional API design
+15:39:29 From Vanessa to Everyone:
+	It was challenging, yes. I would find funding by myself from large tech companies / OSS projects (e.g., Snakemake) and I even started my own service called "RSE Services" and brought in money that way. I loved my supervisor she was so supportive and kind but I felt like I had no job security and the conversation about "How are we going to recover your funding?" kept me up at night.
+15:40:07 From Vanessa to Everyone:
+	And learning was totally my responsibility. It's not a bad thing, but there was nobody to look out for my growth, career or personal. I think this is the reality for most RSEng.
+15:40:32 From Todd Gamblin to Everyone:
+	One thing that keeps coming up is color of money — people not able to contribute to or grow research software projects b/c they’re “not funded for that”.    I think it would be useful to examine the funding sources, to look at the wording of the grants and the way institutions interpret it, and see if that’s really the case — do the grants rule out contributing to RSE activities or are people just interpreting that way b/c it’s a cultural thing?
+15:41:14 From Todd Gamblin to Everyone:
+	I think a common RSE org would help for career development, mentoring, growth, valuing RSEs, etc., but I also think the funding for it likely isn’t going to come from one place so getting people over their “I’m not supposed to pay for software” hangups would help a lot.
+15:41:39 From Vanessa to Everyone:
+	I think my favorite projects I contribute to have nothing to do with what I'm paid to do. In a way we have to be superhuman and go beyond our 9-5 to contribute to things we care about.
+15:41:58 From Jordan Perr-Sauer to Everyone:
+	@Vanessa 100% agree with that last statement! It is very challenging to find hands-on mentorship as an RSE. Not for lack of mentors in an org, but lack of funding for those people to become mentors.
+15:42:15 From Vanessa to Everyone:
+	At least at my old institution - I was paid directly by labs and I'd be working on some niche thing for the lab - machine learning, databases/interfaces whatever. But in my free time? I was developing a container technology.
+15:42:28 From Vanessa to Everyone:
+	exactly
+15:42:55 From Vanessa to Everyone:
+	and over time it just kind of wears you out? You get so focused on "must survive" that "must flourish" isn't even part of the mental conversation.
+15:43:46 From Reed Milewicz (SNL) to Everyone:
+	Yeah, it’s like Maslow’s hierarchy of needs. If I’m in survival mode, it’s hard to be forward-thinking.
+15:45:18 From Vanessa to Everyone:
+	+1
+15:45:41 From Reed Milewicz (SNL) to Everyone:
+	I really want to publish at software engineering venues more on the impact of RSE integration into teams
+15:45:47 From Reed Milewicz (SNL) to Everyone:
+	There’s so much there worth writing about and studying
+15:45:59 From Vanessa to Everyone:
+	Some of the most successful labs at my graduate institution were successful because the PIs explicitly hired people to work on software. Tis was before the idea of RSEng had come to the US.
+15:46:15 From Carlo Graziani (ANL) to Everyone:
+	One place where RSE professionalization is happening more and more, due to the imperatives of the field, is actually HPC. The reason is that it is irresponsible to run domain-specialist-written (AKA "amateur") code on modern HPC platforms, so collaborations between domain scientists and programmers with HPC technical expertise are mandatory. This means that Universities need to start having them on staff, or those scientists need to avail themselves of the outreach by DOE Lab catalysts, etc. One way or another, it's a channel by which the profession is getting solidified.
+15:46:34 From Miranda Mundt (SNL) to Everyone:
+	Yay, Reed, for the pretty slides
+15:46:40 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	@carlo +1
+15:46:47 From Vanessa to Everyone:
+	Why do we have to mirror academia and have publishing be our primary venue of sharing information? Putting text on a PDF page is so dated and I wish we could do better.
+15:47:00 From Vanessa to Everyone:
+	wow slides in like under 10 minutes? amazing
+15:47:11 From Miranda Mundt (SNL) to Everyone:
+	Reed is magic - let all know this
+15:47:16 From Vanessa to Everyone:
+	what kind of witchcraft is this
+15:47:18 From Jordan Perr-Sauer to Everyone:
+	Seriously - very impressed!
+15:47:25 From Mark (he/him) Miller (LLNL) to Everyone:
+	@Vanessa...speaking as a member of BSSw.io editorial board...we'd welcome a blog or short article ;)
+15:47:51 From Dong Ahn to Everyone:
+	@Reed: Maslow’s hierarchy of needs reminds me of a Google study as to the fine keys to a successful Google SW dev and other teams: https://rework.withgoogle.com/blog/five-keys-to-a-successful-google-team/
+15:47:56 From Arnold Tharrington to Everyone:
+	Reed -> GOAT of breakout workshop slides!!!
+15:48:27 From David Bernholdt (he/him) to Everyone:
+	I think he created them in advance
+15:48:27 From Anshu Dubey to Everyone:
+	As my white paper says, the evidence of what works and doesn’t is based upon studies that for software with deterministic end goals. We need studies that do the same for software that evolves with the state of knowledge on a nearly continuous basis.
+15:48:28 From Vanessa to Everyone:
+	yeah I've published there before! But the number of people that read any single blog is probably pretty tiny.
+15:48:28 From Miranda Mundt (SNL) to Everyone:
+	@V, it might be that we have to use that as a starting board (publishing in “standard” formats), but then we start to slowly change the standards
+15:49:08 From David Bernholdt (he/him) to Everyone:
+	But it should be!
+15:49:39 From Jordan Perr-Sauer to Everyone:
+	@Anshu - and development and support of professionals in an organization who are up to date on this research and can translate it into process improvement.
+15:49:46 From Arnold Tharrington to Everyone:
+	@David Stop being a hater ☺️
+15:49:57 From Todd Gamblin to Everyone:
+	I felt guilty when I first started promoting Spack b/c I was giving the same-ish presentation at different venues. I was taught in grad school everything had to be novel 🙂
+15:50:30 From Miranda Mundt (SNL) to Everyone:
+	Okay, but Todd, Spack *is* novel
+15:50:48 From Todd Gamblin to Everyone:
+	It’s been novel since 2013 🙂
+15:51:05 From Miranda Mundt (SNL) to Everyone:
+	Which shows you just how important it is. The shiny-ness has yet to wear off ;)
+15:51:14 From Carlo Graziani (ANL) to Everyone:
+	He created them in advance, but he used a time machine.
+15:51:29 From Reed Milewicz (SNL) to Everyone:
+	;-)
+15:51:30 From Todd Gamblin to Everyone:
+	I still think they’re very awesome slides
+15:51:46 From Kelley Ruehl (Sandia) to Everyone:
+	@Reed what if adoption of best practices is tied to a software quality metric?
+15:52:06 From Arnold Tharrington to Everyone:
+	Had a great time everybody!!!!
+15:52:16 From Reed Milewicz (SNL) to Everyone:
+	@Kelley, oooooooh

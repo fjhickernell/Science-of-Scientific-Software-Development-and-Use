@@ -1,0 +1,1419 @@
+11:03:25 From Reed Milewicz (SNL) to Everyone:
+	Woot! Go Ian!
+11:03:40 From Reed Milewicz (SNL) to Everyone:
+	@Mike True!
+11:04:12 From Fred Hickernell (Illinois Tech) to Hal Finkel(Direct Message):
+	Hi Hal, I might have missed it, but are the slides from the plenary talks being shared?
+11:04:30 From Hal Finkel to Fred Hickernell (Illinois Tech)(Direct Message):
+	Yes.
+11:04:51 From Hal Finkel to Fred Hickernell (Illinois Tech)(Direct Message):
+	Some may already be in our Google Drive. Regardless, they'll all be posted on the website afterwards.
+11:05:14 From Miranda Mundt (SNL) to Everyone:
+	For those who have never had the opportunity to hear Ian speak before… You’re in for a treat. Excited for this talk, Ian!
+11:05:49 From Fred Hickernell (Illinois Tech) to Hal Finkel(Direct Message):
+	Thanks!
+11:06:38 From William Godoy (ORNL) to Everyone:
+	+1 Go Ian
+11:06:47 From Mark (he/him) Miller (LLNL) to Everyone:
+	is that experience OR training or experience AND training?
+11:08:28 From Leslie Carr to Everyone:
+	My RSE colleagues say of me that Prof Carr *can* write software but that under no circumstances should I be *allowed* to write software.
+11:08:52 From Observer: Claude D. Hall Jr. to Everyone:
+	I can't help but agree with this meme
+11:09:01 From David Bernholdt (he/him) to Everyone:
+	We used to say that my graduate advisor was *threatening* to get back to writing code
+11:09:02 From Jana Thayer to Everyone:
+	I feel seen
+11:09:49 From Todd Gamblin to Everyone:
+	That comic was a little too real for me because my advisor looks like the PhD comics advisor, and any bad code was blamed on the infamous “Italian postdoc” who wrote the bad parts of the project years ago and then left.
+11:10:06 From Observer: Reuben D. Budiardja to Everyone:
+	Rewriting a code can actually be a useful learning experience (for the person doing the rewrite).
+11:10:16 From Mike Heroux to Everyone:
+	I used to write software on the keyboard, then by email and phone calls with postdocs.  Now I talk to people who talk to people who write software.
+11:10:23 From Sandra Gesing to Everyone:
+	This has been also a very fun weekend using libraries, or?:-) https://www.wired.com/story/log4j-flaw-hacking-internet/
+11:10:24 From Carlo Graziani to Everyone:
+	Often bad code is job security, though.
+11:10:45 From Ignacio Laguna to Everyone:
+	On reproducibility: even if the code runs, reproducing the same numerical results can be tricky.
+11:11:18 From Kyle Harrington to Everyone:
+	@Carlo https://dilbert.com/strip/1995-11-13
+11:11:24 From Jeff Shrager to Everyone:
+	ML complicates reproducibility even more due to external data dependencies.
+11:11:43 From Jeff Shrager to Everyone:
+	In fact, strict reproducibility is essentially impossible.
+11:12:02 From Mark (he/him) Miller (LLNL) to Everyone:
+	Regarding the cooking analogy...my Mother-in-Law was a phenomenal cook. Certainly as good as any "chef". The difference isn't about quality of food they produce...IMHO, its about quantity. My Mother-in-Law regularly cooked for a family of 8. A chef might oversee a team of cooks producing food for hundreds.
+11:12:25 From Ganesh Gopalakrishnan to Everyone:
+	How will HPC code blended with ML code look like? Will they be cleanly separated? What is the RSE anticipated for that?
+11:12:38 From Todd Gamblin to Everyone:
+	I’m always shocked when people tell me they do not have time to set up CI
+11:12:38 From Sandra Gesing to Everyone:
+	Ian’s audio breaks up sometimes for me. is it my connection or has anyone the same problem?
+11:12:47 From Simon Hettrick to Everyone:
+	It’s been okay for me
+11:12:49 From Miranda Mundt (SNL) to Everyone:
+	Sandra, I haven’t noticed any issues
+11:12:59 From Sandra Gesing to Everyone:
+	ok - so it’s my connection
+11:13:24 From Vadim Dyadechko to Everyone:
+	@Mark: +1
+11:13:25 From Deb Agarwal (Berkeley Lab) to Everyone:
+	@Mark, agree - also the repercussions of a mistake differentiate the two. If your mom burns dinner - you order pizza.
+11:13:32 From Carlo Graziani to Everyone:
+	"Strict" reproducibility (bit-for-bit) is not really a necessary standard for scientific code, or at least for all scientific code. There are statistical measures of agreement that are acceptable outcomes for some software.
+11:13:54 From Mark (he/him) Miller (LLNL) to Everyone:
+	@Deb...funny you mention pizza. I've just learned to make that myself ;)
+11:13:55 From Matthew Wolf to Everyone:
+	There are a host of related things around reproducibility, including reusability, refactorizability, and verifiability.  I think we need to think about which of those are really of interest for scientific software.
+11:14:18 From Ganesh Gopalakrishnan to Everyone:
+	@carlo, when things deviate, we need to be able to explain - at least during testing regressions, right?
+11:14:26 From Simon Hettrick to Everyone:
+	This surprise at the speed at which these groups grow is something I hear about a lot
+11:15:02 From Jeff Shrager to Everyone:
+	The "regression" could be "progression" as the science improves or moves, or the datasets enlarge or are cleaned.
+11:15:12 From Carlo Graziani to Everyone:
+	That is, platform/library/compiler/optimization option-change-induced variations in output that trigger (say) fluid instabilities without disturbing distribution measures are harmless (just an example).
+11:15:40 From Sandra Gesing to Everyone:
+	@carlo there is a standard that reproducibility is defined as “close” https://sites.pitt.edu/~jdnorton/teaching/1702_jnrsnr_sem/1702_jnrsnr_seminar_2014/docs/Reproducibility/reproducibility.html
+11:16:01 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	And note:  it’s *technical* work
+11:16:04 From Jeff Shrager to Everyone:
+	But that doesn't account for progress.
+11:16:13 From Ignacio Laguna to Everyone:
+	Bit-by-bit repo is not needed always. But even reproducing an acceptable level of error or even statistical measures can be tricky between too different platforms.
+11:16:25 From Siva Rajamanickam to Everyone:
+	This is the type of RSEs I would like to have more :).
+11:16:56 From Jeff Shrager to Everyone:
+	I think we all agree that we're not talking bit:bit repo. The problem is that as things PROGRESS, it makes things non-reproducible for good reason.
+11:17:11 From Carlo Graziani to Everyone:
+	There would have to be a "close" standard. When you regression-test a shock solution, and the shock moves by 1-cell, that's a negligible change to a scientist, but a 100% change to an output checker.
+11:17:27 From Todd Gamblin to Everyone:
+	So Garrett and Abhishek are getting promoted right?  Or just having a huge impact? 🙂
+11:17:41 From Aditya Kashi to Everyone:
+	I think many RSEs and computational scientists do find themselves now and then in an IT support kind of role, at least early on. It could be helping a new co-worker or someone else who's trying to use the code.
+11:17:45 From Reed Milewicz (SNL) to Everyone:
+	A question that arises, of course, is when we ask for reproducibility, for how long does that need to hold true? Five years? Ten years? Twenty years?
+11:18:02 From Mark (he/him) Miller (LLNL) to Everyone:
+	bit-for-bit repo may not be *required* but it is often path of least resistance when having to disambiguate between "expected" changes to results due to changes to infrastructure (OS, dependencies, numeric formats, etc.) and "surprise" changes due to changes in code that nobody expected to change the results.
+11:18:07 From Jeff Shrager to Everyone:
+	It's not a matter of time.
+11:18:11 From Fernanda, NextSilicon (she/her) to Everyone:
+	The analogies aren’t really working for me. Research software is going through what medicine went through 50 years ago: specialization.
+11:18:20 From Rick Arthur (GE) to Everyone:
+	A better formalism for "required confidence" against which result UQ could be assessed could drive more disciplined tolerancing of result reproduction.
+11:18:31 From Ben Dudson to Everyone:
+	The UK EPSRC requirement is for 10 years: In principle they can ask you to reproduce a figure in any paper you published within 10 years that they funded
+11:18:38 From Todd Gamblin to Everyone:
+	@Carlo: I think that speaks more to the capabilities of test frameworks right now.  I think there’s a need for tools that do much more sophisticated stuff for cases like you’re describing.
+11:19:22 From Reed Milewicz (SNL) to Everyone:
+	@Jeff Is it not? Reproducibility is an *ility, like any other software quality. It can decay over time, it requires investment, intentional planning, etc. And I’m asking whether the utility of reproducibility of a piece of software goes down over time, because that affects how we approach the problem.
+11:19:25 From Jeff Shrager to Everyone:
+	How often do the RSEs end up as a co-author?
+11:19:33 From Todd Gamblin to Everyone:
+	I think it’s reasonable to ask for reproducible *scientific* results — basically that the conclusions of your paper are still supported by the data with the experiments you’re reproducing.
+11:19:36 From Carlo Graziani to Everyone:
+	@Todd: that particular case always required human scientist intervention to bless the new solution. It would be nice to have an alternative.
+11:20:07 From Todd Gamblin to Everyone:
+	@Carlo: is it that people could not come up with good metrics?
+11:20:30 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	That’s the problem:  bit-for-bit repro is easy to define, any alternative is hard to define
+11:20:30 From Carlo Graziani to Everyone:
+	100% "close" changes are not easy to characterize.
+11:20:38 From Todd Gamblin to Everyone:
+	What’s the blocker there?  I can think of ways to diff/compare outputs — I don’t know how numerically correct they’d be, but I could imagine making a suite with tolerances
+11:20:47 From Simon Hettrick to Everyone:
+	@Jeff Shrager In the 2018 RSE survey, 54% of RSEs have been reported as co-author (at some point). We don’t have frequency.
+11:20:52 From Mark (he/him) Miller (LLNL) to Everyone:
+	@Todd and @Carlo...I've had in mind a ML/AI project for VisIt's testing to filter changes in images (and numerics) due to variations in software/hardware dependencies vs. changes due to variations in VisIt code itself. This would allow us to run VisIt testing with confidence in pass/fail results with greater confidence than we can now.
+11:20:54 From Leslie Carr to Everyone:
+	I think RSEs providing basic IT/SE functionality is like Researchers doing basic data cleansing - it’s not the headline part of their job but it might be the tedious and necessary 80% of their effort.
+11:21:02 From Reed Milewicz (SNL) to Everyone:
+	@Charles: Explainability may be the missing piece then. Close may be fine, but we do need to know *why* there’s a variation in results.
+11:21:05 From Todd Gamblin to Everyone:
+	@Mark: that’s cool
+11:21:15 From Jeff Shrager to Everyone:
+	@SH: That's great!
+11:21:15 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	@reed:  yes
+11:21:21 From Ganesh Gopalakrishnan to Everyone:
+	+1 Reed
+11:21:38 From John’s iPad to Everyone:
+	Who funds the RSEs at Princeton? The university or the investigators? If the investigators, does the university guarantee salaries as investigator funds fluctuate?
+11:21:42 From Carlo Graziani to Everyone:
+	@Mark, that sounds promising.
+11:21:45 From Simon Hettrick to Everyone:
+	@Jeff Shrager: data is all here (lots of other interesting stuff too): https://softwaresaved.github.io/international-survey-2018/section/publications-and-citations/#world
+11:22:02 From Miranda Mundt (SNL) to Everyone:
+	John, I believe Ian answers that question later
+11:22:03 From Mark (he/him) Miller (LLNL) to Everyone:
+	@Carlo...its still vaporware at the moment. But, I would love to have resources to pursue ;)
+11:22:15 From Derek Gaston to Everyone:
+	@Carlo - often the solution is to change what you’re comparing for the test.  For your shock example… if it’s a 1D pipe in the X direction… compare the position of the front (found through post processing) instead of comparing the full solution field.  As long as it’s within tolerance then it should be fine.  Comparing post-processed values is something we do a lot in the MOOSE test suite.
+11:22:24 From Jeff Shrager to Everyone:
+	@SH Thanks!!
+11:22:40 From Jason Wiese to Everyone:
+	Did I miss the slide where Ian said how these RSEs are funded?
+11:23:01 From Fernanda, NextSilicon (she/her) to Everyone:
+	Don’t think he showed it
+11:23:08 From Mark (he/him) Miller (LLNL) to Everyone:
+	@JW...yes, his first slide mentioned that they work on the side as cooks...(just kidding)
+11:23:21 From Reed Milewicz (SNL) to Everyone:
+	@Simon thanks for linking to that survey!
+11:23:22 From Miranda Mundt (SNL) to Everyone:
+	I think he talks about that later in the presentation
+11:23:31 From Jason Wiese to Everyone:
+	Awesome, thanks!
+11:23:32 From Ignacio Laguna to Everyone:
+	There is a significant lack of metrics to determine if a numerical result is reproduced, acceptable, and/or correct. If we have a better set of metrics we would benefit from tools that *could* make testing more automatic on different platforms.
+11:23:38 From Carlo Graziani to Everyone:
+	@Derek: what you say is true, but you wind up with tests that are customized to solutions, and there are a _lot_ of solutions.  We had a general regression-testing suite, with pretty basic logic.
+11:24:01 From Simon Hettrick to Everyone:
+	@Reed 👍🏻
+11:25:07 From Fernanda, NextSilicon (she/her) to Everyone:
+	Question: what’s the career path for these students?
+11:25:16 From Simon Hettrick to Everyone:
+	If you are an RSE or doing RSE-like work, it would be fantastic if you took part in this year’s survey (and let other people know about it too): https://softwaresaved.limequery.com/386272?lang=en
+11:26:00 From Ganesh Gopalakrishnan to Everyone:
+	+1 @ignacio!
+11:26:03 From Derek Gaston to Everyone:
+	@Carlo - we’ve solved this in a couple of ways.  Firstly, MOOSE can do online post-processing (outputs can be CSV or JSON) of solutions.  This helps by allowing for general testers that simply compare values in CSV/JSON.  Secondly, our test harness is extensible (Python) - so you can inherit from the Tester and easily code your own test logic if it’s needed.
+11:26:06 From Pete Peterson to Everyone:
+	There was a comment yesterday about (I think financial software) where there are reference implementations/results that new software must be able to produce. That sort of thing could be made domain specific rather than solution specific. An example is numerical integration reproducing analytical calculattions for the limited set it is applicable for
+11:26:11 From Jeff Shrager to Everyone:
+	@Fenanda: I think that these are staff, not students...unless I am mis-understanding.
+11:26:15 From Mike Heroux to Everyone:
+	@Ian: Are your people required to be onsite?  Do you recruit for remote-only?
+11:26:40 From Todd Gamblin to Everyone:
+	@Pete: some of our codes generate baselines (results of a reference test run) and compare to the baselines.
+11:27:31 From Cyrus Harrison (LLNL) to Everyone:
+	most of our codes use extensive sets of baselines, in addition to analytic test problems with known solutions
+11:27:46 From Pete Peterson to Everyone:
+	@Todd I think "we" would benefit from having an index and adding the reference results as a standard way of developing new capability/techniques
+11:28:16 From Mark (he/him) Miller (LLNL) to Everyone:
+	How long does it take for an RSE to a new project to come up to speed? How long do they have to be retained to recoup that startup cost? In many DOE projects I am familiar with, the people on the projects have been on them for 20+ years. That is unheard of in other sectors (like commercial, maybe academia) and I think that longevity makes such contributors defacto RSEs because of the enormous amount of experience and corporate knowledge they have.
+11:28:42 From Daniel S Katz to Everyone:
+	FYI for @mike - the NCSA group has people who are virtual, but are generally those who were once on-site - starting someone as remote is much harder and we haven't really done it
+11:29:14 From Mike Heroux to Everyone:
+	Thanks, @Dan
+11:29:25 From Miranda Mundt (SNL) to Everyone:
+	The US-RSE has an active DEI working group - for anyone who is interested in US-RSE and DEI, we always welcome new members
+11:29:41 From Ganesh Gopalakrishnan to Everyone:
+	Looks like Princeton is offering a Grad Certificate on RSE. Neat! https://researchcomputing.princeton.edu/learn/cse-graduate-certificate/graduate-certificate-faq . I wonder how many other universities have this.
+11:29:51 From Jeff Shrager to Everyone:
+	@ian: Do RSEs also deal with statistical questions, like a statistical consultant?
+11:30:37 From Daniel S Katz to Everyone:
+	And for Fernanda, we (NCSA) have 4 career levels for RSEs (and are moving to 5) - see https://danielskatzblog.wordpress.com/2021/09/27/senior-rse-paths/ and http://doi.org/10.1109/SE4Science.2019.00009 and http://hdl.handle.net/10125/71494
+11:30:38 From Simon Hettrick to Everyone:
+	In the UK, that very much depends on the RSE. Some have specialities, such as stats, others are more general RSEs
+11:31:15 From Vadim Dyadechko to Everyone:
+	@carlo: no reproducibility: as long as the numerical method used is stable and the code is bug free, the floating point noise due to different order of operations should be tolerated
+11:31:19 From Jeff Shrager to Everyone:
+	I find that figuring out what computation I want to do is harder than figuring out how to do it once I've answer the previous question.
+11:31:26 From Vadim Dyadechko to Everyone:
+	@carlo: on ...
+11:32:30 From Liz Vu, Sloan Foundation (she/her/s) to Everyone:
+	we'll be excited to see it finally happen this April (fingers crossed)!
+11:32:33 From Mark (he/him) Miller (LLNL) to Everyone:
+	@Vadim...tolerated but also understand and distinguishable from other variations in results due to other kinds of changes to the code base/hardware on which it executes.
+11:32:42 From Mark (he/him) Miller (LLNL) to Everyone:
+	underand-->understood
+11:32:53 From Miranda Mundt (SNL) to Everyone:
+	@Liz, please knock on wood as well. Safety from all jinxes!
+11:33:07 From Simon Hettrick to Everyone:
+	👋🏻
+11:33:36 From Daniel S Katz to Everyone:
+	http://bit.ly/RSE-survey-2021
+11:33:47 From Miranda Mundt (SNL) to Everyone:
+	https://softwaresaved.limequery.com/386272?lang=en
+11:33:54 From Miranda Mundt (SNL) to Everyone:
+	Non-bitly link ^^
+11:35:05 From Daniel S Katz to Everyone:
+	data from past RSE surveys: https://github.com/softwaresaved/international-survey
+11:35:27 From Ignacio Laguna to Everyone:
+	How do people handle cases where the compiler completely changed a numerical solution due to optimizations?
+11:35:40 From Jeff Shrager to Everyone:
+	This also shows that they're underpaid.
+11:35:50 From Fernanda, NextSilicon (she/her) to Everyone:
+	yup
+11:35:57 From Mark (he/him) Miller (LLNL) to Everyone:
+	@Ignacio...simplest answer...tolerance thresholds.
+11:36:03 From Fernanda, NextSilicon (she/her) to Everyone:
+	Thus the question about career path
+11:36:27 From Daniel S Katz to Everyone:
+	underpaid compared to what?  industry? labs? there are pros and cons in different places, of which $ is just one
+11:36:36 From Todd Gamblin to Everyone:
+	So on the small team thing: a lot of RSEs work on larger OSS projects. I think it’d be interesting to ask how big the projects they work on are in addition to their “team”.
+11:36:38 From Ignacio Laguna to Everyone:
+	@Mark what if the tolerance threshold is violated by the compiler optimization? How do you debug it?
+11:36:59 From Vadim Dyadechko to Everyone:
+	@Mark: I agree that quantifying acceptable level of roundoff noise is tricky. My point was that bitwise reproducibility is not required from the point of view math modeling, it is more of a QA feature.
+11:37:02 From Todd Gamblin to Everyone:
+	@Daniel: I think it’s hard to deny that salary compared to industry, esp. for computational scientists, is a really big one.
+11:37:06 From Vanessa to Everyone:
+	@Dan compared to industry and undervalued compared to other roles in the academic fabric.
+11:37:07 From Derek Gaston (INL) to Everyone:
+	@Ignacio - tolerances… but if it truly completely changes the solution (like going down a different path)… then I’ll be honest and say that we restrict the test to running in a particular environment.
+11:37:11 From Mark (he/him) Miller (LLNL) to Everyone:
+	Great question...a lot of work by numerical analysists to either confirm/reject the result as acceptable.
+11:37:42 From Fernanda, NextSilicon (she/her) to Everyone:
+	Look like they are cheap
+11:37:42 From Simon Hettrick to Everyone:
+	The small teams thing: this is based on responses from all RSEs, not just those in RSE Groups. The vast majority of RSEs are those that are embedded in research groups.
+11:37:51 From Daniel S Katz to Everyone:
+	@todd - I agree, but the people who work as RSEs in academia often don't want to work in industry, and are not driven by earning the largest possible salary
+11:38:00 From Fernanda, NextSilicon (she/her) to Everyone:
+	They are cheap: it’s that there’s no funding model for them
+11:38:20 From Daniel S Katz to Everyone:
+	@vanessa - right, we could do better within academia compared to other roles, and are working on this
+11:38:27 From Carlo Graziani to Everyone:
+	@Mark: in the case of a turbulence simulation, where the flow can change completely and unpredictably in a turnover time due to a perturbation, but maintains statistical properties, "tolerances" need to be generalized to functionals of the solution.
+11:38:30 From Vanessa to Everyone:
+	The university funding model is used to low paid labor to do research - graduate students and postdocs. A university is a business and that's their model.
+11:38:46 From Fernanda, NextSilicon (she/her) to Everyone:
+	💯
+11:38:48 From Mark (he/him) Miller (LLNL) to Everyone:
+	@VD...yeah its a QA thing for sure. The math (theory) says its all the same, right? But that underscores the difference between theory and practice. In practice, we still wind up either investing of ton of resources to understand each little bit twiddle or, opt to demand bit-for-bit resutls...until we can't ;)
+11:38:57 From Ignacio Laguna to Everyone:
+	@Derek - thanks! Yes, I mean when it takes a different branch and as a result things get wrong. I think these cases are not common but when they happen they are tricky to debug.
+11:39:03 From Miranda Mundt (SNL) to Everyone:
+	@Fernanda, to add to that, it’s also a perception issue. RSEs aren’t inherently valued at the same level as their domain scientist counterparts. We’re seen more as “tools” than “staff to be invested in”\
+11:39:13 From Vanessa to Everyone:
+	These definitions of RSEs are very limited - this is why I started RSE Stories. RSEs can be involved in web interfaces / visualization, farming, outreach, it's not just "you exist between research and software."
+11:39:24 From Todd Gamblin to Everyone:
+	@Dan: true for the labs as well, but when you can’t even buy a house it starts becoming a big issue.  I don’t think RSE salaries 6x less than industry are particularly sustainable.
+11:39:31 From Fernanda, NextSilicon (she/her) to Everyone:
+	@miranda exactly : Back to my career path question
+11:40:11 From Miranda Mundt (SNL) to Everyone:
+	@Ian, I spoke about ITSM in relation to RSEs yesterday, too!
+11:40:18 From Daniel S Katz to Everyone:
+	@todd - the average house price here is 2x average RSE salary 🙂
+11:40:24 From Jordan Perr-Sauer to Everyone:
+	The expectation of low pay in research is a problem in and of itself. What would change if research institutions could hire software professionals competitively with industry?
+11:40:44 From Vanessa to Everyone:
+	You'd have better software! lol
+11:40:47 From Todd Gamblin to Everyone:
+	thatyep
+11:40:48 From Rick Arthur (GE) to Everyone:
+	Suppose there were a way to inject an RSE path into the Digital Corps relative to public / science efforts - and augment with student debt reduction/etc.? https://www.gsa.gov/blog/2021/08/30/introducing-the-us-digital-corps-a-new-path-to-public-service-for-early-career-technologists
+11:41:02 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	@rick +1
+11:41:05 From Vanessa to Everyone:
+	That's me! build build build. No scholarly-ness here lol
+11:41:15 From Daniel S Katz to Everyone:
+	@jordan - the funding for research typically from funding agencies - can we convince the government to make their awards much larger so that staff can be paid more?
+11:41:21 From Fernanda, NextSilicon (she/her) to Everyone:
+	Lol V
+11:41:43 From Todd Gamblin to Everyone:
+	@Dan: does the government care about retaining RSEs?  If so then why can’t we convince them?
+11:42:03 From Daniel S Katz to Everyone:
+	we are working on it - it's not a switch we can flip
+11:42:16 From Miranda Mundt (SNL) to Everyone:
+	@Todd - The government cares about what RSEs can help bring to the table, but not so much about RSEs themselves.
+11:42:30 From Simon Hettrick to Everyone:
+	That sounds familiar
+11:42:42 From Dan Gunter (he/him) to Everyone:
+	Arguably national labs have a lot of funded RSEs
+11:42:48 From Fernanda, NextSilicon (she/her) to Everyone:
+	“Make my sw better so I can publish and advance my career, thanks for your service, we might acknowledge you in the paper. Maybe”
+11:42:57 From Vanessa to Everyone:
+	If a university can have core funds that go to sports teams, etc. I think the universities need to prioritize RSEs. If it comes from the government that implies grants, and I don't think that's the right direction to go, on soft money.
+11:42:58 From Mark (he/him) Miller (LLNL) to Everyone:
+	@Carlos...is there a distance metric possible there? Wholly disparate chaotic behavior (which is nonetheless completely within the bounds of acceptable outputs) seems harder to handle than the "simpler" cases of mere changes in how a given algorithm is implemented (precision, lossy compression, parallel decomp, numeric architecture, CPU/GPU, order of ops, new sqrt routine, etc.). Those cases seem much simpler to me than what you are describing...which sounds like it truly does require higher level statistical comparison...somehow 🙁
+11:43:04 From Miranda Mundt (SNL) to Everyone:
+	@Dan - do any of them have that official title, though? I mean, my title is R&D S&E, Computer Science.
+11:43:07 From Todd Gamblin to Everyone:
+	@Dan: I bristle when this comes up and the response is always “some people just aren’t driven by salary”.  Yep that’s true but that doesn’t tell me anyone’s working on improving the salary situation.
+11:43:10 From Benjamin Sims to Everyone:
+	Related to Vanessa’s earlier comment about how diverse RSEs are, In my research I have found that there are lots of people who don’t really identify completely as RSEs but see themselves as sometimes doing RSE work and are definitely interested in learning RSE skills, RSE orgs can serve them too
+11:43:14 From Miranda Mundt (SNL) to Everyone:
+	I’m not recognized as an RSE
+11:43:14 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	@dan national labs have a lot of them, but that doesn’t automatically mean well-supported
+11:43:23 From Todd Gamblin to Everyone:
+	I think it’s good that it’s being worked on but it’s an elephant in the room.
+11:43:52 From Vanessa to Everyone:
+	+1 Benjamin, there are so many people that discover the role and feel something, but they see the "definition" and say "well that's not entirely me."
+11:43:52 From Miranda Mundt (SNL) to Everyone:
+	Charles +1
+11:44:19 From Daniel S Katz to Everyone:
+	@todd - understood. We are working on this at NCSA, and improving, both building career paths and increasing salaries, but its slow (but steady) progress
+11:44:21 From Vanessa to Everyone:
+	If we are to address diversity we can't have such a narrow definition that leaves so many people out.
+11:44:23 From Jordan Perr-Sauer to Everyone:
+	I think it also depends on the funding model. Is it a cost center funded out of overhead, or is it a contract organization that funds itself through projects?
+11:44:42 From Derek Gaston (INL) to Everyone:
+	@Dan I agree that the labs have many of these.  Based off of these definitions my whole group are RSEs.  At Idaho National Lab we don’t currently have a designation for it - but they are currently designated as “computational scientists”.  We may need to make a new designation.
+11:44:53 From Vanessa to Everyone:
+	Established career path, titles that match the roles, and monies.
+11:44:59 From Todd Gamblin to Everyone:
+	+1 @v
+11:45:03 From Fernanda, NextSilicon (she/her) to Everyone:
+	“some people just aren’t driven by salary” when they can make enough money
+11:45:05 From Deb Agarwal (Berkeley Lab) to Everyone:
+	One thing we have found essential to turning our software engineers into better RSEs is exposure to user experience design.
+11:45:17 From Fernanda, NextSilicon (she/her) to Everyone:
+	+100 @V
+11:45:25 From Rick Arthur (GE) to Everyone:
+	In the past (I think more in the NSF context than DOE) I've heard conversations about adding a certification where someone with said certification would be *required* on a proposal team for an award. (Which would suddenly change the economic calculus)
+11:45:25 From Todd Gamblin to Everyone:
+	+1000 @v
+11:45:30 From Jeff Shrager to Everyone:
+	Judicious use of quotes to focus google search actually gets some pretty useful results.
+11:45:46 From Daniel S Katz to Everyone:
+	@fernanda - I agree, there's an "enough" money that we need to offer, but beyond that, there are other things that matter
+11:45:58 From Mark (he/him) Miller (LLNL) to Everyone:
+	@Deb +1 UX design ;0
+11:46:01 From Carlo Graziani (ANL) to Everyone:
+	There is a role at ASCR computing facilities (ANL, ORNL) called the "Catalyst". They are essentially RSE-like, consultant/translation-layer people who know code and architecture but can talk to application people in their own language. It's a valuable model.
+11:46:25 From Miranda Mundt (SNL) to Everyone:
+	@Carlo - That’s interesting. Is that a long-term role or meant to be more short-term?
+11:46:27 From Jordan Perr-Sauer to Everyone:
+	@Fernanda - I agree. It’s not clear that just paying more would attract the type of talent we need. I haven’t yet seen an evidence-based study on this topic.
+11:46:34 From Carlo Graziani (ANL) to Everyone:
+	Long-term.
+11:46:36 From Vanessa to Everyone:
+	I made a site to share roles / positions if anyone wants to share them https://us-rse.org/rse-roles/
+11:47:20 From Vanessa to Everyone:
+	Ian is the best :)
+11:47:31 From Vanessa to Everyone:
+	clapclapclap!
+11:47:33 From Deb Agarwal (Berkeley Lab) to Everyone:
+	Nice talk Ian!
+11:47:35 From Marshall McDonnell  to Everyone:
+	Just to say, at ORNL, 2 years ago we started a Research Software Engineering group. It has now had to split into 2 groups and is a mix of research software engineers, computer scientists, software architects, DevOps engineers, etc. Lots of growth and really love being part of the group!
+11:47:37 From Jordan Perr-Sauer to Everyone:
+	Yes, go ian!
+11:47:52 From Vanessa to Everyone:
+	Marshall that's awesome! I wish we had that at my lab.
+11:47:56 From Miranda Mundt (SNL) to Everyone:
+	Ian, perfect mix of humor and information, as per usual. Well done!
+11:48:06 From Marshall McDonnell  to Everyone:
+	Love the talk, Ian! Thank you so much!
+11:48:12 From Anshu Dubey to Everyone:
+	Nice talk indeed.
+11:48:18 From Todd Munson (Argonne) to Everyone:
+	Catalysts are a type of RSE, but there are needs beyond those specialists as well.
+11:48:41 From Vanessa to Everyone:
+	Programs could have a focus in research software engineering, akin to some other focus.
+11:48:49 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	LANL recruiting stresses quality-of-life and service to science/nation/humanity.  That can overcome the salary difference to some degree (though probably not 6x)
+11:48:50 From Fernanda, NextSilicon (she/her) to Everyone:
+	@Jordan, @DK, nobody goes into gov/academia to make money. But gov/academia also treats them like background service staff and when low pay and low recognition for the service occurs, they *will* leave for some place that at least gives them enough cash to enjoy life
+11:49:07 From Reed Milewicz (SNL) to Everyone:
+	+1 @Fernanda
+11:49:12 From Will Sutherland to Everyone:
+	Given that a lot of RSEs are embedded in groups and working with the people they are writing software for, is more HCI/user research a kind of work that many of them end up learning/doing?
+11:49:18 From Todd Gamblin to Everyone:
+	Career path is difficult to talk about, at least at labs, because it varies quite a bit from org to org. e.g., at LLNL there are official levels, but you can’t tell anyone another person’s level and promotions aren’t announced.  Once you make it to level 6 it’s announced and you’re a distinguished member of technical staff, but that’s only a few people. There are no official titles for lower levels, which IMO is an issue b/c it a) makes career path unclear, b) muddies the signal of what the lab values, and c) is disadvantageous for women and minorities who might be assumed not to be at a high level when, in fact, they are.  Titles normalize assumptions to some extent.
+11:49:24 From Marshall McDonnell  to Everyone:
+	Vanessa, first, thanks for all the work you do for US-RSE! Second, we are hiring! ;)
+11:49:42 From Derek Gaston (INL) to Everyone:
+	@Marshall - that sounds great… can you say anything about how you fund those RSE groups?
+11:49:44 From Mark (he/him) Miller (LLNL) to Everyone:
+	How much do RSEs need to know about programming (incl. parallelism of some/any kind) and how much about numerical methods, FEM, FV, etc.?
+11:49:44 From Vanessa to Everyone:
+	Will I don't think so - my preference was for generalist technologies over running pipelines for a group.
+11:49:46 From Fernanda, NextSilicon (she/her) to Everyone:
+	I’m hiring too!  😄
+11:50:00 From Dan Gunter (he/him) to Everyone:
+	Right, the labs are different from each other. I didn't know until now that some labs had a group called RSE
+11:50:07 From Todd Munson (Argonne) to Everyone:
+	I was frequently referred to as a “plumber” (and treated like such) when writing the critical software the domain people needed…
+11:50:08 From Simon Hettrick to Everyone:
+	I agree with Ian: we should be recruiting from undergrads, masters and PhDs
+11:50:24 From Daniel S Katz to Everyone:
+	We're also hiring - https://www.ncsa.illinois.edu/about/careers/
+11:50:24 From Vanessa to Everyone:
+	My title is "Computer Scientist" and it makes me feel like an imposter in my own shoes lol.
+11:50:31 From Todd Gamblin to Everyone:
+	Um hey people who are hiring: we are very happy to have @v at LLNL so um cool it y’all.
+11:50:33 From Jordan Perr-Sauer to Everyone:
+	@Dan - The labs are all in different stages of implementing RSE groups, and are all taking slightly different paths.
+11:50:43 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	@todd :-)
+11:50:48 From Vanessa to Everyone:
+	lol they aren't targeting me :)
+11:50:52 From Fernanda, NextSilicon (she/her) to Everyone:
+	Yes we are
+11:50:55 From Todd Gamblin to Everyone:
+	^^
+11:50:56 From Vanessa to Everyone:
+	LOL
+11:50:57 From Vanessa to Everyone:
+	ohno
+11:50:59 From Dan Gunter (he/him) to Everyone:
+	@Jordan I don't think it's a linear progression
+11:51:01 From Vanessa to Everyone:
+	*runs away*
+11:51:01 From Todd Gamblin to Everyone:
+	STAHP
+11:51:05 From Jordan Perr-Sauer to Everyone:
+	Let me qualify what I said with - sample size = 3 or 4 in my mind 🙂
+11:51:07 From Neil Chue Hong / SSI (he/his) to Everyone:
+	@simon - a key question would be: are any of the many paths to becoming an RSE currently blocked because of lack of legitimacy or available training/education?
+11:51:07 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	@v it’s nice to be wanted…
+11:51:26 From Marshall McDonnell  to Everyone:
+	@derek we work at many different levels where we may embed as one member on another team to larger projects that we mainly manage with 5-10 members of our group working on them. The big one is our neutron scattering data reduction work for the Spallation Neutron Source and High Flux Isotope reactor. But we work all over the lab. I get to "see" so much of the lab in this group because we have so much opportunity to help out. Have to sort of "turn down" work 
+11:51:30 From Miranda Mundt (SNL) to Everyone:
+	Hahah, Vanessa, suffering from too much appreciation
+11:51:31 From Vanessa to Everyone:
+	yeah I'm smiling pretty big right now thanks y'all!
+11:51:37 From Mark (he/him) Miller (LLNL) to Everyone:
+	@Vanessa...I was educated as an EE (little to no CS formal training) but my entire career I have written software...I hope I know what I was doing ;)
+11:51:40 From Fernanda, NextSilicon (she/her) to Everyone:
+	🙂
+11:51:58 From Fernanda, NextSilicon (she/her) to Everyone:
+	We admire you @V and @Todd you better stay on your toes
+11:52:04 From Vanessa to Everyone:
+	I was educated in World of Warcraft.
+11:52:15 From Rick Arthur (GE) to Everyone:
+	Scientific & Engineering Research generally does a terrible marketing job about clarifying the career-long value of interesting and impactful projects vs. the utter drudgery of the actual work at the $$$ jobs to which we always grumble about losing talent (financial or ad-targeting).
+11:52:32 From Todd Munson (Argonne) to Everyone:
+	👍for the WoW reference!
+11:52:33 From Todd Gamblin to Everyone:
+	@Fernanda: ❤️
+11:52:49 From Vanessa to Everyone:
+	I have a different view I don't think the training matters *that* much as long as you figure out you love programming / being an RSE at some point and just learn what you need.
+11:52:55 From Deb Agarwal (Berkeley Lab) to Everyone:
+	At LBNL we have teams that have large numbers of RSEs that work on domain problems. We currently include researchers in those groups to give them opportunities to also work on CS research and to help keep them advancing the field themselves.
+11:53:02 From Derek Gaston (INL) to Everyone:
+	@Marshall - thanks… that sounds very familiar.  My team at INL is funded about half that way and half directly (from programs).
+11:53:21 From Miranda Mundt (SNL) to Everyone:
+	@Rick - Do you mean the difference in quality of life and work at research facilities versus, say, Google?
+11:53:40 From Fernanda, NextSilicon (she/her) to Everyone:
+	We underestimate how much learning on the job is a thing
+11:53:40 From Jordan Perr-Sauer to Everyone:
+	@Vanessa - I think this works for some, but definitely not all, and perhaps contributes to the myth of the hero-developer.
+11:53:58 From Vanessa to Everyone:
+	what's a hero developer?
+11:54:00 From Todd Gamblin to Everyone:
+	@V: if you’re enthusiastic about picking up new skills I think that works, and that might be a key attribute for RSEs given that there… isn’t that much training yet.
+11:54:03 From Mike Heroux to Everyone:
+	Young people who are forming opinions of careers don’t use Twitter, LinkedIn other platforms.  They see five-second commercials on YouTube.  If we want to insert awareness of our communities and needs we need to get our ideas exposed there
+11:54:23 From Fernanda, NextSilicon (she/her) to Everyone:
+	They see TikTok Mike
+11:54:27 From Todd Gamblin to Everyone:
+	Yeah mike tiktok
+11:54:29 From Vanessa to Everyone:
+	hahaha
+11:54:30 From Todd Gamblin to Everyone:
+	YouTube is for boomers
+11:54:32 From Derek Gaston (INL) to Everyone:
+	@Mike - you need to recalibrate… we need to get on TikTok
+11:54:32 From Vanessa to Everyone:
+	+1 Fernanda!
+11:54:34 From Jordan Perr-Sauer to Everyone:
+	@Vanessa: Perhaps not well defined term. 10x developer?
+11:54:36 From Mike Heroux to Everyone:
+	Yes, another location.  Great point
+11:54:50 From Jordan Perr-Sauer to Everyone:
+	@Vanessa: That all you really need is a star developer who does everything.
+11:54:52 From Vanessa to Everyone:
+	Is 10x developer a myth?
+11:54:58 From Vanessa to Everyone:
+	oh I see
+11:55:12 From Andy Gallo to Everyone:
+	Another anecdote.  8-)  Where’s the “science” in Princeton’s RSE approach? - they tried it, it worked anecdotally, so they did more.  And I think that’s OK.  Knuth called this profession an “art”…
+11:55:34 From Jeff Shrager to Everyone:
+	From the 2018 survey data: Python	68.0	68.686869
+	R	39.0	39.393939
+	SQL	34.0	34.343434
+11:55:44 From Observer - Steve Fiore (UCF) to Everyone:
+	It is not personality that matters, but, rather, helping them develop the competencies needed to work on a team and creating a culture of collaboration. Above, I posted one of my papers on this. [Fiore, S. M., Gabelica, C., Wiltshire, T., & Stokols, D. (2019). Training to Be a (Team) Scientist. In K. L. Hall, A. L. Vogel, & R. T. Croyle (Eds.), Strategies for Team Science Success: Handbook of Evidence-Based Principles for Cross-Disciplinary Science and Practical Lessons Learned from Health Researchers (pp. 421–444). Basel, Switzerland: Springer International Publishing.]
+11:55:49 From Mark (he/him) Miller (LLNL) to Everyone:
+	@V and @Todd do point to a key requirement of RSEs...they have to embrace change and constantly learning (the right) new technologies without becoming distracted by the flavor-of-the-month technologies.
+11:55:50 From Rick Arthur (GE) to Everyone:
+	@Miranda The difference in job satisfaction rather than shiny-thing perks (brag about a Google line on a resume / driving a fancy car from your tiny Mountain View apartment / getting free food ~ playing video games at work / etc.)
+11:55:56 From Jeff Shrager to Everyone:
+	Surprising that R is so high. I don't think of R as an HPC language.
+11:56:01 From Todd Gamblin to Everyone:
+	@Mark: @V calls this “being scrappy"
+11:56:10 From Vanessa to Everyone:
+	yes!
+11:56:12 From Fernanda, NextSilicon (she/her) to Everyone:
+	My 22yo found her calling on TikTok thanks to people sharing “ A day in the life of…” also none of us learned about HPC in school. We came from domain sciences
+11:56:13 From Jeff Shrager to Everyone:
+	(And I wish Python wasn't so high!)
+11:56:42 From Daniel S Katz to Everyone:
+	@v - hero developer used to refer to someone who writes a big HPC code on their own and is an expert on all aspects (this was a concept before there was a realization that teams were important in software development)
+11:56:43 From Miranda Mundt (SNL) to Everyone:
+	@Rick - Oh, absolutely. I was invited for an interview at Google earlier in my career, and I rejected the interview request purely because I didn’t want my quality of life to tank
+11:56:59 From Carlo Graziani (ANL) to Everyone:
+	A model related to Catalysts is RSEs embedded in facilities or computing centers (e.g. at universities) rather than in research groups. At the University of Chicago's Research Computing Center there's a Consultant Partnership Program (https://rcc.uchicago.edu/support-and-services/consultant-partnership-program) that one can buy into, which essentially gets you HPC expertise for your code at less cost than hiring your own stable of RSEs.
+11:58:08 From Vanessa to Everyone:
+	Ah interesting, I haven't heard that term as much as "10x" developer, but even that term I didn't associate with being responsible for the maintenance of a project, I always thought it was a stereotype for someone that drinks Soylent and has developer superpowers (and they may not necessarily work well with other people or be interested to help with a project).
+11:58:17 From Todd Gamblin to Everyone:
+	@Mike: another place I see younger folks picking things up is twitch.  Live-streaming is catching on
+11:58:38 From Rick Arthur (GE) to Everyone:
+	When we opened our San Ramon facility, I told them to put up a billboard near the bridge with something like: "You can work at Yahoogle and help send ads to browsers - or you can work with us and help treat and cure breast cancer."
+11:58:58 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	@rick cool!
+11:59:23 From Mike Heroux to Everyone:
+	Yes, my son is a chess and rocket league esports player, all streamed on twitch
+11:59:28 From Fernanda, NextSilicon (she/her) to Everyone:
+	Tiktok, discord, twitch yup
+11:59:33 From Fernanda, NextSilicon (she/her) to Everyone:
+	Mike I play rocket league!
+11:59:42 From Vanessa to Everyone:
+	ouch
+11:59:54 From Vanessa to Everyone:
+	I walked into a tree once
+11:59:55 From Mike Heroux to Everyone:
+	My son’s handle is el bloop
+11:59:58 From Rick Arthur (GE) to Everyone:
+	I'd watch a chess and rocket league mash-up!
+12:00:11 From Todd Gamblin to Everyone:
+	@V: I think all that is part of the 10x developer mythos.  There’s a lot of good and bad.
+12:00:15 From Fernanda, NextSilicon (she/her) to Everyone:
+	HPC-sports 😄
+12:00:58 From Todd Gamblin to Everyone:
+	@Fernanda: Battle ropes with IB cable bundles
+12:01:04 From Todd Munson (Argonne) to Everyone:
+	Run rocket league on  Frontier?
+12:01:15 From Jeff Shrager to Everyone:
+	An RSE and a scientist walk into a bar. The scientist walks out with a publication. The RSE picks up the tab.
+12:01:26 From Fernanda, NextSilicon (she/her) to Everyone:
+	I approve Todd.
+12:01:27 From Todd Munson (Argonne) to Everyone:
+	I wonder ho many FPS we could get.
+12:01:30 From Hannah Cohoon to Everyone:
+	<3 boundary objects
+12:01:30 From Vanessa to Everyone:
+	lol!
+12:01:33 From Todd Munson (Argonne) to Everyone:
+	^ho^how^
+12:01:48 From Todd Gamblin to Everyone:
+	Good RSEs don’t pick up tabs — they use spaces.
+12:01:56 From Jeff Shrager to Everyone:
+	lol!
+12:02:06 From Reed Milewicz (SNL) to Everyone:
+	Ian, my question that I was gonna ask is about how RSEs can play institutional funding games well?  Is that something we leave to the PIs of teams we're embedded in and stay out of such matters, or should RSEs take a more active role? Because I think if someone’s going to put in a proposal for research work involving software development, RSEs should be part of that conversation early on. I also think RSE teams could be putting in proposals to secure funding of their own and on their own terms, such as for developing innovative infrastructure. What are your thoughts?
+12:02:57 From Daniel S Katz to Everyone:
+	@reed - for us, this is part of the job of the RSE group leader (who can be project PIs) and software directorate leads, as well as the science PIs
+12:04:53 From Pete Peterson to Everyone:
+	@Reed RSE can be PI, but they tend to fit better as a co-investigator. However, if you want to keep them arround, they/we like to be a partner in the funding proposal and overall solution decisions. I've been turned off by "cool GPU things" that were pitched when plain old MPI is a better fit.
+12:05:33 From Rick Arthur (GE) to Everyone:
+	Back to Andy's comment and the science vs. art aspect, to what extent has RSE been able to "flatten the curve" (that seems to be anecdotally true if not measured) where productivity/quality of developers can differ by a factor of 10x.
+12:05:39 From Todd Gamblin to Everyone:
+	Before @v came to LLNL I tried to work with her via a contract w/Stanford and it was a bit surprising that RSEs could not lead contracts at all.  They had to find a professor to work with, even though the project was clearly something @v would be leading the Stanford side of.  I was pretty surprised that they didn’t have that degree of independence.
+12:05:53 From Reed Milewicz (SNL) to Everyone:
+	Good responses, thank you everyone!
+12:06:01 From Reed Milewicz (SNL) to Everyone:
+	Woot, go @Boyana!
+12:06:02 From Daniel S Katz to Everyone:
+	that's not the case for NCSA - any NCSA staff member can be a PI or co-PI
+12:06:11 From Todd Gamblin to Everyone:
+	Good for NCSA.
+12:06:20 From Ian Cosden to Everyone:
+	@Reed, good question! It’s a bit loaded when you think about the ramifications of saying it should be strongly  one way or the other. Both have advantages. If an RSE will have a significant contribution/insight then shouldn’t they be included?  But what happens if the RSE leaves?
+12:06:29 From Todd Gamblin to Everyone:
+	It was a huge pain to deal with that — had to fill in very busy professors about a project they’d likely have little to do with
+12:06:54 From Vanessa to Everyone:
+	@Todd that's accurate - the CIO of research computing could not write grants to get her own funding. I have a PhD and I could not either. I had to (on my own) negotiate large contracts with tech companies (which were fun at the end of the day don't get me wrong) to fund myself.
+12:07:07 From Daniel S Katz to Everyone:
+	I think it's the case for many universities, but Stanford is in the minority.  It's partly, to me, related to universities that have a strong vs weak distinction between faculty and staff
+12:07:09 From Ian Cosden to Everyone:
+	By default our RSEs are not able to be co-pi/pi’s but part of our conversation with the university is to allow this in special cases.  And we have been successful
+12:07:43 From Todd Gamblin to Everyone:
+	I think that reflects a really limited view of how projects and funding work.
+12:07:46 From Vanessa to Everyone:
+	I made RSE Services and the rates were totally controlled by the finance department (and imho way too high to be reasonable) for research groups - the result I saw was that it was mostly groups from the school of medicine (where there is more money) that would engage OR really large powerhouse labs.
+12:07:54 From Daniel S Katz to Everyone:
+	Illinois has a role called "Academic Professional" that might be "staff" elsewhere, where the academic part is recognized as important
+12:07:56 From Todd Gamblin to Everyone:
+	And it limits RSEs’ collaboration
+12:08:17 From Reed Milewicz (SNL) to Everyone:
+	Good point. I’m not saying that RSEs need to be PIs or co-PIs to be part of the conversation. But I’m wondering to what extent RSEs should be involved in that conversation about where the research is going with respect to the software, etc.
+12:09:12 From Vanessa to Everyone:
+	They should! There should be a layer of RSEs at a university that are aware of the work going on at the university, so when lab A comes in and says "we are working on this" they can say "lab B is working on this let's collaborate" or "this method is actually similar to this other work that you didn't know about."
+12:09:53 From Vanessa to Everyone:
+	If successful the fabric would go beyond the institution and it wouldn't be so hard, for say, Ian's group to collaborate with another university that has a group.
+12:10:06 From Kelley Ruehl (Sandia) to Everyone:
+	@Reed I'm a PI and I've had to learn RSE skills to effectively manage my team and our software, it's a multi-institution team
+12:10:15 From Vanessa to Everyone:
+	There are just SO many barriers- forget about the contracts, how about the 50% overhead on salary that makes it impossible?
+12:10:27 From Todd Gamblin to Everyone:
+	I think there needs to be a mix of RSE services where some of them are just centrally funded to catalyze small projects — I dunno university economics that well but it seems like you could make it a common burden on grants or something.  I think it also makes sense for large groups to have the rate-based thing if they want a larger fraction of a person. Making everyone pay that seems harmful though — it just makes things even harder for small labs.
+12:10:27 From Miranda Mundt (SNL) to Everyone:
+	ELAINE!!
+12:10:28 From Andy Gallo to Everyone:
+	Working for a corporation, I appreciated the “activity centric” mindset in the prior talk.  But I wonder - at what point does a research team which wrote software for self wake up to magnanimity and want to write it to share (with its associated costs)?  What are the motivation$?
+12:11:05 From Daniel S Katz to Everyone:
+	part of the mission of a public institution is technology transfer for societal benefit
+12:11:07 From Ian Cosden to Everyone:
+	Personally, I think that funding agencies should be demanding (maybe too strong a statement) that if reusable software is a deliverable from a funded project, then the project team should include someone (read: RSE) who can ensure the quality of the product.
+12:11:20 From Derek Gaston (INL) to Everyone:
+	@Rick - I think my group has been successful at that (flattening the curve).  We both develop a framework and embed with the research groups to help hundreds of engineers (mostly nuclear engineers) efficiently develop parallel, multiphysics, nuclear reactor simulation tools.  The application of good computer science to computational science can provide multipliers on output.
+12:12:19 From Vanessa to Everyone:
+	@Todd the rate was just for external collaborators. For RSE Services I did have all different kinds of rates - everything from a few hours to a percentage of my time to a single rate for a scoped project.
+12:12:23 From Todd Gamblin to Everyone:
+	@Dan: agree but do the funding agencies realize that often the tech transfer happens in ad-hoc interactions and free energy situations?  A recurring theme of these talks is that RSEs or academics “aren’t paid” to do certain types of work, and that just kills any sort of spontaneous interactions around software.
+12:12:25 From Rick Arthur (GE) to Everyone:
+	@Ian - that's what I was getting at in prior comment (while you were presenting) relative to a "credential" for RSE and associated requirement from grant agencies for the proposal team. Place a tangible value on the formal qualification and inclusion.
+12:12:36 From Todd Gamblin to Everyone:
+	@V: that’s cool — I think that makes a lot of sense
+12:13:02 From Rafael Mudafort to Everyone:
+	And designers! Architects, etc.
+12:13:29 From Reed Milewicz (SNL) to Everyone:
+	When teaching programming courses in grad school, my favorite students were the art and English majors. Good critical thinking skills, out-of-the-box thinking, etc.
+12:14:01 From Daniel S Katz to Everyone:
+	@todd - I agree too 🙂 there are lots of stakeholders with somewhat overlapping goals, and technology transfer is one of the things that gets stuck in the middle many times, unless the PI pushes it
+12:14:25 From Ian Cosden to Everyone:
+	@Rick. Credentials are hard and scare me, but the reasoning behind the need are spot on.
+12:14:50 From Rick Arthur (GE) to Everyone:
+	In theory, tools / AI~ML will get better and better at the finicky bits of coding, and then the harder part - like effective visualization / communication will be areas for humans to really shine.
+12:15:57 From Daniel S Katz to Everyone:
+	@rick - at NSF, I was some places where specific credentials were needed to be successful, and these places were closed to other people with other ideas, which seemed unfortunate to me. Other parts were open to anyone, with the caveat that potential PIs needed to explain how they were qualified to do what they proposed
+12:16:04 From Daniel S Katz to Everyone:
+	*I saw
+12:16:07 From Todd Gamblin to Everyone:
+	@Dan: I see a lot of PIs who hamstring themselves on things like this — some are really good at just doing the outreach, etc. but others have deep preconceptions about what is funded and what is not.  I think it would help to have some clarity — maybe a statement or something? —  around the goals of the agency and how small-scale outreach that doesn’t distract with project goals is a plus, not a misuse of funds.
+12:16:09 From Rick Arthur (GE) to Everyone:
+	Credentials need not be perfect, but there are examples where this is well-established and seems to function - like cybersecurity.
+12:16:42 From Sandra Gesing to Everyone:
+	I like that NSF asks for CSSI proposals now for RSE mentoring plans but I think it should be added for any call asking for developing software
+12:16:45 From Vadim Dyadechko to Everyone:
+	Hollywood takes credentials seriously. Astrophysicists too.
+12:16:58 From Jeff Shrager to Everyone:
+	No no ... it wasn't phone apps, it was phone operating systems!
+12:17:00 From Rick Arthur (GE) to Everyone:
+	RSEs could unionize :)
+12:17:21 From Daniel S Katz to Everyone:
+	@Todd - that's a good idea. I wonder how we might do this.  Maybe this could be a breakout topic
+12:17:35 From Simon Hettrick to Everyone:
+	@Rick That was the idea behind the first RSE Association
+12:18:42 From Rick Arthur (GE) to Everyone:
+	Well, I hear it takes a few castles falling into the swamp before you can build the one that stands.
+12:18:44 From Vanessa to Everyone:
+	oooh there should be a Freakonomics podcast episode about this area.
+12:18:50 From Reed Milewicz (SNL) to Everyone:
+	@Rick Or co-determination, I like that solution. Bake the represented interests of RSEs directly into the institution.
+12:20:02 From Vanessa to Everyone:
+	ooh Stephen Dubner!
+12:20:15 From Andy Gallo to Everyone:
+	These comparisons between writing sci soft and phone apps and then saying they’re very different - would it help the conversation to compare sci soft with engineering soft… like working at an Ansys, or… surely they’re more suitable for comparison than “phone apps”?
+12:20:19 From Vanessa to Everyone:
+	and Levitt
+12:20:45 From Daniel S Katz to Everyone:
+	I'm thinking about if this meeting was in person, what parts would be better and what would be worse.
+12:20:46 From Reed Milewicz (SNL) to Everyone:
+	Mutation analysis!
+12:21:00 From Vanessa to Everyone:
+	If you don't have any tests.. do you have any bugs? heh
+12:21:01 From Reed Milewicz (SNL) to Everyone:
+	Use mutation analysis to predict how many bugs you could have caught with your test suite
+12:21:08 From Vanessa to Everyone:
+	If a tree falls in the woods...
+12:21:09 From Reed Milewicz (SNL) to Everyone:
+	That gives you a rough idea
+12:21:10 From Rick Arthur (GE) to Everyone:
+	Alternately - is there a demonstratable negative consequence for the absence of RSE that results in a tangible / assessable penalty or cost?
+12:21:15 From Todd Gamblin to Everyone:
+	How can you even begin to scale your project or get external contributions without unit tests?
+12:21:19 From Rick Arthur (GE) to Everyone:
+	Yes, what he said :)
+12:21:36 From Vanessa to Everyone:
+	I think when there aren't RSEng there is more a propensity to not share code, so you never really know if there are bugs or issues.
+12:22:11 From Jason Wiese to Everyone:
+	@Slaven this is the classic challenge of doing formative user-centered work! It’s essential, and if it’s successful you never know.
+12:22:14 From Simon Hettrick to Everyone:
+	@Jordan +1
+12:22:21 From Cyrus Harrison (LLNL) to Everyone:
+	that’s an example of “be careful what you measure” — if you can’t measure benefit and but you can measure cost. You can paint yourself in a corner
+12:23:11 From Todd Munson (Argonne) to Everyone:
+	I am concerned that the academic economists I work with are very theoretical and not applied.  It would be helpful to define what we want from the economists.
+12:23:35 From Vanessa to Everyone:
+	Oh I don't want to paint myself into a corner.
+12:24:01 From Jim Willenbring to Everyone:
+	For the bugs that were prevented, there must be some ability to compare projects with certain practices to those without those practices and look at relative defect rates.
+12:24:18 From Boyana Norris to Everyone:
+	@Jim, yes, but it’s a coarse comparison
+12:24:45 From Vanessa to Everyone:
+	It would be fun to identify good/improper patterns in code, everything from static analysis of the file to looking at the structure or contents of a repo, and then compare between groups with RSEs/not
+12:24:53 From Todd Gamblin to Everyone:
+	@Jim: I think the ones without testing don’t make it to being large projects
+12:24:57 From Ganesh Gopalakrishnan to Everyone:
+	One could calibrate the cost of bugs retrospectively. Intel’s FDIV was valued at $400M or so.
+12:25:05 From Rick Arthur (GE) to Everyone:
+	A big problem in asserting economics on all this is there is rarely a sufficiently large/dynamic/fungible population for "fair market forces"
+12:25:16 From Hui Zhou to Everyone:
+	If the milestones are defined by software engineers, then having software engineers on the team probably will be crucial in meeting those milestones. On the other hand, if the milestones are defined by domain scientists, then the metrics in the milestone will like be more detached from a software engineering and thus the inclusion of software engineer may be less crucial. It is a kinda chicken-egg situation and need be careful on how we phrase the question
+12:25:18 From Todd Gamblin to Everyone:
+	So you could make the case that projects at a certain scale all have these practices but it’s hard to find the ones that failed b/c they didn't.
+12:25:27 From Vanessa to Everyone:
+	yeah "quick and dirty" == "faster publication" that's where the incentives lie.
+12:26:14 From Derek Gaston (INL) to Everyone:
+	@Daniel re: meeting in person.  Due to the high energy in this chat… we should have a Slack chat during _in-person_ meetings too!
+12:26:28 From Todd Munson (Argonne) to Everyone:
+	You mean you don’t?
+12:26:33 From Todd Gamblin to Everyone:
+	@Hui: I suspect that even for domain-centric metrics, software engineering is becoming more important, and still crucial.
+12:26:44 From Todd Munson (Argonne) to Everyone:
+	I regularly slack pithy comments during in person meetings…
+12:26:47 From Kelley Ruehl (Sandia) to Everyone:
+	@Philip, I agree, I think that's a big challenge. There is a conflict between the need for quick results and adhering to best practices. Often projects I work on aren't software development projects, they develop software to answer a research question, so the focus is on the latter
+12:26:58 From Vanessa to Everyone:
+	why do they have to be young?
+12:27:00 From Jim Willenbring to Everyone:
+	With and without testing are binary differences. I was thinking looking at different testing practices, not with or without.
+12:27:17 From Derek Gaston (INL) to Everyone:
+	@Todd - well, that’s a given… but that’s on my own team’s slack - not on the meeting’s Slack!
+12:27:58 From Vanessa to Everyone:
+	One of the most fun things that I've found, throughout my career, is finding like-minded folks in OSS communities and then working on projects together.
+12:28:01 From Todd Gamblin to Everyone:
+	@Jim: that would be interesting — I’d also be interested in coverage levels
+12:28:17 From Todd Gamblin to Everyone:
+	+100 @v
+12:28:29 From Vanessa to Everyone:
+	I think not just everyone can work with everyone else - you have to find a good match of working style and personality.
+12:28:36 From Cyrus Harrison (LLNL) to Everyone:
+	dan, I agree — I wish we could tease out why folks are reading that as “the” path.  There are many other paths to success. I don’t think it’s unique to labs.
+12:28:42 From Todd Gamblin to Everyone:
+	For spack we hired one developer (Max) on contract b/c he was a strong OSS contributor, and we knew of @v due to her OSS contributions and recruited her b/c of them.
+12:29:00 From Todd Gamblin to Everyone:
+	OSS is super advantageous b/c you already have a sense of whether the person will be a strong contributor.
+12:30:00 From Elaine Raybourn to Everyone:
+	@dan I believe you are also hitting on the notion that cultures (organizations) can be well designed with purpose — it takes effort and thinking in advance
+12:30:00 From Vanessa to Everyone:
+	There is also this magic with OSS - I can't put my finger on it but there are other people with a level of excitement that is hard to find when people "have to work on a thing." Yeah, I think that's the filter - working on something you feel passionate about vs. doing it because you have to.
+12:30:24 From Vanessa to Everyone:
+	so the trick is to match people to work on things they are passionate about I think.
+12:30:35 From Derek Gaston (INL) to Everyone:
+	@Todd - I’m definitely interested in coverage statistics.  For MOOSE we publish this very publicly… we also enforce 80% of line code coverage in our CI… and publish automated coverage diffs for every PR.  Here’s the overall coverage… https://mooseframework.inl.gov/docs/coverage/framework/?_ga=2.255250752.913483641.1639419872-1812585702.1633483514
+12:30:46 From Vanessa to Everyone:
+	Mooooose!
+12:31:01 From Todd Gamblin to Everyone:
+	It’s a wider net so you’re more likely to find the really passionate contributors, and in many cases you get more out of them than out of people you pay.
+12:31:23 From Todd Gamblin to Everyone:
+	At least some of them — it varies.  What’s really nice is when you can hire them for what they want to work on.
+12:31:50 From Vanessa to Everyone:
+	I don't think that is always true - I contribute to things just because they are fun and I don't do an economic analysis about how I'm going to benefit. But maybe you are right this kind of assessment is done on the level of groups / managers.
+12:32:01 From Vanessa to Everyone:
+	(that was in response to the speaker)
+12:32:13 From Todd Gamblin to Everyone:
+	@Derek: yep coverage is a big deal — it’s helped us build better tests
+12:32:46 From Ben Dudson to Everyone:
+	+1 @vanessa sometimes the benefit is just the enjoyment of building something because you can
+12:32:52 From Vanessa to Everyone:
+	yes <3
+12:33:23 From Vanessa to Everyone:
+	my first class I wrote in Python was a car and when I wrote a function that would make it honk its horn I lost my mind.
+12:33:52 From Deb Agarwal (Berkeley Lab) to Everyone:
+	+1 Jason - agree about UX role
+12:34:12 From Hui Zhou to Everyone:
+	It is so true that it is so much easier for domain scientists to talk across projects and even disciplines than software engineers to talk across projects even with the same subject domains. I think this is the issue of software practice itself. The domain scientists discuss in a generic language suited for communicating ideas. Software engineer are still using programming languages that overshadows ideas with to much unrelated but necessary details
+12:34:13 From Ignacio Laguna to Everyone:
+	@Derek that’s a nice coverage table!
+12:34:33 From Cyrus Harrison (LLNL) to Everyone:
+	@dan — I also think that can only happen at certain scales.  In the distance past, that was actually the scale of a sim code (many years ago). Maybe that is why it is embedded in our culture. Now we are shifting to more modularity (shrinking the scale back) so that might be driving those changes.
+12:34:40 From Vanessa to Everyone:
+	It should be standard practice that docs keep up with code. I write docs AS I write the code.
+12:35:20 From Fernanda, NextSilicon (she/her) to Everyone:
+	yup
+12:35:23 From Todd Gamblin to Everyone:
+	@Hui: I’m not sure I understand your comment. Software engineers don’t talk to each other in programming languages.  It’s possible (and common) to have high level discussions across software domains.
+12:36:23 From Derek Gaston (INL) to Everyone:
+	@Todd @Ignacio - not wanting to get too off-topic, but I have to mention coverage _diffs_.  We use pycobertura on every PR… and our CI automatically comments back on the PR with the results.  We use it to guide modifications to PRs so that we can have high coverage of every change coming into the repo.  Check out a typical PR with a coverage comment here: https://github.com/idaholab/moose/pull/19462
+12:37:00 From Dan Laney to Everyone:
+	@cyrus agreed.  More tools are being built to leverage the larger applications
+12:37:07 From Vanessa to Everyone:
+	Huge +1 - it's so easy as an RSEng to get disconnected from the user base.
+12:37:38 From Ignacio Laguna to Everyone:
+	@Derek: cool! I wonder how many other projects follow this strategy for PRs + coverage.
+12:38:03 From Hui Zhou to Everyone:
+	@Todd For example, as simple question of what are you working on, the domain scientists can go into much details that they can easily draw detailed ideas from each other. On the other hand, ask a software engineer what you are working on, it only can be discussed on a very high level that what the software engineer actually are struggling on cannot really be discussed.
+12:38:19 From Daniel S Katz to Everyone:
+	I've been on that project 🙂
+12:38:50 From Vanessa to Everyone:
+	Oh yes! So in industry they have Developer Tools teams - developers that work on tools for other developers.
+12:39:08 From Hannah Cohoon to Everyone:
+	@Mike, can you point me to where I can find that data on where the most complete description is? that’s super interesting to me in relation to our content analysis of software projects
+12:39:20 From Todd Gamblin to Everyone:
+	@Derek: we’re using Codecov but I need to try this because Codecov seems to have scaling problems with our project.  Have you considered any of the hosted services or did you start with pycobertura first?
+12:39:51 From Mike Heroux to Everyone:
+	@Hannah, yes
+12:39:55 From Vanessa to Everyone:
+	good question
+12:40:20 From Fernanda, NextSilicon (she/her) to Everyone:
+	Reed your pins are 🙌🏼
+12:40:25 From Andy Gallo to Everyone:
+	Similarly we don’t form two teams to write the same piece of software, one which uses good practices and one which doesn’t, and then ask which one did better science.  No such luxury.
+12:40:29 From Hannah Cohoon to Everyone:
+	thank you!
+12:40:30 From Reed Milewicz (SNL) to Everyone:
+	@Fernanda, thank you!
+12:40:31 From Derek Gaston (INL) to Everyone:
+	@Ignacio - no idea but I think it would make a great paper to do a survey of large HPC projects and their testing practices.  (Unless someone knows that this paper already exists and I missed it)
+12:40:36 From Will Sutherland to Everyone:
+	Lol I noticed the pins too — awesome
+12:41:11 From Vanessa to Everyone:
+	I think you can get a glimpse of health by just looking at a community slack, for example, to see how comfortable people are talking about themselves, and their work, and (importantly) their differences. Slacks where this isn't the case have people showing up in general and maybe just posting a bug, slacks where you have a healthy community people are joking and having fun.
+12:41:27 From Damian Rouson (he/him/his) to Everyone:
+	I love the question’s description of RSEs as intersectional. Great point.
+12:41:34 From Vanessa to Everyone:
+	That's not a very scientific method, but it's a "gut feeling" method.
+12:41:51 From Ignacio Laguna to Everyone:
+	@Derek - Good point. I don’t think this paper exists.
+12:42:55 From Talita Perciano (she/her) to Everyone:
+	Great topic to be discussed, love the question from Mary Ann
+12:43:10 From Reed Milewicz (SNL) to Everyone:
+	Great answers! Taking notes on all of the responses
+12:43:13 From Mary Ann Leung she/her/hers to Everyone:
+	:-)
+12:43:15 From Kyle Harrington to Everyone:
+	@Vanessa it could be quantitative though. It might be hard to conclude from if there are small communities, but one could measure how vocal people are.
+12:43:24 From Vanessa to Everyone:
+	Oh I definitely agree.
+12:43:54 From Mary Ann Leung she/her/hers to Everyone:
+	I'm on a panel tomorrow.  You can also read my position paper
+12:43:58 From Vanessa to Everyone:
+	Y'all we have TWO great episodes of RSE Stories coming up that are fairly DEI focused - I can't wait to share (but it won't be for some months) - keep on the look out!
+12:44:02 From Fernanda, NextSilicon (she/her) to Everyone:
+	Any and all intersectional career paths suffer from “jack of all trades, master of none” bias
+12:44:13 From Miranda Mundt (SNL) to Everyone:
+	@V, I am really looking forward to those!
+12:44:18 From Talita Perciano (she/her) to Everyone:
+	@Mary Ann, definitely going to read your paper 🙂
+12:44:22 From Vanessa to Everyone:
+	ME TOO and I already recorded them lol
+12:44:38 From Derek Gaston (INL) to Everyone:
+	@Todd - maybe we should chat offline ( I’m at derek.gaston@inl.gov ).  But, in general: we always find the self-hosted stuff to be “better”.  We run 20+ Million tests a week on our CI… it’s tough to find any service that scales like that.
+12:44:59 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	@fernanda +1
+12:45:47 From Vanessa to Everyone:
+	I highly recommend hosting a podcast as an easy way to talk to new people! If anyone wants to host an RSE Stories episode (or more than one, as many as you like!) please reach out to me!
+12:47:08 From Miranda Mundt (SNL) to Everyone:
+	“How to Meet New People” - Record them answering questions. <— The technological age is fun.
+12:47:20 From Reed Milewicz (SNL) to Everyone:
+	I think diversity, equity, and inclusion can improve productivity and the quality of the resulting science, which in turn improves the trajectory of this ongoing experiment we call the human race, lol.
+12:48:03 From Vanessa to Everyone:
+	There are also visible / invisible kinds of diversity. The question of if there are people out there with different abilities or differences is answered - it's a huge yes, but the degree to which people are comfortable talking about their experiences and diifferences depends on the community culture.
+12:48:05 From Talita Perciano (she/her) to Everyone:
+	+1 @Reed
+12:48:22 From Miranda Mundt (SNL) to Everyone:
+	Mary Ann cited a paper in her position paper that links innovation to diversity
+12:48:32 From Miranda Mundt (SNL) to Everyone:
+	Or, sorry, opposite direction. Diversity -> innovation
+12:49:05 From Richard Barnes to Everyone:
+	Linters can automatically restrict design spaces.
+12:50:01 From Kirk Landin  to Everyone:
+	Building DSLs are also a great way to constrain things
+12:50:03 From Reed Milewicz (SNL) to Everyone:
+	@Richard To be fair, there are infinitely many hypothetical pieces of software that satisfy a set of functional requirements. 99.9% of them are bad. Some amount of design space restriction is good.
+12:50:20 From Talita Perciano (she/her) to Everyone:
+	@Vanessa, I think you brought up a great point… community culture hugely impacts the application of DEI
+12:51:03 From Richard Barnes to Everyone:
+	@Reed: I think you might have replied to the wrong person.
+12:51:08 From Andy Gallo to Everyone:
+	“Down-selecting”.  We do it all the time… e.g. which of the E4S tools will we down-select and adopt.  Another example - you can let non-programmers loose with MPI, or you can provide a constraining layer.
+12:51:09 From Jeff Shrager to Everyone:
+	Why is functional programming constraining?
+12:51:37 From Anshu Dubey to Everyone:
+	No side effects ...
+12:51:38 From Reed Milewicz (SNL) to Everyone:
+	@Richard I was thinking on what you said about linters.
+12:51:58 From Reed Milewicz (SNL) to Everyone:
+	“There are N competing standards, we should develop a common standard!”
+12:51:58 From Jeff Shrager to Everyone:
+	@ad That seems free'ing not constraining.
+12:52:35 From Vanessa to Everyone:
+	@Talita 100%! As an easy example, if you see a community, for example, where the culture to socialize is akin to what fraternties do in college (going to bars, drinking, etc.) that is leaving so many people out. The same kinds of subtle things happen in slack channels to, so there is the creation of in an out groups.
+12:53:00 From Ganesh Gopalakrishnan to Everyone:
+	If functional programming AND reduced data movement can coexist, I’m for it. I don’t have enough evidence that convinces me though. @jeff
+12:53:10 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	@Jeff FP forces all state to be passed as function arguments - in large programs that can make for huge unwieldy interfaces
+12:53:24 From Reed Milewicz (SNL) to Everyone:
+	+1 @Ganesh ooh, that’s good point
+12:53:49 From Kirk Landin  to Everyone:
+	@Ganesh, introducing laziness helps a lot with reducing data movement in FP
+12:53:53 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	@ganesh FP and pass-by-reference can coexist
+12:53:54 From Richard Barnes to Everyone:
+	@Reed: I think the value of linters is that they provide a way to restrict design spaces on top of what a language already provides. It's an easier sell then "use a new language" and a better solution than "let's just agree to do X and hope it happens".
+12:53:55 From Miranda Mundt (SNL) to Everyone:
+	@V, part of the “in and out” groups is unfortunately an ingrained human characteristic. We like to put ourselves in categories, which inherently leads to “insiders” and “outsiders.” People may not even be intentionally doing it. But that’s the goal - for us to recognize both our intentional and unintentional exclusionary choices
+12:53:58 From Jeff Shrager to Everyone:
+	@FC: I thought that PR was saying that this was a positive thing.
+12:54:28 From Carlo Graziani (ANL) to Everyone:
+	This chat tool needs a threaded interface.
+12:54:34 From Ben Dudson to Everyone:
+	I think the higher the level and larger the system the more constraints are important: Within a function or localised piece of code it can be important for performance to mutate or have side-effects. Its when those leak out that difficulties start because the interaction of side-effects become hard to reason about. A functional. immutable type interface between components helps keep larger systems manageable
+12:54:57 From Vanessa to Everyone:
+	I think one of my definitive qualities is that I never felt like I fit in a group - ethnically there weren't a lot of people like me where I lived, interest wise I was on another planet, so I never have felt like part of an "in" group. This would be a super interesting area of research, psychology of RSENg.
+12:55:19 From Ganesh Gopalakrishnan to Everyone:
+	@charles - I agree. FP and references are a good combo. This is why I feel things like Julia that can “open the FP cover” appeal to me a lot.
+12:55:29 From Kyle Harrington to Everyone:
+	I’ll have to defend FP as well. I regularly use Lisp/Clojure for large image data.
+12:55:41 From Jeff Shrager to Everyone:
+	@GG +1
+12:55:48 From Ganesh Gopalakrishnan to Everyone:
+	BTW I love FP, I code in Ocaml
+12:55:48 From Miranda Mundt (SNL) to Everyone:
+	Reed and I are interesting in doing some research into motivating factors within the CSE community at national labs - a subset of which, of course, is RSEs. So that’s a step in the right direction, but man, that *WOULD* be interesting!
+12:55:53 From Reed Milewicz (SNL) to Everyone:
+	^^^^
+12:55:55 From Derek Gaston (INL) to Everyone:
+	@Jeff I completely agree about the interface explosion issue for functional.  For many numerical methods (FE/FV for instance) there is a LOT of data that needs to make it all the way down into the final residual/jacobian computation (think of a stable flow formulation in FV with unstructured mesh - that needs 3 layers of elements worth of a stencil).  Passing that through functional interfaces ends up being ridiculous.
+12:56:26 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	@Kyle and @Jeff - Don’t get me wrong, I like FP, but it is a constraint, or as I prefer to think of it, a discipline
+12:56:31 From Jeff Shrager to Everyone:
+	@DG Can you just pass a state token?
+12:56:33 From Ganesh Gopalakrishnan to Everyone:
+	BTW this month’s CACM cover feature “hardware lottery” is cool! The most important line in that article is this: This article begins by acknowledging a crucial paradox: machine-learning researchers mostly ignore hardware despite the role it plays in determining which ideas succeed.
+12:56:35 From Fernanda, NextSilicon (she/her) to Everyone:
+	Majority people underestimate how much having other people “like you” helps feel like part of a bigger team
+12:56:37 From Hannah Cohoon to Everyone:
+	+1 Elaine!
+12:56:39 From Jeff Shrager to Everyone:
+	Like closures.
+12:56:54 From Kirk Landin  to Everyone:
+	@derek, at that point you can do something like OCaml's module system or "Immutable Classes" where you can pass things through without a huge amount of overhead
+12:56:59 From Miranda Mundt (SNL) to Everyone:
+	@Fernanda +1
+12:57:01 From Hannah Cohoon to Everyone:
+	evidence will make you more certain in the ambiguity
+12:57:03 From Reed Milewicz (SNL) to Everyone:
+	Ambiguity is good. I’m a researcher, if I knew exactly what was going on in a given situation, I wouldn’t be researching it, I’d just know it.
+12:57:03 From Will Sutherland to Everyone:
+	There were some studies in the sciences that looked at mentorship networks as a really important aspect of DEI.
+12:57:31 From Miranda Mundt (SNL) to Everyone:
+	@Will, YES!
+12:57:44 From Miranda Mundt (SNL) to Everyone:
+	The US-RSE DEI working group is talking about that exact topic recently
+12:58:13 From Talita Perciano (she/her) to Everyone:
+	😄 @Vanessa, I think we are on the same page there… for several reasons and events throughout my career/life, I never felt like I fit in a group
+12:58:14 From Todd Gamblin to Everyone:
+	Functional or not, the lesson is that you need to be careful about managing state.  FP makes you careful about it, but I also find there are a lot of FP oversells -- e.g., the one I always hear from people who don’t work on parallel codes — “FP makes it easier to parallelize code”
+12:58:15 From Ganesh Gopalakrishnan to Everyone:
+	@jeff, this is the article : https://cacm.acm.org/magazines/2021/12/256929-the-hardware-lottery/fulltext . It shows how disconnected ML researchers can be with HW (ergo with data movement). I’ve observed this (not all, but many).
+12:58:22 From Derek Gaston (INL) to Everyone:
+	@Jeff - definitely possible.  To be clear, I like FP - and we create a lot of FP-like interfaces in our own code… but _actually_ fully doing FP is very limiting for many numerical methods.
+12:58:35 From Vanessa to Everyone:
+	I think being able to make decisions under uncertainty AND too many choices is another RSEng skill. I've definitely encountered engineers that get really lost in the details and can't choose, and I'm on the other end of the spectrum that I'm too quick to jump into something I've chosen before considering all the things.
+12:58:36 From Matthew Wolf to Everyone:
+	Taking the FP discussion in a slightly different direction, an industry software engineer that I respect highly observed that he always looks to see if someone has experience with both a functional and an imperative language.  If they can hold both of them in their mind at the same time, it showed him they could fit into the needs of their organization.  Which languages didn’t matter, it was about finding people who could bridge categories.
+12:58:43 From Reed Milewicz (SNL) to Everyone:
+	@Todd functional programming made me realize just how much state I like carrying around.
+12:59:32 From Fernanda, NextSilicon (she/her) to Everyone:
+	RSEing skill includes prototyping and that’s SOooo undervalued in our field. How many people “wait it out” to see which framework will “win out"
+12:59:34 From Kirk Landin  to Everyone:
+	@Reed, then you have to start going through state withdrawals
+12:59:41 From Kyle Harrington to Everyone:
+	@Reed <insert George Carlin’s Stuff sketch>
+13:00:38 From Jordan Perr-Sauer to Everyone:
+	Reed: Ambiguity is good and necessary — sometimes. But if left unchecked it can drive unnecessary complexity.
+13:01:02 From Reed Milewicz (SNL) to Everyone:
+	@Jordan True. The entire purpose of my PhD was to teach me how to manage my own ignorance productively, haha
+13:02:52 From Philip Roth [ORNL] to Everyone:
+	Cookies and coffee are down the hall…
+13:03:25 From Fernanda, NextSilicon (she/her) to Everyone:
+	It’s oatmeal raising and the coffee is burnt
+13:03:32 From Jordan Perr-Sauer to Everyone:
+	I attended at least one conference during covid that shipped me a box of “swag” and snacks.
+13:04:01 From Observer: Claude D. Hall Jr. to Everyone:
+	lol
+13:04:36 From Bill Hoffman to Everyone:
+	I can not see the breakout rooms.
+13:04:50 From Oceane to Everyone:
+	same
+13:04:59 From Bill Hoffman to Everyone:
+	I might have got in after they were created???
+13:05:00 From Talita Perciano, LBNL (she/her) to Everyone:
+	I think they are going to open the breakout rooms after the break
+13:05:07 From Bill Hoffman to Everyone:
+	Oh ok.
+13:05:11 From Bill Hoffman to Everyone:
+	Makes sense.
+13:05:20 From Carina Haupt to Everyone:
+	I attended an online meetup where they shipped you a whole meal (burger, sides, salad, dessert) with instructions how to reheat and assemble as well as two bottles beer
+13:05:35 From Pete Peterson to Everyone:
+	I've seen in ML that there are standard datasets for people to try out. Are there similar things for "science" or "algorithm" results?
+13:05:52 From Vanessa to Everyone:
+	y'all 5 minutes is such a short time! Can we do a little more time in the future?
+13:05:53 From Anshu Dubey to Everyone:
+	@Carina, I want to know these people.
+13:06:04 From David Bernholdt (he/him) to Everyone:
+	I see that I'm missing out on the *good* meetings! :-)
+13:06:48 From Fernanda, NextSilicon (she/her) to Everyone:
+	Hook us up @carina
+13:07:04 From David Bernholdt (he/him) to Everyone:
+	Breakout rooms are open now...
+13:07:25 From Oceane to Everyone:
+	I don’t see the option
+13:07:39 From David Bernholdt (he/him) to Everyone:
+	If you see "More..." it may be under there
+13:07:54 From Oceane to Everyone:
+	No “More” option
+13:08:01 From Neil Chue Hong / SSI (he/his) to Everyone:
+	@Vanessa - agreed. I need more time to get sustenance.
+13:08:05 From David Bernholdt (he/him) to Everyone:
+	Or ask Deneise to move you
+13:09:03 From Talita Perciano, LBNL (she/her) to Everyone:
+	@Pete That is something we talk about in our position paper… the importance of curated methods and data
+13:12:17 From Daniel S Katz to Everyone:
+	notes: https://docs.google.com/document/d/1hJOKCu-f2cqcTxqKCIlToiZO3rPbK4PYjoyURqoDKuw/edit
+13:20:00 From Daniel S Katz to Everyone:
+	see https://documentation.divio.com re types of documentation
+13:21:14 From Fernanda, NextSilicon (she/her) to Everyone:
+	This is an awesome resource Daniel. We are writing documentation as we prepare to launch
+13:23:13 From Daniel S Katz to Everyone:
+	Neil Chue Hong pointed me to this a few weeks ago, and now I keep thinking about it as I think about documentation
+13:28:27 From Ganesh Gopalakrishnan to Everyone:
+	BTW I’m forming “starter slides” for Bill’s presentation here: feel free to take anything that works: https://docs.google.com/presentation/d/1G8irMrs5kNmRvkmGA5yVRuMGQ6njaM5lQ27WFwyJLr4/edit?usp=sharing
+13:32:13 From Derek Gaston (INL) to Everyone:
+	In case anyone is interested… within the MOOSE ecosystem we fund several repositories of open user inputs.   All codes/libraries are tested automatically against these “input repositories” on every pull-request.  One of them is focused on full nuclear reactor simulation and you can see it here: https://mooseframework.inl.gov/virtual_test_bed/
+13:40:48 From Daniel S Katz to Everyone:
+	Fernanda's hand is also up, and was first
+13:42:24 From Todd Gamblin to Everyone:
+	I dunno who tried to contribute to CMake ~12 years ago but it was a different universe with separate push and pull URLs and all kinds of complexity
+13:43:53 From Derek Gaston (INL) to Everyone:
+	@Todd - agreed.  To me, the single largest improvement to software engineering is the invention of the GitHub style Pull-Request.  It made so many best-practices easier to implement.
+13:45:55 From Todd Gamblin to Everyone:
+	It’s also interesting how the conversation around git has changed with the availability of good tooling.  This kind of discussion would usually involve a debate of whether svn or git was more complex on the CLI, and nobody cares now.
+13:49:16 From Todd Gamblin to Everyone:
+	Spack: https://github.com/spack/spack — for some talks on spack, conda, others, check out packaging-con: https://pretalx.com/packagingcon-2021/schedule/#
+13:49:50 From Fernanda, NextSilicon (she/her) to Everyone:
+	You’re a shill for Spack Todd
+13:49:56 From Todd Gamblin to Everyone:
+	I know right
+13:50:17 From Todd Gamblin to Everyone:
+	This is “outreach”, Fernanda
+13:50:30 From Fernanda, NextSilicon (she/her) to Everyone:
+	😂
+13:52:05 From Sayan Ghosh (PNNL) to Everyone:
+	GH and build system improvements definitely are good, but the processes required to move legacy code, add doc, and testing framework to GH might not be that straightforward (long latencies on internal IP, lack of expertise, no incentive from management unless hero/champion apps), and for small projects deter developers from taking the path. Also, license mismatches can dissuade folks to integrate with existing codebases. I have found a number of non-sw folks don’t understand sw licenses.
+13:53:13 From Todd Gamblin to Everyone:
+	@Sayan: build latencies for legacy languages (C/C++/Fortran) are an issue too — in many cases CI takes too long for things like free CI if you try to build all your dependencis
+13:53:55 From Todd Gamblin to Everyone:
+	We’ve been making some strides on that with build caches — but esp for codes with a lot of custom packages, teams often need to be empowered to build essentially their own stack
+13:55:10 From Fernanda, NextSilicon (she/her) to Everyone:
+	Editors, debuggers, profilers FTW
+13:55:15 From Todd Gamblin to Everyone:
+	emacs! But I want to switch b/c vim is more ubiquitous.  Sadly, 2 rounds of vim adventures hasn’t done it for me.
+13:55:41 From Fernanda, NextSilicon (she/her) to Everyone:
+	Go VS Code Todd. Give in
+13:55:49 From Fred Hickernell (Illinois Tech) to Everyone:
+	Ever tried FINE (FINE Is Not Emacs).  A distant memory.
+13:55:51 From Sayan Ghosh (PNNL) to Everyone:
+	@Todd - definitely technical innovations are happening, but I think managers should establish incentive structures to empower teams. Currently in our lab at least, paper is the FOM.
+13:55:52 From Todd Gamblin to Everyone:
+	So Microsoft very scary
+13:55:57 From Daniel S Katz to Everyone:
+	I learned vi as an extension from ed, and it made sense - emacs never clicked for me 🙂
+13:56:02 From Derek Gaston (INL) to Everyone:
+	@Todd there is also build technology that can help too.  With MOOSE unity builds are hugely impactful on build speed.
+13:56:14 From Kyle Harrington to Everyone:
+	VS Code almost got me but I kept running into walls when trying to make it as comfy as emacs
+13:56:28 From Todd Gamblin to Everyone:
+	What is a unity build?
+13:56:52 From Derek Gaston (INL) to Everyone:
+	https://en.wikipedia.org/wiki/Unity_build
+13:57:29 From Fernanda, NextSilicon (she/her) to Everyone:
+	PRINTF() we hope will become irrelevant
+13:57:35 From Derek Gaston (INL) to Everyone:
+	With the MOOSE build system we have a hybrid unity system.  We build about 30 “units”… one for each logical code system.
+13:59:20 From Fernanda, NextSilicon (she/her) to Everyone:
+	Punch cards
+14:00:46 From Fernanda, NextSilicon (she/her) to Everyone:
+	To summarize what we were saying “bring back punch cards”
+14:01:07 From Reed Milewicz (SNL) to Everyone:
+	Now there’s a fun hot take
+14:01:11 From Damian Rouson (he/him/his) to Everyone:
+	LOL
+14:01:14 From Vanessa to Everyone:
+	welcome to the year 2025 we haven't ventured outside because of the coronapocalypse and your support robot will be with you shortly
+14:01:21 From Todd Gamblin to Everyone:
+	“Slightly longer break” is 15 minutes lol
+14:01:28 From Fernanda, NextSilicon (she/her) to Everyone:
+	Be thankful Todd!
+14:01:32 From Arnold Tharrington to Everyone:
+	Eating in 15 minutes gave me heartburn!!!
+14:01:37 From Reed Milewicz (SNL) to Everyone:
+	@Arnold You too?!
+14:01:58 From Todd Gamblin to Everyone:
+	I did the hotdog eating trick and just dipped my sandwich in water to swallow faster
+14:02:00 From Observer: Claude D. Hall Jr. to Everyone:
+	My mother already gave me lunch. Veggie burger and fries
+14:02:16 From Jeff Shrager to Everyone:
+	I heard someone use #Tesla as a verb today: "We don't want the AI to Tesla the user into a tree." (Tesla, v., The act of an AI making a harmful mistake. :-)
+14:02:20 From Vanessa to Everyone:
+	I don't eat lunch but I just take a think of cocoa and like, chug it. It's a learned thing I think - eating takes too much time.
+14:02:43 From Vanessa to Everyone:
+	Tesla - the verb of the future!
+14:02:45 From Reed Milewicz (SNL) to Everyone:
+	@Jeff to be fair, even if the AI was intentionally evil, and sought to kill 100 people a day, it’d still be safer than human drivers, haha
+14:02:54 From Vanessa to Everyone:
+	huge +1
+14:02:58 From Vanessa to Everyone:
+	driving cars is so dangerous
+14:03:03 From Reed Milewicz (SNL) to Everyone:
+	exactly!
+14:03:44 From Jeff Shrager to Everyone:
+	I just like the alliteration of being Tesla'ed into a Tree.
+14:03:46 From Carlo Graziani (ANL) to Everyone:
+	Lobster Thermidor au crevettes, in a Mornay sauce, with brandy, and a fried egg, on top of spam.
+14:04:08 From Todd Gamblin to Everyone:
+	I thought someone was also Tesla’d under a trailer
+14:04:12 From Derek Gaston (INL) to Everyone:
+	Could we get a quick explanation of what each breakout session is?
+14:04:35 From Jeff Shrager to Everyone:
+	Yeah, and a bike got Tesla'ed in Phoenix, I think it was.
+14:05:04 From Carlo Graziani (ANL) to Everyone:
+	I have no idea what most of the BOR titles mean.
+14:05:45 From Jeff Shrager to Everyone:
+	I think they're intended to be mysterious.
+14:05:45 From Carlo Graziani (ANL) to Everyone:
+	OK, I've decrypted "Potential Opportunities for AI".
+14:06:06 From Derek Gaston (INL) to Everyone:
+	I can’t parse the first one: “Scale Req Dif Studies”?
+14:07:03 From Reed Milewicz (SNL) to Everyone:
+	Scale Required for Different Kinds of Studies
+	Potential Opportunities for using AI
+	Impact of Better Training and Practices on Productivity
+	Addressing Non-Technical Roadblocks to Studying Development and Use
+14:16:58 From Mary Ann Leung she/her/hers to Everyone:
+	https://docs.google.com/document/d/12qf3ZREdPjzrW3SOG3s-DI7nUol2GnQ7smDb3B0cxTo/edit?pli=1#heading=h.c9ofwij8r05b
+14:18:53 From Mary Ann Leung she/her/hers to Everyone:
+	https://docs.google.com/document/d/12qf3ZREdPjzrW3SOG3s-DI7nUol2GnQ7smDb3B0cxTo/edit?pli=1#heading=h.c9ofwij8r05b
+14:29:05 From Ben Dudson to Everyone:
+	Peer review of e.g. each other's pull requests is a quite easy win in team development
+14:45:55 From Kelley Ruehl (Sandia) to Everyone:
+	We've been criticized before that our software is too easy to use!
+14:47:24 From Sandra Gesing to Everyone:
+	sorry - have to jump off for today. great discussions! looking forward to tomorrow
+14:49:20 From Fred Hickernell (Illinois Tech) to Everyone:
+	Kelley, which is your software?
+14:49:47 From Ian Cosden to Everyone:
+	I don’t think that’s your fault!
+14:50:11 From Kelley Ruehl (Sandia) to Everyone:
+	http://wec-sim.github.io/WEC-Sim/master/index.html
+14:51:14 From Kelley Ruehl (Sandia) to Everyone:
+	It's an issue we face!
+14:57:24 From Ben Dudson to Everyone:
+	Sorry, got to go to another meeting. Thanks for the interesting discussion!
+15:05:05 From Kelley Ruehl (Sandia) to Everyone:
+	We know who our core development team is, but we don't know all of our end-users, and so how can we train them to be user-developers? It's also a challenge in terms of prioritizing new feature development, we can't communicate with our end-users directly so we can't get their feedback on priorities (but this issue doesn't relate to BPs).
+15:14:38 From Kelley Ruehl (Sandia) to Everyone:
+	In my field a large number of software tools used are written in FORTRAN and have that very issue, there's a fear of change and concerns about reproducibility.
+15:15:18 From Kelley Ruehl (Sandia) to Everyone:
+	We even had a popular software tool rewritten in Python, from FORTRAN, but it has known bugs that the OG package doesn't have
+15:16:43 From Hartwig Anzt to Everyone:
+	@Kelley this is why you need complete unit test coverage before rewriting ;)
+15:17:27 From Kelley Ruehl (Sandia) to Everyone:
+	If only :)
+15:18:02 From Vanessa to Everyone:
+	Honestly I didn't expect it I thought this ASCR meeting would be kind of boring.
+15:18:26 From Carlo Graziani (ANL) to Everyone:
+	Oh no, we're a notorious barrel of laughs.
+15:18:29 From Jordan Perr-Sauer to Everyone:
+	I was just thinking during the break how much I wish this was an in person workshop.
+15:18:35 From Vanessa to Everyone:
+	yeah!!
+15:18:40 From Todd Gamblin to Everyone:
+	I’ve generally liked the ASCR workshops just for networking with people in DOE
+15:18:47 From Todd Gamblin to Everyone:
+	Even the in person ones when they were in DC
+15:18:47 From Vanessa to Everyone:
+	Go away COVID nobody likes you anymore, launch you to an alient planet where you belong
+15:18:50 From David Bernholdt (he/him) to Everyone:
+	How many RSEs does it take to change a lightbulb?
+15:18:56 From Jordan Perr-Sauer to Everyone:
+	How can we network on Zoom though?
+15:19:01 From Elaine Raybourn to Everyone:
+	Hi everyone! If you took notes please add your name to our session notetakers
+15:19:10 From David Rogers to Everyone:
+	None, we'll fix it in documentation.
+15:19:20 From Todd Gamblin to Everyone:
+	But I think this software workshop has a very different (and better) chat experience than any prior workshop I’ve been to 🙂
+15:19:21 From Vanessa to Everyone:
+	Just by talking I think? Learning about one another and then connecting in other online chats/venues?
+15:19:44 From Jordan Perr-Sauer to Everyone:
+	US-RSE slack?
+15:20:03 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	Not all here are in US-RSE
+15:20:03 From Todd Gamblin to Everyone:
+	Get to know your DOE friends via 500 slacks
+15:20:06 From Vanessa to Everyone:
+	That would be a good one (for me) lol
+15:20:14 From Todd Gamblin to Everyone:
+	There’s never just one slack
+15:20:17 From Arnold Tharrington to Everyone:
+	led or fluorescent?
+15:20:46 From Vanessa to Everyone:
+	"We don't use lightbulbs we use AI luminescent beings that detect when a lightsource is needed."
+15:20:47 From David Bernholdt (he/him) to Everyone:
+	@Arnold, come on, these are RSEs we're talking about...
+15:20:53 From Carlo Graziani (ANL) to Everyone:
+	You mean "upgrade a lightbulb"?
+15:21:05 From Jordan Perr-Sauer to Everyone:
+	We need an RFP for the lightbulb.
+15:21:19 From Todd Munson (Argonne) to Everyone:
+	And start from an RFI
+15:21:48 From Carlo Graziani (ANL) to Everyone:
+	The lightbulb cannot be changed because dependencies.
+15:22:00 From Vanessa to Everyone:
+	There is no lightbulb.
+15:22:07 From Fernanda, NextSilicon (she/her) to Everyone:
+	Cmake runs the lightbulb
+15:22:10 From Vanessa to Everyone:
+	only Zoul.
+15:22:11 From Todd Munson (Argonne) to Everyone:
+	Build a new fixture that is better.
+15:22:13 From Reed Milewicz (SNL) to Everyone:
+	Ugh, now I’m getting connection issues. I keep dropping out at the most important part, the summaries of the breakouts
+15:23:17 From Reed Milewicz (SNL) to Everyone:
+	Wow, Greg, really upstaging my use of colors here with your slides. Love it
+15:23:34 From Fernanda, NextSilicon (she/her) to Everyone:
+	Greg is classic overacheiver
+15:23:37 From Reed Milewicz (SNL) to Everyone:
+	He is
+15:23:40 From Reed Milewicz (SNL) to Everyone:
+	We love that about him
+15:23:45 From Carlo Graziani (ANL) to Everyone:
+	When we tried to change the lightbulb we were unable to do so because the license server for the lightbulb-changing application was down.
+15:24:04 From Michelle Barker to Everyone:
+	Some of these questions are similar to a crowd-sourced list we came up in answer to what do we (not) know about RSE, and which has been submitted to JOSS https://docs.google.com/document/d/15zLt-rGWYv44-VgG8auJ_uVuSyhZqpsCdcuVjJ4-ed4/edit
+15:24:23 From Reed Milewicz (SNL) to Everyone:
+	Light-as-a-service! It’s the future, people no longer need to own their own light, it’s dynamically provisioned by our state of the art servers that will surely never fail and plunge people into darkness!
+15:25:07 From Wes Bethel (he/him) to Everyone:
+	💡😂
+15:26:16 From Todd Munson (Argonne) to Everyone:
+	The blinky lights on the server should be sufficient?
+15:28:12 From Fernanda, NextSilicon (she/her) to Everyone:
+	Taht’s why I’m in HPC: for the Blinky lights
+15:31:17 From Vanessa to Everyone:
+	This could fit nicely into my taxonomy https://rseng.github.io/software/repository/github/bluesky/bluesky/annotate-taxonomy/
+15:31:23 From Vanessa to Everyone:
+	I have blinky lights!
+15:31:33 From Vanessa to Everyone:
+	like from the company blinky lights
+15:31:36 From Reed Milewicz (SNL) to Everyone:
+	I saw a preliminary study indicating that GitHub copilot writes code with security vulnerabilities at roughly the same rate as real humans. Imagine that, near-human performance in bad decision making. What a time to be alive!
+15:31:43 From Vanessa to Everyone:
+	And I have one server with one little light so A blinky light
+15:31:52 From Vanessa to Everyone:
+	lol!
+15:32:08 From Carlo Graziani (ANL) to Everyone:
+	Eniac would be very proud.
+15:32:18 From Will Sutherland to Everyone:
+	I would love to see that version of John Henry
+15:33:57 From Damian Rouson (he/him/his) to Everyone:
+	Not all Fortran code is legacy code!
+15:34:26 From Reed Milewicz (SNL) to Everyone:
+	@Will S. lololololol
+15:34:31 From Todd Gamblin to Everyone:
+	I’m cool with using ML to maintain all the Fortran codes — great way to make sure they get rewritten 🙂
+15:34:38 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	+1 Damian
+15:34:40 From Damian Rouson (he/him/his) to Everyone:
+	Although the language has been spelled in mixed case at least since Fortran 90 so possibly it’s true that FORTRAN is legacy code, but Fortran is not. 😄
+15:35:06 From Matthew Sottile (LLNL) to Everyone:
+	CACM mentioned the copilot Garbage-In-Garbage-Out phenomenon this fall: https://cacm.acm.org/careers/255189-github-copilot-highly-likely-to-introduce-bugs-and-vulnerabilities/fulltext
+15:35:08 From Carlo Graziani (ANL) to Everyone:
+	I feel a religious war brewing.
+15:35:30 From Fernanda, NextSilicon (she/her) to Everyone:
+	If someone is coming for Fortran they’ll have to come for me. LONG LIVE FORTRAN
+15:35:30 From John Wu to Everyone:
+	https://docs.google.com/presentation/d/169NXvRn9xQT9Ikz149heOEskV996DlOdwknCnSYgzDE/edit#slide=id.p4
+15:35:31 From Bill Hoffman to Everyone:
+	Early CMake was known as SCREAM MAKE...
+15:35:48 From Damian Rouson (he/him/his) to Everyone:
+	Hooray, Fernanda!
+15:36:05 From William Godoy (ORNL) to Everyone:
+	Nice job @John!
+15:36:06 From Damian Rouson (he/him/his) to Everyone:
+	One for all.  All for one!
+15:36:15 From Carlo Graziani (ANL) to Everyone:
+	'Modern" Fortran is a Neanderthal in a business suit.
+15:36:27 From Damian Rouson (he/him/his) to Everyone:
+	Boooo.
+15:36:29 From Fernanda, NextSilicon (she/her) to Everyone:
+	Sir
+15:36:46 From Todd Gamblin to Everyone:
+	Fortran stands for “for translation… into other languages” right?
+15:36:48 From David Bernholdt (he/him) to Everyone:
+	Virtual meetings reduce violence, fortunately
+15:36:53 From Fernanda, NextSilicon (she/her) to Everyone:
+	This is why Argonne can’t have nice things
+15:37:35 From Damian Rouson (he/him/his) to Everyone:
+	Ha!
+15:37:50 From William Godoy (ORNL) to Everyone:
+	@David 😂
+15:39:19 From Damian Rouson (he/him/his) to Everyone:
+	David, please say more about virtual meetings and violence.  That’s a powerful point.
+15:40:21 From David Bernholdt (he/him) to Everyone:
+	Well, it seemed like Carlo was about to start a brawl with you and Fernanda, but the screens prevented it from going too far
+15:41:11 From Carlo Graziani (Recovering Fortran Programmer) to Everyone:
+	It was a polite technical exchange of Views.
+15:41:22 From Damian Rouson (he/him/his) to Everyone:
+	@David Got it.  I just wanted to be sure whether you were joking or being serious.  Yes, I hope we kept it fun and avoided a language war.
+15:43:37 From Todd Gamblin to Everyone:
+	There’s a great conference dedicated to topics like these — https://conf.researchr.org/home/msr-2022
+15:43:44 From Todd Gamblin to Everyone:
+	It’s a symposium alongside ICSE
+15:48:27 From Todd Gamblin to Everyone:
+	https://ecp-ci.gitlab.io
+15:48:35 From Vanessa to Everyone:
+	YES. We rely on services like GitHub/GitLab and they have arguably done more for our communities than any small software effort from a rseng space. Why can't we provide that level of tooling for our communities too?
+15:48:40 From Talita Perciano (she/her) to Everyone:
+	Here is a comment about GitHub copilot: it was not developed to replace programmers, but to help them on productivity and possibly writing in a better/cleaner way. So, yes, big problem if you are using copilot “blindly”. I read an interesting article about copilot, mentioning that a programmer using copilot is in constant  “state of code review”… and that’s a very good way to see it.
+15:49:00 From Todd Gamblin to Everyone:
+	+100 public HPC CI cycles
+15:49:42 From Reed Milewicz (SNL) to Everyone:
+	RCS, CVS, Walgreens, SVN, Mercurial, Git…
+15:50:01 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	@reed :-P
+15:50:15 From Todd Gamblin to Everyone:
+	CVS was the most traceable one though — receipts for everything
+15:50:21 From Reed Milewicz (SNL) to Everyone:
+	hahahahaha
+15:50:33 From Vanessa to Everyone:
+	I said this in our breakout, but we also talk about the tools we need and best practices, but nobody is sitting down and actually writing down all the developer workflows that we have, and what we might desire.
+15:50:49 From Vanessa to Everyone:
+	E.g., ask two software engineers in this room about their developer workflows - my money is on them looking very different.
+15:51:04 From Vanessa to Everyone:
+	I have my own routines and I have no idea what other people's routines look like.
+15:51:09 From Todd Gamblin to Everyone:
+	*punch art
+15:51:29 From Jordan Perr-Sauer to Everyone:
+	I would love to see a big document with conferences, journals, and even direct citations, that people in this conference would recommend others to check out.
+15:51:40 From Pete Peterson (ORNL) to Everyone:
+	@Vanessa it is super hard to separate development from tools used. Tools are integral
+15:52:31 From Todd Gamblin to Everyone:
+	@v: I think it’d be useful to study workflows but there isn’t a ton of standardization — I think even higher level concepts like monorepo, polyrepo, use-the-distro, etc. are pretty nascent.  Definitely worth studying
+15:53:24 From Todd Gamblin to Everyone:
+	CI is being studies — I’ve had two research groups interview me about CI… and another about bots
+15:53:40 From Todd Gamblin to Everyone:
+	But I think the trends haven’t been pursued too much more deeply than that
+15:54:37 From Vanessa to Everyone:
+	+1.
+15:55:03 From Vanessa to Everyone:
+	For best practices, I'd argue that giving a list is a good start, but lists of best practices don't make a difference until they become routines.
+15:56:09 From Vanessa to Everyone:
+	No matter how besty something is, if it doesn't fit into my routine in a comfortable way I won't do it.
+15:56:20 From Reed Milewicz (SNL) to Everyone:
+	@Kelly did great work leading the discussion session!!
+15:56:24 From Todd Gamblin to Everyone:
+	Tools like GitHub, GitLab, public CI, etc. work best at scale and you have to make them really easy for people to adopt.  DOE has one of the biggest concentrations of scientific developers in the world but dev infrastructure is stratified across facilities with very different processes (or lack of them) and I think adoption is only going to happen if the infrastructure can be standardized and popularized.
+15:56:40 From Todd Gamblin to Everyone:
+	cf. HPC CI cycles for GitHub repos
+15:56:55 From Vanessa to Everyone:
+	so you have to trick me - show me something is fun and it solves a problem I have and I'll fall into using it.
+15:57:57 From Vanessa to Everyone:
+	Elaine was an amazing session leader!
+15:58:01 From Observer: Charles Ferenbaugh (LANL) to Everyone:
+	@todd - and if DOE constraints can be satisfied, e.g., security concerns
+15:58:26 From Daniel S Katz to Everyone:
+	GitHub is really a social platform - it benefits from network effects
+15:58:30 From Todd Gamblin to Everyone:
+	@Charles: it is possible to create sandboxed environments for this stuff (see GitHub, etc.) they just have to decide to do it at the required scale.
+15:58:44 From Todd Gamblin to Everyone:
+	Software development benefits from network effects.
+15:58:56 From Marshall McDonnell  to Everyone:
+	@vanessa - think the "routine" you speak of is exactly what "code kata" refers to (https://medium.com/hackernoon/what-are-code-katas-and-why-should-we-care-2e3f1b7e111c) David Thomas would be proud.
+15:59:12 From Vanessa to Everyone:
+	taking a look!
+15:59:58 From Vanessa to Everyone:
+	oup I have a meeting I need to run - thanks y'all this was fun!
