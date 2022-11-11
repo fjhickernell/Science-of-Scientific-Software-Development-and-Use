@@ -124,7 +124,7 @@ Sponsor: Department of Energy, Office of Science, Advanced Scientific Computing 
     urlcolor=blue}
 
 \begin{document}
-\title{Position Paper on the \\ Science of Scientific-Software Development and Use}
+\title{Four Ways to Grow Scientific-Software}
 \author{\vspace{-2ex}Sou-Cheng Terrya Choi}
 \address[Choi, Ding, Hickernell, Sorokin]{Department of Applied Mathematics, RE 220, 10 W. 32nd St., Chicago, IL 60616}
 \email{schoi32@iit.edu, yding2@iit.edu, hickernell@iit.edu, asorokin@hawk.iit.edu\vspace{-3.5ex}}
@@ -156,17 +156,17 @@ Developers wishing to contribute new (additions to) libraries and the practition
 \subsection{Data-driven error estimation} 
 Complex computations may require the chaining of algorithms, e.g., the output of a (P)DE solver becomes the input of an optimizer.  Since the next algorithm in the chain accepts inexact input from the previous algorithm, 
 %error may be compounded unbeknownst to individual methods. 
-we need error bounds on algorithm output, as noted in \cite{Ips21a}. A priori algorithm error bounds based on unknown norms of input functions are unhelpful.  Reliable data-driven error bounds or estimates are needed. Moreover, error analysis for algorithms needs to factor in inexact inputs.
+we need error bounds on algorithm output, as noted in \cite{Ips21a}. A priori algorithm error bounds based on unknown norms of input functions are unhelpful. Reliable data-driven error bounds or estimates are needed. Moreover, error analysis for algorithms needs to factor in inexact inputs, and diagnostics should also be developed to ensure that necessary conditions for error bound validity are still met.
 
 \begin{wrapfigure}{r}{0.5\textwidth}
     \includegraphics[width = 0.5\textwidth]{cropped-ideas-watersheds-software-ecosystem-road.jpg}
 \end{wrapfigure}
 
 \subsection{Multiple Algorithms} 
-First scientific computing courses \cite{BurFaiBur16a} introduce students to numerical algorithms.  Computational science courses \cite{HolEic19a,ShifShif14a} combine numerical methods with modeling.  Rarely are students taught to combine multiple algorithms to solve a problem.  This leaves them unprepared for  large-scale computational science, which requires not only multiple algorithms, but multiple libraries. The IDEAS Watershed project, whose codebase is depicted on the right \cite{IDEASWatershedPict}, is an example.
+First computational mathematics courses \cite{BurFaiBur16a} introduce students to numerical algorithms.  Computational science courses \cite{HolEic19a,ShifShif14a} combine numerical methods with modeling.  Rarely are students taught to combine multiple algorithms to solve a problem.  This leaves them unprepared for  large-scale computational science, which requires not only multiple algorithms, but multiple libraries. The IDEAS Watershed project, whose codebase is depicted on the right \cite{IDEASWatershedPict}, is an example.
 
 \subsection{Large-scale computational environments} 
-Since the mid-1980s, computational scientists of the last generation have become proficient at carrying out computations on their personal machines.  However, many do not know how to take advantage of the variety of advanced architectures that are now common-place:  GPUs, cloud computing, open science grid, and high-performance computing.  Even with resources being made available through projects such as \href{https://covid19-hpc-consortium.org}{The COVID-19 High Performance Computing Consortium}, many users and software library developers do not know how to take full advantage of them.
+Since the mid-1980s, computational scientists have become proficient at carrying out computations on their personal machines.  However, many do not know how to take advantage of the variety of advanced architectures that are now common-place:  GPUs, cloud computing, open science grid, and high-performance computing.  Even with resources being made available through projects such as \href{https://covid19-hpc-consortium.org}{The COVID-19 High Performance Computing Consortium}, many users and software library developers do not know how to take full advantage of them.
 
 
 
@@ -176,35 +176,35 @@ Since the mid-1980s, computational scientists of the last generation have become
 Code across multiple languages and platforms adheres to standards for certain data types, such as \href{https://en.wikipedia.org/wiki/IEEE_754}{IEEE 754 for floating-point arithmetic}.  We propose that interested parties connected with larger scientific libraries develop shared standards for key objects that appear in algorithms, such as functions, sampling sites, and (partial) differential equations ((P)DEs). This would promote connectivity among software libraries and allow smaller libraries to be merged into larger ones.  Developers could more easily contribute to existing libraries, and practitioners would find it easier to use multiple libraries.
 
 \subsection{Data-driven error estimation} 
-Several of the authors and their collaborators have developed data-driven error bounds for multi-dimensional integration as well as univariate function approximation and optimization using numerical analysis and probabilistic numerics approaches \cite{ChoEtal17a, HicEtal14b, HicEtal14a, HicJim16a, RatHic19a,JimHic16a}.  The key behind these error bounds is to identify reasonable cones of input functions that are not too spiky or peaky.  This facilitates theoretical guarantees on the data-driven error bounds.  The ideas referenced here could be extended to other algorithms such as differential equation solvers.  What is also needed is for the error bounds derived to allow for inexact input, which comes from chaining multiple algorithms together.
+Several of the authors and their collaborators have developed data-driven error bounds for multi-dimensional integration as well as univariate function approximation and optimization using numerical analysis and probabilistic numerics approaches \cite{ChoEtal17a, HicEtal14b, HicEtal14a, HicJim16a, RatHic19a,JimHic16a}.  The key behind these error bounds is to identify reasonable cones of input functions that are not too spiky or peaky.  This facilitates theoretical guarantees on the data-driven error bounds.  The ideas referenced here could be extended to other algorithms such as differential equation solvers.  There is also a need for the error bounds derived to allow for inexact input, which comes from chaining multiple algorithms together.
 
 \subsection{Multiple Algorithms}
-Computational science curricula need to be re-written to stress the combination of multiple algorithms, or even multiple libraries to solve problems, during introductory courses.  To make room, we may need to reduce the details of some numerical algorithms that in the past would be explained in the same way that we often avoid the details of the algorithm for computing the sine function.  This curriculum revision may start by way of supplementary materials that will hopefully work their way into standard texts.
+Computational science curricula need to be re-written to stress the combination of multiple algorithms, or even multiple libraries to solve problems, during introductory courses.  To make room, we may need to eliminate detailed explanations of some numerical algorithms in the same way that we often avoid the details of the algorithm for computing the sine function.  This curriculum revision may start by way of supplementary materials that will hopefully work their way into standard texts.
 
 \subsection{Large-scale computational environments}  
-Educating the next generation in viewing cloud or cluster computing the same way that this generation views personal computing can be attained through partnerships involving academic institutions, national labs, and corporations offering test sites for students to learn and for developers to experiment.  Software tools are also needed to help developers migrate their libraries from personal machines to environments taking advantage of multiple cores, GPUs, and other advanced architectures.  
+Educating the next generation to embrace cloud or cluster computing the same way that this generation views personal computing can be attained through partnerships involving academic institutions, national labs, and corporations offering test sites for students to learn and for developers to experiment.  Software tools are also needed to help developers migrate their libraries from personal machines to environments taking advantage of multiple cores, GPUs, and other advanced architectures.  
 
 
 
 \section{Timeliness} % Why now? What breakthrough or change makes progress possible now where it wasn’t possible previously? What will be the impact of success?
 
-The \href{https://xsdk.info}{Extreme-scale Scientific Software Development Kit} (xSDK) is an effort to ``address challenges in interoperability and sustainability of software developed by diverse groups at different institutions.'' The push to identify standards for objects such as functions and (P)DEs, would fit this program. The presence of a good number of large libraries presents the possibility of healthy discussion among these communities to arrive at reasonable standards.
+The \href{https://xsdk.info}{Extreme-scale Scientific Software Development Kit} (xSDK) is an effort to ``address challenges in interoperability and sustainability of software developed by diverse groups at different institutions.'' The push to identify standards for objects such as functions and (P)DEs, would fit this program. The existence of a good number of large libraries makes it possible for healthy discussion among these communities to arrive at reasonable standards.
 
 The rise in popularity of probabilistic numerics research provides one promising avenue for data-driven error bounds.  So does the authors' work on adaptive algorithms.
 
-The permeation of computing into multiple disciplines and the availability of multiple packages make it possible to bridge the gap between what is taught in the classroom and what is needed at the frontiers of research.  Training grants may be used to pilot programs to address what is lacking in curricula.
+The permeation of computing into multiple disciplines and the availability of multiple packages make it possible to bridge the gap between what is taught in the classroom and what is needed at the frontiers of research.  Training grants may be used to develop and pilot programs that address what is lacking in our present curricula.
 
-Like large-scale computational environments banded together for COVID-19 research, they can do the same to provide basic competency to computational scientists in advanced architectures.  This might look like \href{https://colab.research.google.com}{Google Colaboratory} but with access to more advanced architectures.  Given the wider availability of these architectures, the time is ripe to provide developer tools to migrate libraries to exploit them.
+Just as large-scale computational environments banded together for COVID-19 research, they can do the same to provide basic competency to computational scientists in advanced architectures.  This might look like \href{https://colab.research.google.com}{Google Colaboratory} but with access to more advanced architectures.  Given the wider availability of these architectures, the time is ripe to provide developer tools to migrate libraries to exploit them.
 
 \printbibliography
 %\bibliographystyle{amsplain}
 %\bibliography{FJH23,FJHown23}
 
-\vspace{-1ex}
+\vspace{0ex}
 
-\SCTCNote{Need everyone sign off before submission: Sou-Cheng Choi}
+%\SCTCNote{Need everyone sign off before submission: Sou-Cheng Choi}
 
-\SCTCNote{Typos in bib: `Diagam', `Implmentation'. Change `probnum' to `ProbNum'}
+%\SCTCNote{Typos in bib: `Diagam', `Implmentation'. Change `probnum' to `ProbNum'}
 
 \end{document}
 
